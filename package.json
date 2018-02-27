@@ -1,0 +1,36 @@
+{
+  "name": "static-website",
+  "description": "Honeypot.io new static website",
+  "version": "1.0.0",
+  "author": "Mohammad Rajabifard <mo.rajbi@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.215",
+    "gatsby-link": "^1.6.37",
+    "gatsby-plugin-react-helmet": "^2.0.5",
+    "gatsby-plugin-styled-components": "^2.0.8",
+    "prop-types": "^15.6.1",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^3.1.6"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.5.0",
+    "prettier": "^1.10.2"
+  },
+  "keywords": [
+    "gatsby",
+    "honeypot"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5",
+    "singleQuote": true
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
