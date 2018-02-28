@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 
-export const normalWidth = 840
-export const widerWidth = 920
+const narrower = p => p.theme.narrowerContainer
+const normal = p => p.theme.normalContainer
+const wider = p => p.theme.widerContainer
 
 const Container = styled.div`
-  max-width: ${p => (p.wide ? widerWidth : normalWidth)}px;
+  width: 100%;
+  max-width: ${p => (p.wide ? wider : p.narrow ? narrower : normal)}px;
   margin: 0 auto;
   padding: 0 25px;
   box-sizing: content-box;

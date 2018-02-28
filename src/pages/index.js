@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 
 // Local
 import Seo from '../shared/Seo'
-import Nav from '../App/Nav'
+import MainHeader from '../App/MainHeader'
+import TalentBenefits from '../App/TalentBenefits'
+import FeatureAndQuotes from '../App/FeatureAndQuotes'
 
 const IndexPage = () => (
   <div>
@@ -12,19 +13,10 @@ const IndexPage = () => (
       description="Honeypot is Europe’s tech job platform for Software Developers, DevOps, Data Scientists, Product Owners, QA and Engineering Leaders"
     />
 
-    <Header>
-      <Nav />
-
-      <h1>Honeypot!</h1>
-      <p>Now go build something great.</p>
-    </Header>
+    <MainHeader />
+    <TalentBenefits />
+    <FeatureAndQuotes />
   </div>
 )
 
 export default IndexPage
-
-const Header = styled.header`
-  /* Rectangle 3: */
-  background-image: linear-gradient(-158deg, #5dc0f9 0%, #418fd9 75%);
-  color: white;
-`
