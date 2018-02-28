@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider, injectGlobal } from 'styled-components'
 
 // Utilities
 import theme from '../utils/style/theme'
 
 // Styles
-import './index.css'
+import 'normalize.css/normalize.css'
 
 // Images
 import favicon from '../static/favicon.ico'
@@ -32,3 +32,12 @@ MainLayout.propTypes = {
 }
 
 export default MainLayout
+
+// Global styles
+injectGlobal`
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+`
