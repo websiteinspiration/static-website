@@ -17,7 +17,7 @@ export default {
   innerNavHeight: 48,
   logoHeight: 33,
   mobileNavZIndex: 6,
-  stickyNavZIndex: 999,
+  stickyNavZIndex: 20,
   // -- Header
   headerMaskWidth: 1920,
   mascotZIndex: 5,
