@@ -3,8 +3,9 @@ import React from 'react'
 // Local
 import Seo from '../shared/Seo'
 import Footer from '../shared/Footer'
-import TalentBenefits from '../App/talent/TalentBenefits'
 import Header from '../App/tech-employer/Header'
+import Benefits from '../App/tech-employer/Benefits'
+import Mission from '../App/tech-employer/Mission'
 import FeatureAndQuotes from '../App/tech-employer/FeatureAndQuotes'
 import TalentSteps from '../App/talent/TalentSteps'
 import JoinCommunity from '../App/JoinCommunity'
@@ -18,8 +19,10 @@ const TechEmployerPage = () => (
     />
 
     <Header />
-    <TalentBenefits />
+    <Benefits />
     <FeatureAndQuotes />
+
+    <Mission />
 
     {/* Both share one background */}
     <JoinCommunityBg>
