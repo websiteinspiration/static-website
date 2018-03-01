@@ -2,18 +2,18 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 // Utilities
-import { mobile } from '../../utils/style/media'
+import { mobile } from '../../../utils/style/media'
 
 // Local
-import Container from '../../shared/Container'
-import Title from '../../shared/Section/Title'
-import Button from '../../shared/Button'
+import Container from '../../../shared/Container'
+import Title from '../../../shared/Section/Title'
+import Button from '../../../shared/Button'
 import Card from './Card'
 
 // Icons
-import PersonLine from '../../shared/vectors/PersonLine'
-import ToolLine from '../../shared/vectors/ToolLine'
-import PinLine from '../../shared/vectors/PinLine'
+import PersonLine from '../../../shared/vectors/PersonLine'
+import ToolLine from '../../../shared/vectors/ToolLine'
+import PinLine from '../../../shared/vectors/PinLine'
 
 const TalentBenefits = props => (
   <Wrapper {...props}>

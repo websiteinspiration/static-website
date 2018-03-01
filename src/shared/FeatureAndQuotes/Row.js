@@ -12,16 +12,18 @@ const Row = ({
   photoUrl,
   reverse,
   textsFlexAlign = 'center',
+  smallQuote = false,
+  littleRectColor = p => p.theme.primary,
   ...props
 }) => (
   <Wrapper {...props} reverse={reverse}>
-    <QuoteBox photoUrl={photoUrl}>
-      <QuoteText>“{quote}”</QuoteText>
+    <QuoteBox photoUrl={photoUrl} smallQuote={smallQuote}>
+      <QuoteText smallQuote={smallQuote}>“{quote}”</QuoteText>
       <Quotee>{quotee}</Quotee>
     </QuoteBox>
 
     <Texts reverse={reverse} flexAlign={textsFlexAlign}>
-      <Title>{title}</Title>
+      <Title littleRectColor={littleRectColor}>{title}</Title>
       <Desc>{desc}</Desc>
     </Texts>
   </Wrapper>
@@ -46,7 +48,8 @@ const QuoteBox = styled.blockquote`
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  padding: 22px 55px 32px 42px;
+  padding: ${p =>
+    p.smallQuote ? `22px 20px 32px 30px` : `22px 55px 32px 42px`};
   box-sizing: border-box;
   margin: 0;
 
@@ -62,9 +65,9 @@ const QuoteBox = styled.blockquote`
 const QuoteText = styled.p`
   margin: 0;
   color: white;
-  font-size: ${p => p.theme.font20}px;
+  font-size: ${p => (p.smallQuote ? p.theme.font17 : p.theme.font20)}px;
   font-weight: bold;
-  line-height: 1.64;
+  line-height: 1.72;
 `
 
 const Quotee = styled.div`
@@ -90,6 +93,8 @@ const Title = styled.h3`
   position: relative;
   padding-bottom: 18px;
   margin: 0 0 30px 0;
+  max-width: 300px;
+  line-height: 1.5;
 
   font-size: ${p => p.theme.font18}px;
   font-weight: bold;
@@ -101,7 +106,7 @@ const Title = styled.h3`
     width: var(--width);
     height: 3px;
     border-radius: 5px;
-    background: ${p => p.theme.primary};
+    background: ${p => p.littleRectColor(p)};
     /* center */
     position: absolute;
     bottom: 0;

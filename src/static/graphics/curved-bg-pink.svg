@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1024px" height="1200px" viewBox="0 0 1024 1200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1920px" height="1211px" viewBox="0 0 1920 1211" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>Rectangle 3 Copy 2</title>
+    <title>curved-bg-pink</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Employer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -1298.000000)">
-        <path d="M0,1486.0743 C423.869792,1362.18737 686.604167,1299.50446 788.203125,1298.02557 C889.802083,1296.54667 969.067708,1359.22958 1026,1486.0743 L1026,2350.6894 C573.71875,2449.81114 311.354167,2498.91041 238.90625,2497.98722 C166.458333,2497.06403 86.8229167,2473.53618 0,2427.40365 L0,1486.0743 Z" id="Rectangle-3-Copy-2" fill="#F4ECEF" transform="translate(513.000000, 1898.000000) scale(-1, -1) translate(-513.000000, -1898.000000) "></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="curved-bg-pink" fill="#F4ECEF">
+            <path d="M9.09494702e-13,311.088139 C686.3906,104.362713 1098.12497,1 1235.20312,1 C1422.94352,2.80092776 1651.20915,157.526901 1920,465.177921 L1920,968.427813 C1200.43065,1129.63871 789.084767,1210.34224 685.962355,1210.53838 C537.125668,1208.64179 308.471549,1107.37171 0,906.728159 L9.09494702e-13,311.088139 Z" id="Rectangle-3-Copy-2" transform="translate(960.000000, 605.769190) scale(-1, -1) translate(-960.000000, -605.769190) "></path>
+        </g>
     </g>
 </svg>

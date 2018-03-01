@@ -2,11 +2,11 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 // Utilities
-import { mobile } from '../../utils/style/media'
+import { mobile } from '../../../utils/style/media'
 
 // Local
-import Container from '../../shared/Container'
-import Title from '../../shared/Section/Title'
+import Container from '../../../shared/Container'
+import Title from '../../../shared/Section/Title'
 import Card from './Card'
 
 const TalentSteps = props => (
