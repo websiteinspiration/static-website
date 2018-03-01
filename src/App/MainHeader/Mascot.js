@@ -1,5 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+// Utilities
+import { mobile } from '../../utils/style/media'
 
 // Images
 import mascot from '../../static/mascot.svg'
@@ -20,4 +23,8 @@ const ImageWrapper = styled.div`
     display: block;
     margin: 0;
   }
+
+  ${mobile(css`
+    display: none;
+  `)};
 `
