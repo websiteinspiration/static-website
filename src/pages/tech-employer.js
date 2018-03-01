@@ -6,8 +6,8 @@ import Footer from '../shared/Footer'
 import Header from '../App/tech-employer/Header'
 import Benefits from '../App/tech-employer/Benefits'
 import Mission from '../App/tech-employer/Mission'
+import Plans from '../App/tech-employer/Plans'
 import FeatureAndQuotes from '../App/tech-employer/FeatureAndQuotes'
-import TalentSteps from '../App/talent/TalentSteps'
 import JoinCommunity from '../App/JoinCommunity'
 import JoinCommunityBg from '../App/JoinCommunity/Bg'
 
@@ -21,12 +21,11 @@ const TechEmployerPage = () => (
     <Header />
     <Benefits />
     <FeatureAndQuotes />
-
     <Mission />
 
-    {/* Both share one background */}
-    <JoinCommunityBg>
-      <TalentSteps />
+    <JoinCommunityBg top="-1700%">
+      {/* Both share one background */}
+      <Plans />
       <JoinCommunity />
     </JoinCommunityBg>
 

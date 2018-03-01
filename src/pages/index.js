@@ -21,8 +21,8 @@ const IndexPage = () => (
     <TalentBenefits />
     <FeatureAndQuotes />
 
-    {/* Both share one background */}
-    <JoinCommunityBg>
+    <JoinCommunityBg top="-60%">
+      {/* Both share one background */}
       <TalentSteps />
       <JoinCommunity />
     </JoinCommunityBg>

@@ -27,10 +27,7 @@
     "eslint-plugin-react": "^7.7.0",
     "prettier": "^1.10.2"
   },
-  "keywords": [
-    "gatsby",
-    "honeypot"
-  ],
+  "keywords": ["gatsby", "honeypot"],
   "license": "MIT",
   "main": "n/a",
   "prettier": {
@@ -42,6 +39,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint ./src/** --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

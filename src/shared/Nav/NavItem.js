@@ -5,8 +5,8 @@ import styled, { css } from 'styled-components'
 // Utilities
 import { mobile } from '../../utils/style/media'
 
-const NavItem = ({ active, sticky, ...props }) => (
-  <Wrapper active={active} sticky={sticky} {...props} />
+const NavItem = ({ active, sticky, to = '', ...props }) => (
+  <Wrapper active={active} sticky={sticky} to={to} {...props} />
 )
 
 export default NavItem

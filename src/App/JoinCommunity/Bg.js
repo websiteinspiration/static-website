@@ -8,5 +8,5 @@ export default styled.section`
   background-size: auto auto;
 
   background-repeat: no-repeat;
-  background-position: top -60% center;
+  background-position: top ${p => p.top} center;
 `
