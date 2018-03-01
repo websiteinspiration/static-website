@@ -8,6 +8,7 @@ import FeatureAndQuotes from '../App/FeatureAndQuotes'
 import TalentSteps from '../App/TalentSteps'
 import JoinCommunity from '../App/JoinCommunity'
 import JoinCommunityBg from '../App/JoinCommunity/Bg'
+import Footer from '../App/Footer'
 
 const IndexPage = () => (
   <div>
@@ -25,6 +26,8 @@ const IndexPage = () => (
       <TalentSteps />
       <JoinCommunity />
     </JoinCommunityBg>
+
+    <Footer />
   </div>
 )
 
