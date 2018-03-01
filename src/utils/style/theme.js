@@ -29,6 +29,7 @@ export default {
   font20: 20,
   font22: 22,
   fontHeading: 30,
+  fontBig: 45,
   fontExtraBig: 73,
 
   // Line Heights

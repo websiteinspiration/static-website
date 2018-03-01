@@ -1,5 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+// Utilities
+import { mobile } from '../../utils/style/media'
 
 // Local
 import Nav from '../../shared/Nav'
@@ -61,6 +64,10 @@ const Title = styled.h1`
   font-size: ${p => p.theme.fontExtraBig}px;
   font-weight: 700;
   color: white;
+
+  ${mobile(css`
+    font-size: ${p => p.theme.fontBig}px;
+  `)};
 `
 
 const Desc = styled.p`

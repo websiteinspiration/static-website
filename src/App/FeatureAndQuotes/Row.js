@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 // Utilities
-import { mobile, desktop, notMobile } from '../../utils/style/media'
+import { mobile, notMobile } from '../../utils/style/media'
 
 const Row = ({
   title,
