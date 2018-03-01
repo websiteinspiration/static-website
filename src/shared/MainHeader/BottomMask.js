@@ -13,7 +13,8 @@ export default () => (
 )
 
 const ImageWrapper = styled.div`
-  width: ${p => p.theme.headerMaskWidth}px;
+  width: 100%;
+  min-width: ${p => p.theme.headerMaskWidth}px;
   position: absolute;
   bottom: 0;
   margin-left: -${p => p.theme.headerMaskWidth / 2}px;
@@ -22,6 +23,8 @@ const ImageWrapper = styled.div`
   pointer-events: none;
 
   img {
+    width: 100%;
+    height: auto;
     display: block;
     margin: 0;
   }
