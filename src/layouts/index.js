@@ -21,6 +21,14 @@ const MainLayout = ({ children }) => (
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
         <link rel="shortcut icon" href={favicon} />
+
+        {/* TypeKit */}
+        <script src="https://use.typekit.net/fkv8pfd.js" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{Typekit.load({ async: true });}catch(e){}`,
+          }}
+        />
       </Helmet>
       {children()}
     </div>
