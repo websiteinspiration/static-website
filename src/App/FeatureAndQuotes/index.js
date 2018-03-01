@@ -1,10 +1,13 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
+// Utilities
+import { desktop, mobile } from '../../utils/style/media'
+
 // Local
-import { desktop } from '../../utils/style/media'
 import Container from '../../shared/Container'
 import Row from './Row'
+import Button from '../../shared/Button'
 
 // Images
 import bg from '../../static/graphics/curved-bg-lightblue.svg'
@@ -44,6 +47,15 @@ const FeatureAndQuotes = props => (
           photoUrl={photo3}
         />
       </RowWrapper>
+
+      <ButtonWrapper>
+        <Button
+          href="https://www.honeypot.io/users/sign_up"
+          style={{ paddingRight: 58, paddingLeft: 58 }}
+        >
+          Join
+        </Button>
+      </ButtonWrapper>
     </Container>
   </Wrapper>
 )
@@ -51,18 +63,27 @@ const FeatureAndQuotes = props => (
 export default FeatureAndQuotes
 
 const Wrapper = styled.section`
-  height: 1300px;
   background-image: url(${bg});
   background-size: auto auto;
   background-repeat: no-repeat;
   background-position: center center;
   margin-top: 50px;
+  padding-bottom: 50px;
 
   ${desktop(css`
+    background-size: auto 100%;
+  `)};
+
+  ${mobile(css`
     background-size: auto 100%;
   `)};
 `
 
 const RowWrapper = styled.div`
-  margin-bottom: 70px;
+  margin-bottom: 80px;
+`
+
+const ButtonWrapper = styled.div`
+  margin-top: 80px;
+  text-align: center;
 `
