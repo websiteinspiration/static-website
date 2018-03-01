@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 // Utilities
+import theme from '../../utils/style/theme'
 import { mobile } from '../../utils/style/media'
 
 // Local
@@ -22,7 +23,10 @@ const MainHeader = ({
   <Wrapper {...props} bg={bg}>
     <Nav style={{ color: navTextColor }} />
 
-    <Container narrow={true} style={{ position: 'relative' }}>
+    <Container
+      narrow={true}
+      style={{ position: 'relative', zIndex: theme.relativeZIndex }}
+    >
       <Title>{title}</Title>
       <Desc>{desc}</Desc>
       <ButtonsWrapper>{renderButtons()}</ButtonsWrapper>
@@ -35,7 +39,10 @@ const MainHeader = ({
       </Container>
     </CompaniesWrapper>
 
-    <Container wide={true} style={{ position: 'relative' }}>
+    <Container
+      wide={true}
+      style={{ position: 'relative', zIndex: theme.mascotZIndex }}
+    >
       <Mascot />
     </Container>
 

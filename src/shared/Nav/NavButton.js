@@ -54,15 +54,28 @@ const styles = css`
   `)}
 
   /* Active style when it's sticky and when it's not */
-  ${({ outline, sticky }) => {
+  ${({ outline, sticky, theme }) => {
     if (sticky) {
       // Styles when sticky mode is enabled
       return outline
         ? css`
-            color: currentColor;
-            box-shadow: inset 0 0 0 2px currentColor;
+            color: ${theme.blue};
+            box-shadow: inset 0 0 0 2px ${theme.blue};
           `
-        : css``
+        : css`
+            color: white;
+            background-size: 200% 200%;
+            background-image: linear-gradient(
+              -200deg,
+              #76c2ee 0%,
+              #418fd9 50%,
+              #76c2ee 100%
+            );
+
+            &:hover {
+              background-position: 100%;
+            }
+          `
     } else {
       // When it's not sticky mode
       return outline
