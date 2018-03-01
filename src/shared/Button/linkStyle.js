@@ -1,6 +1,7 @@
 import { css } from 'styled-components'
 
 export default css`
+  display: inline-block;
   padding: 9px 38px;
   font-weight: bold;
   font-size: ${p => p.theme.fontBase};

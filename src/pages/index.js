@@ -6,6 +6,8 @@ import MainHeader from '../App/MainHeader'
 import TalentBenefits from '../App/TalentBenefits'
 import FeatureAndQuotes from '../App/FeatureAndQuotes'
 import TalentSteps from '../App/TalentSteps'
+import JoinCommunity from '../App/JoinCommunity'
+import JoinCommunityBg from '../App/JoinCommunity/Bg'
 
 const IndexPage = () => (
   <div>
@@ -18,7 +20,11 @@ const IndexPage = () => (
     <TalentBenefits />
     <FeatureAndQuotes />
 
-    <TalentSteps />
+    {/* Both share one background */}
+    <JoinCommunityBg>
+      <TalentSteps />
+      <JoinCommunity />
+    </JoinCommunityBg>
   </div>
 )
 

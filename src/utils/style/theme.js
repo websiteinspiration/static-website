@@ -5,6 +5,7 @@ export default {
   headerDarkBlue: '#0C5295',
   lightGray: '#EEE',
   grayText: '#888',
+  dimText: 'rgba(0, 0, 0, 0.5)',
 
   // Sizes
   // -- Container

@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 // Utilities
-import { desktop, mobile } from '../../utils/style/media'
+import { tablet } from '../../utils/style/media'
 
 // Local
 import Container from '../../shared/Container'
@@ -64,18 +64,15 @@ export default FeatureAndQuotes
 
 const Wrapper = styled.section`
   background-image: url(${bg});
-  background-size: auto auto;
+  background-size: auto 100%;
+
   background-repeat: no-repeat;
   background-position: center center;
   margin-top: 50px;
   padding-bottom: 50px;
 
-  ${desktop(css`
-    background-size: auto 100%;
-  `)};
-
-  ${mobile(css`
-    background-size: auto 100%;
+  ${tablet(css`
+    background-size: auto auto;
   `)};
 `
 

@@ -78,6 +78,10 @@ const CardWrapper = styled.div`
   flex: 1 1 33%;
   margin-right: 100px;
 
+  &:last-child {
+    margin-right: 0;
+  }
+
   ${mobile(css`
     flex: 1 1 auto;
     margin-right: 0;
