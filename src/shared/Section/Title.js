@@ -1,10 +1,11 @@
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
 
-export default styled.h1`
+const Title = styled.h1`
   position: relative;
-  padding: 0 10px 25px 10px;
+  padding-bottom: 25px;
   margin: 20px 0 20px 0;
-  text-align: center;
+  text-align: ${p => p.align};
   line-height: 1.5;
   font-size: ${p => p.theme.font22}px;
   font-weight: bold;
@@ -16,10 +17,31 @@ export default styled.h1`
     height: 5px;
     border-radius: 5px;
     background: ${p => p.theme.lightGray};
-    /* center */
+    /* align */
     position: absolute;
     bottom: 0;
-    left: 50%;
-    margin-left: -25px;
+    ${({ align }) =>
+      align === 'center'
+        ? css`
+            left: 50%;
+            margin-left: -25px;
+          `
+        : align === 'left'
+          ? css`
+              left: 0;
+            `
+          : css`
+              right: 0;
+            `};
   }
 `
+
+Title.defaultProps = {
+  align: 'center',
+}
+
+Title.propTypes = {
+  align: PropTypes.oneOf(['center', 'right', 'left']),
+}
+
+export default Title

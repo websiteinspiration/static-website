@@ -5,6 +5,7 @@ import Seo from '../shared/Seo'
 import MainHeader from '../App/MainHeader'
 import TalentBenefits from '../App/TalentBenefits'
 import FeatureAndQuotes from '../App/FeatureAndQuotes'
+import TalentSteps from '../App/TalentSteps'
 
 const IndexPage = () => (
   <div>
@@ -16,6 +17,8 @@ const IndexPage = () => (
     <MainHeader />
     <TalentBenefits />
     <FeatureAndQuotes />
+
+    <TalentSteps />
   </div>
 )
 

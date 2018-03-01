@@ -3,7 +3,8 @@ export default {
   primary: '#F6CD3D',
   blue: '#4BA0E4',
   headerDarkBlue: '#0C5295',
-  lightGray: '#EEEEEE',
+  lightGray: '#EEE',
+  grayText: '#888',
 
   // Sizes
   // -- Container
