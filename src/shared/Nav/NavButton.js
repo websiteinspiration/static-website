@@ -2,6 +2,9 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
 
+// Utilities
+import { mobile } from '../../utils/style/media'
+
 const NavButton = ({ outline = false, sticky, ...props }) => (
   <Wrapper outline={outline} sticky={sticky} {...props} />
 )
@@ -30,6 +33,11 @@ const Wrapper = styled(Link)`
   &:first-child {
     margin-left: 0;
   }
+
+  ${mobile(css`
+    margin-left: 0;
+    margin-bottom: 10px;
+  `)}
 
   /* Active style when it's sticky and when it's not */
   ${({ outline, sticky, theme }) => {

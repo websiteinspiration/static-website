@@ -2,6 +2,9 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
 
+// Utilities
+import { mobile } from '../../utils/style/media'
+
 const NavItem = ({ active, sticky, ...props }) => (
   <Wrapper active={active} sticky={sticky} {...props} />
 )
@@ -39,6 +42,11 @@ const Wrapper = styled(Link)`
     opacity: 0.9;
     transform: scale(1.05);
   }
+
+  ${mobile(css`
+    margin-left: 0;
+    margin-bottom: 5px;
+  `)}
 
   /* Active style when it's sticky and when it's not */
   ${({ active, sticky }) => {

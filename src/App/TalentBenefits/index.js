@@ -1,5 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+// Utilities
+import { mobile } from '../../utils/style/media'
 
 // Local
 import Container from '../../shared/Container'
@@ -64,11 +67,26 @@ const CardsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
+
+  ${mobile(css`
+    flex-direction: column;
+    justify-content: center;
+  `)};
 `
 
 const CardWrapper = styled.div`
   flex: 1 1 33%;
   margin-right: 100px;
+
+  ${mobile(css`
+    flex: 1 1 auto;
+    margin-right: 0;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  `)};
 `
 
 const ButtonWrapper = styled.div`

@@ -11,8 +11,10 @@ export default {
   normalContainer: 840,
   widerContainer: 920,
   // -- Navbar
+  navHeight: 70,
   innerNavHeight: 48,
   logoHeight: 33,
+  mobileNavZIndex: 6,
   // -- Header
   headerMaskWidth: 1920,
   mascotZIndex: 5,
