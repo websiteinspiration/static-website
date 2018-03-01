@@ -26,7 +26,7 @@ const customOnlySpecs = [
 ]
 
 const Plans = props => (
-  <Wrapper {...props}>
+  <Wrapper id="plans" {...props}>
     <Container>
       <Title styleType="light">
         Honeypot has Payment Options Depending on your Hiring Plan

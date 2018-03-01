@@ -1,17 +1,29 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
 
 // Utilities
 import { mobile } from '../../utils/style/media'
 
-const NavItem = ({ active, sticky, to = '', ...props }) => (
-  <Wrapper active={active} sticky={sticky} to={to} {...props} />
-)
+const NavItem = props => {
+  if (props.to) {
+    return <ItemLink {...props} />
+  } else {
+    return <ItemA {...props} />
+  }
+}
+
+NavItem.propTypes = {
+  active: PropTypes.bool,
+  sticky: PropTypes.bool,
+  href: PropTypes.string,
+  to: PropTypes.string,
+}
 
 export default NavItem
 
-const Wrapper = styled(Link)`
+const styles = css`
   position: relative;
   height: ${p => p.theme.innerNavHeight}px;
   line-height: ${p => p.theme.innerNavHeight}px;
@@ -73,4 +85,11 @@ const Wrapper = styled(Link)`
           `
     }
   }}};
+`
+
+const ItemA = styled.a`
+  ${styles};
+`
+const ItemLink = styled(Link)`
+  ${styles};
 `

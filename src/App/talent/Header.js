@@ -15,10 +15,10 @@ const Header = () => (
     desc="Honeypot is Europe’s tech job platform for Software Developers, DevOps,
     Data Scientists, Product Owners, QA and Engineering Leaders."
     renderButtons={() => [
-      <Button key={1} white={true}>
+      <Button key={1} white={true} href="https://www.honeypot.io/users/sign_up">
         Find a Job
       </Button>,
-      <Button key={2} white={true} linkStyle={true} to="/employer">
+      <Button key={2} white={true} linkStyle={true} to="/tech-employer">
         I'm hiring
       </Button>,
     ]}

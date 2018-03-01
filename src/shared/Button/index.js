@@ -32,13 +32,15 @@ const common = css`
 `
 
 const WrapperButton = styled.button`
-  ${common};
   border: none;
   outline: none;
+  -webkit-appearance: none;
 
   &:focus {
     box-shadow: 0 0 0 3px ${p => p.theme.blue};
   }
+
+  ${common};
 `
 const WrapperA = styled.a`
   ${common};

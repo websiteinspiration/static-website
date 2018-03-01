@@ -1,17 +1,31 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import styled, { css } from 'styled-components'
 
 // Utilities
 import { mobile } from '../../utils/style/media'
 
-const NavButton = ({ outline = false, sticky, ...props }) => (
-  <Wrapper outline={outline} sticky={sticky} {...props} />
-)
+const NavButton = props => {
+  if (props.to) {
+    return <ButtonLink {...props} />
+  } else if (props.href) {
+    return <ButtonA {...props} />
+  } else {
+    return <Button {...props} />
+  }
+}
+
+NavButton.propTypes = {
+  outline: PropTypes.bool,
+  sticky: PropTypes.bool,
+  href: PropTypes.string,
+  to: PropTypes.string,
+}
 
 export default NavButton
 
-const Wrapper = styled(Link)`
+const styles = css`
   box-sizing: border-box;
   padding: 7px 20px;
   margin-left: 10px;
@@ -62,4 +76,20 @@ const Wrapper = styled(Link)`
           `
     }
   }}};
+`
+
+const Button = styled.button`
+  /* Remove default button style */
+  background: transparent;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+
+  ${styles};
+`
+const ButtonA = styled.a`
+  ${styles};
+`
+const ButtonLink = styled(Link)`
+  ${styles};
 `

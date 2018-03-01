@@ -37,13 +37,20 @@ class Nav extends React.Component {
             </MobileNavHandle>
 
             <NavItems openOnMobile={openOnMobile}>
-              <NavItem>Talent</NavItem>
-              <NavItem>Employers</NavItem>
+              <NavItem to="/">Talent</NavItem>
+              <NavItem to="/tech-employer">Employers</NavItem>
               <NavItem>Community</NavItem>
               <NavItem>Invite a friend</NavItem>
               <Separator />
-              <NavButton outline={true}>login</NavButton>
-              <NavButton>sign up</NavButton>
+              <NavButton
+                outline={true}
+                href="https://app.honeypot.io/users/login"
+              >
+                login
+              </NavButton>
+              <NavButton href="https://www.honeypot.io/users/sign_up">
+                sign up
+              </NavButton>
             </NavItems>
           </InnerNav>
         </Container>
