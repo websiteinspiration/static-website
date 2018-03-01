@@ -3,7 +3,7 @@ import React from 'react'
 // Local
 import Seo from '../shared/Seo'
 import Footer from '../shared/Footer'
-import MainHeader from '../shared/MainHeader'
+import Header from '../App/talent/Header'
 import TalentBenefits from '../App/talent/TalentBenefits'
 import FeatureAndQuotes from '../App/talent/FeatureAndQuotes'
 import TalentSteps from '../App/talent/TalentSteps'
@@ -17,7 +17,7 @@ const IndexPage = () => (
       description="Honeypot is Europe’s tech job platform for Software Developers, DevOps, Data Scientists, Product Owners, QA and Engineering Leaders"
     />
 
-    <MainHeader />
+    <Header />
     <TalentBenefits />
     <FeatureAndQuotes />
 

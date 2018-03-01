@@ -104,7 +104,7 @@ const Logo = styled.div`
     display: block;
     margin: 0;
     max-height: 100%;
-    filter: drop-shadow(0 2px 4px rgba(7, 89, 166, 0.5));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   }
 
   ${mobile(css`
@@ -118,5 +118,5 @@ const Note = styled.p`
   margin: 18px 0 0 0;
   font-size: ${p => p.theme.fontBase}px;
   font-weight: bold;
-  color: ${p => p.theme.headerDarkBlue};
+  color: rgba(0, 0, 0, 0.5);
 `

@@ -40,12 +40,12 @@ const Wrapper = styled(Link)`
   `)}
 
   /* Active style when it's sticky and when it's not */
-  ${({ outline, sticky, theme }) => {
+  ${({ outline, sticky }) => {
     if (sticky) {
       // Styles when sticky mode is enabled
       return outline
         ? css`
-            color: ${theme.blue};
+            color: currentColor;
             box-shadow: inset 0 0 0 2px currentColor;
           `
         : css``
@@ -57,7 +57,7 @@ const Wrapper = styled(Link)`
             box-shadow: inset 0 0 0 2px currentColor;
           `
         : css`
-            color: ${theme.blue};
+            color: currentColor;
             background: rgba(255, 255, 255, 0.9);
           `
     }

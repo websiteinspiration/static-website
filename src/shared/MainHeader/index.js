@@ -5,29 +5,27 @@ import styled, { css } from 'styled-components'
 import { mobile } from '../../utils/style/media'
 
 // Local
-import Nav from '../../shared/Nav'
-import Container from '../../shared/Container'
-import Button from '../../shared/Button'
+import Nav from '../Nav'
+import Container from '../Container'
 import Companies, { CompaniesNote } from './Companies'
 import BottomMask from './BottomMask'
 import Mascot from './Mascot'
 
-const MainHeader = () => (
-  <Wrapper>
-    <Nav />
+const MainHeader = ({
+  bg = `linear-gradient(-158deg, #5dc0f9 0%, #418fd9 75%)`,
+  title = 'Choose a Job You Love',
+  desc = `Choose a Job You Love Description as a placeholder!`,
+  navTextColor = `black`,
+  renderButtons = () => {},
+  ...props
+}) => (
+  <Wrapper {...props} bg={bg}>
+    <Nav style={{ color: navTextColor }} />
 
     <Container narrow={true} style={{ position: 'relative' }}>
-      <Title>Choose a Job You Love</Title>
-      <Desc>
-        Honeypot is Europe’s tech job platform for Software Developers, DevOps,
-        Data Scientists, Product Owners, QA and Engineering Leaders.
-      </Desc>
-      <ButtonsWrapper>
-        <Button white={true}>Find a Job</Button>
-        <Button white={true} linkStyle={true} to="/employer">
-          I'm hiring
-        </Button>
-      </ButtonsWrapper>
+      <Title>{title}</Title>
+      <Desc>{desc}</Desc>
+      <ButtonsWrapper>{renderButtons()}</ButtonsWrapper>
     </Container>
 
     <CompaniesWrapper>
@@ -48,7 +46,7 @@ const MainHeader = () => (
 export default MainHeader
 
 const Wrapper = styled.header`
-  background-image: linear-gradient(-158deg, #5dc0f9 0%, #418fd9 75%);
+  background: ${p => p.bg};
   color: white;
   /* For making space for bottom mask */
   padding-bottom: 120px;

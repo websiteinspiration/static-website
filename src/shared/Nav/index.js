@@ -21,7 +21,7 @@ class Nav extends React.Component {
     const { openOnMobile } = this.state
 
     return (
-      <Wrapper>
+      <Wrapper {...this.props}>
         <Container wide={true}>
           <InnerNav>
             <Logo>
@@ -72,8 +72,6 @@ const InnerNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-
-  ${mobile(css``)};
 `
 
 const NavItems = styled.div`
@@ -84,17 +82,24 @@ const NavItems = styled.div`
   ${mobile(css`
     /* Mobile Nav Box */
     position: absolute;
-    top: ${p => p.theme.navHeight}px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    flex: 1 1 100%;
+    top: ${p => p.theme.navHeight + 15}px;
+    left: 25px;
+    right: 25px;
+    width: auto;
+    flex: 1 1 auto;
     padding: 20px 0;
     flex-direction: column;
     z-index: ${p => p.theme.mobileNavZIndex};
+    border-radius: 10px;
+    transition: all 150ms cubic-bezier(0.075, 0.82, 0.165, 1.1);
+    box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.15);
     background-image: linear-gradient(-158deg, #5dc0f9 0%, #418fd9 75%);
+    background-image: linear-gradient(-158deg, #555 0%, #333 75%);
 
-    display: ${p => (p.openOnMobile ? `flex` : `none`)};
+    visibility: ${p => (p.openOnMobile ? `visible` : `hidden`)};
+    opacity: ${p => (p.openOnMobile ? 1 : 0)};
+    transform: scale(${p => (p.openOnMobile ? 1 : 0)});
+    transform-origin: 100% -6%;
   `)};
 `
 
