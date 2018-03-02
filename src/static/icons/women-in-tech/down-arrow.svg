@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="7px" viewBox="0 0 11 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>down-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABCD-HONEYPOT-1" transform="translate(-183.000000, -2392.000000)" fill="#373A39" stroke="#000000" stroke-width="1.00230531">
+            <path d="M192.870905,2393.0303 C192.752516,2392.96671 192.596243,2393.00759 192.52521,2393.11207 L188.5,2397.45034 L184.47479,2393.11207 C184.403757,2393.00759 184.247484,2392.96671 184.129095,2393.0303 C184.005971,2393.0939 183.963351,2393.23018 184.034385,2393.33466 L188.263223,2397.89098 C188.310578,2397.95912 188.391083,2397.99546 188.476322,2397.99546 L188.5,2398 L188.523678,2397.99546 C188.608917,2397.99546 188.689422,2397.95912 188.736777,2397.89098 L192.965615,2393.33466 C193.036649,2393.23018 192.994029,2393.0939 192.870905,2393.0303" id="down-arrow"></path>
+        </g>
+    </g>
+</svg>
