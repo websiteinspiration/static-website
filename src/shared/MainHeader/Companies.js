@@ -69,6 +69,7 @@ const Wrapper = styled.div`
   padding-bottom: 25px;
   /* TODO calc based on container width */
   padding-right: calc((100% - 720px) / 2);
+  cursor: ew-resize;
 
   ${mobile(css`
     padding-right: 0;
