@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
-import { getUrlForLang, getCurrentLangKey } from 'ptz-i18n'
+import { getCurrentLangKey } from 'ptz-i18n'
 import PropTypes from 'prop-types'
 
 // Utilities

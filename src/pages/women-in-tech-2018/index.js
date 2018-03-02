@@ -5,6 +5,7 @@ import Header from '../../App/women-in-tech/Header'
 import Container from '../../App/women-in-tech/Container'
 import LangSwitch, { Placeholder } from '../../App/women-in-tech/LangSwitch'
 import TextContent, { FlexWrapper } from '../../App/women-in-tech/TextContent'
+import CurrencySwitch from '../../App/women-in-tech/CurrencySwitch'
 import DataTable from '../../App/women-in-tech/DataTable'
 import Footer from '../../App/women-in-tech/Footer'
 import LittleRectRow from '../../App/women-in-tech/LittleRectRow'
@@ -107,6 +108,10 @@ export default ({ location }) => (
           </TextContent>
         </FlexWrapper>
         <LittleRectRow style={{ paddingTop: 20 }} />
+        <FlexWrapper>
+          <Placeholder />
+          <CurrencySwitch />
+        </FlexWrapper>
       </Container>
 
       <DataTable />
