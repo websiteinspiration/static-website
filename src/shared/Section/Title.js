@@ -12,7 +12,7 @@ const littleRect = css`
     background: ${p =>
       p.styleType === 'dark'
         ? p.theme.lightGray
-        : p.styleType === 'light' ? `rgba(255, 255, 255, 0.3)` : `transparent`};
+        : p.styleType === 'light' ? `rgba(255, 255, 255, 0.5)` : `transparent`};
     /* align */
     position: absolute;
     bottom: 0;

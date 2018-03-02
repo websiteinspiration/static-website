@@ -23,6 +23,8 @@ export default {
   mascotZIndex: 5,
   maskZIndex: 10,
   relativeZIndex: 5,
+  // -- Circle Switch
+  circleSwitchSize: 38,
 
   // Font Sizes
   fontTiny: 13,

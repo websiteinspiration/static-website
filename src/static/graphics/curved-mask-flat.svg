@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="266px" viewBox="0 0 1920 266" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>curved-mask-flat</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,266 L1920,266 L1920,71 C1255.13871,173.454745 841.921336,224.682117 680.347892,224.682117 C518.774447,224.682117 291.991817,150.124244 0,1.00849709 L0,266 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="curved-mask-flat">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

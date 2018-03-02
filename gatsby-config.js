@@ -9,6 +9,13 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.js`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'en',
+        langKeyForNull: 'any',
+      },
+    },
     'gatsby-plugin-styled-components',
   ],
 }
