@@ -1,8 +1,5 @@
 import React, { PureComponent } from 'react'
 
-// Utilities
-import theme from '../../../utils/style/theme'
-
 // Local
 import {
   GroupHeadCell,
@@ -10,61 +7,7 @@ import {
   CountryHeadCell,
   IconHeadCell,
 } from './helpers'
-
-// Icons
-import {
-  totalWorkforce,
-  femaleWorkforce,
-  percentWomen,
-  legislators,
-  womenInParl,
-  womenInMinis,
-  overallAverageWage,
-  womenAverageWage,
-  genderPayGapBlack,
-  techWorkforce,
-  workforceInTech,
-  femaleTechWorkforce,
-  womenInTech,
-  diffWorkforceAndTech,
-  STEM,
-  techAverageWage,
-  techWomenAverageWage,
-  overallPayGap,
-  genderInequality,
-  payGap5YearsAgo,
-  payGapComparison,
-} from './icons'
-
-const iconHeadCells = [
-  { icon: totalWorkforce, bg: theme.blueHeadBg1 },
-  { icon: femaleWorkforce, bg: theme.blueHeadBg1 },
-  { icon: percentWomen, bg: theme.blueHeadBg1 },
-
-  { icon: legislators, bg: theme.blueHeadBg2 },
-  { icon: womenInParl, bg: theme.blueHeadBg2 },
-  { icon: womenInMinis, bg: theme.blueHeadBg2 },
-
-  { icon: overallAverageWage, bg: theme.blueHeadBg1 },
-  { icon: womenAverageWage, bg: theme.blueHeadBg1 },
-  { icon: genderPayGapBlack, bg: theme.blueHeadBg1 },
-
-  { icon: techWorkforce, bg: theme.greenHeadBg1 },
-  { icon: workforceInTech, bg: theme.greenHeadBg1 },
-  { icon: femaleTechWorkforce, bg: theme.greenHeadBg1 },
-  { icon: womenInTech, bg: theme.greenHeadBg1 },
-  { icon: diffWorkforceAndTech, bg: theme.greenHeadBg1 },
-  { icon: STEM, bg: theme.greenHeadBg1 },
-  { icon: techAverageWage, bg: theme.greenHeadBg1 },
-  { icon: techWomenAverageWage, bg: theme.greenHeadBg1 },
-  { icon: genderPayGapBlack, bg: theme.greenHeadBg1 },
-
-  { icon: overallPayGap, bg: theme.greenGroupBg, light: true },
-
-  { icon: genderInequality, bg: theme.orangeHeadBg1 },
-  { icon: payGap5YearsAgo, bg: theme.orangeHeadBg1 },
-  { icon: payGapComparison, bg: theme.orangeHeadBg1 },
-]
+import { headings } from './data'
 
 export default class DataTable extends PureComponent {
   static defaultProps = {
@@ -98,14 +41,15 @@ export default class DataTable extends PureComponent {
             Country
           </CountryHeadCell>
 
-          {iconHeadCells.map(({ icon, ...cellProps }, i) => {
+          {headings.map(({ icon, bg, light }, i) => {
             const index = i + 1
             /* `+ 1` because 0 is country head */
             const isActive = sortedIndex === index
             return (
               <IconHeadCell
                 key={i}
-                {...cellProps}
+                bg={bg}
+                light={light}
                 active={isActive}
                 reverseArrow={isActive && isReversed}
                 onClick={() => onHeadClick(index)}

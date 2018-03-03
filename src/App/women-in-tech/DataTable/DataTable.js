@@ -8,13 +8,13 @@ import {
   NumberColumn,
   CountryColumn,
 } from './helpers'
-import data from './data'
+import { rows } from './data'
 import TableHead from './TableHead'
 import TableBody from './TableBody'
 
 export default class DataTable extends Component {
   state = {
-    rows: data,
+    rows: rows,
     sortedIndex: 19,
     isReversed: false,
   }
@@ -91,5 +91,4 @@ export default class DataTable extends Component {
 
 const Wrapper = styled.div`
   margin: 30px 0 75px 0;
-  padding: 0 15px;
 `

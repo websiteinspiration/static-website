@@ -1,4 +1,29 @@
-const dataInArray = [
+import theme from '../../../utils/style/theme'
+import {
+  totalWorkforce,
+  femaleWorkforce,
+  percentWomen,
+  legislators,
+  womenInParl,
+  womenInMinis,
+  overallAverageWage,
+  womenAverageWage,
+  genderPayGapBlack,
+  techWorkforce,
+  workforceInTech,
+  femaleTechWorkforce,
+  womenInTech,
+  diffWorkforceAndTech,
+  STEM,
+  techAverageWage,
+  techWomenAverageWage,
+  overallPayGap,
+  genderInequality,
+  payGap5YearsAgo,
+  payGapComparison,
+} from './icons'
+
+export const rows = [
   [
     'Portugal',
     '5.18',
@@ -1026,4 +1051,105 @@ const dataInArray = [
   ],
 ]
 
-export default dataInArray
+export const headings = [
+  {
+    icon: totalWorkforce,
+    bg: theme.blueHeadBg1,
+    title: 'Total Workforce (Millions)',
+  },
+  {
+    icon: femaleWorkforce,
+    bg: theme.blueHeadBg1,
+    title: 'Female Workforce (Millions)',
+  },
+  { icon: percentWomen, bg: theme.blueHeadBg1, title: '% Women' },
+
+  {
+    icon: legislators,
+    bg: theme.blueHeadBg2,
+    title: '% Women Legislators, Senior Officials, and Managers',
+  },
+  { icon: womenInParl, bg: theme.blueHeadBg2, title: '% Women in Parliament' },
+  {
+    icon: womenInMinis,
+    bg: theme.blueHeadBg2,
+    title: '% Women in Ministerial Positions',
+  },
+
+  {
+    icon: overallAverageWage,
+    bg: theme.blueHeadBg1,
+    title: 'Overall Workforce Average Wage (US$)',
+  },
+  {
+    icon: womenAverageWage,
+    bg: theme.blueHeadBg1,
+    title: `Women's Average Wage (US$)`,
+  },
+  {
+    icon: genderPayGapBlack,
+    bg: theme.blueHeadBg1,
+    title: 'Gender Pay Gap (%)',
+  },
+
+  {
+    icon: techWorkforce,
+    bg: theme.greenHeadBg1,
+    title: 'Tech Workforce (Thousands)',
+  },
+  {
+    icon: workforceInTech,
+    bg: theme.greenHeadBg1,
+    title: '% Workforce in Tech',
+  },
+  {
+    icon: femaleTechWorkforce,
+    bg: theme.greenHeadBg1,
+    title: 'Female Tech Workforce (Thousands)',
+  },
+  { icon: womenInTech, bg: theme.greenHeadBg1, title: '% Women in Tech' },
+  {
+    icon: diffWorkforceAndTech,
+    bg: theme.greenHeadBg1,
+    title: '% Difference of Women in Workforce and Women in Tech',
+  },
+  { icon: STEM, bg: theme.greenHeadBg1, title: 'Female STEM Graduates (%)' },
+  {
+    icon: techAverageWage,
+    bg: theme.greenHeadBg1,
+    title: 'Tech Average Wage (US$)',
+  },
+  {
+    icon: techWomenAverageWage,
+    bg: theme.greenHeadBg1,
+    title: 'Tech Average Wage for Women (US$)',
+  },
+  {
+    icon: genderPayGapBlack,
+    bg: theme.greenHeadBg1,
+    title: 'Gender Pay Gap in Tech (%)',
+  },
+
+  {
+    icon: overallPayGap,
+    bg: theme.greenGroupBg,
+    light: true,
+    title: '% Difference of Overall Gender Pay Gap and Gender Pay Gap in Tech',
+  },
+
+  {
+    icon: genderInequality,
+    bg: theme.orangeHeadBg1,
+    title: 'Gender Inequality Index (Score, 0 = equality)',
+  },
+  {
+    icon: payGap5YearsAgo,
+    bg: theme.orangeHeadBg1,
+    title: 'Gender Pay Gap 5 Years Ago',
+  },
+  {
+    icon: payGapComparison,
+    bg: theme.orangeHeadBg1,
+    title: 'Comparison of Gender Pay Gap From 5 Years Ago To Today',
+  },
+]

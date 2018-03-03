@@ -41,6 +41,8 @@ export default {
   topLeftCornerZIndex: 10,
   topHeadersZIndex: 5,
   leftHeadersZIndex: 5,
+  // -- Table Guide
+  guideIconSize: 50,
 
   // Font Sizes
   fontTiny: 13,

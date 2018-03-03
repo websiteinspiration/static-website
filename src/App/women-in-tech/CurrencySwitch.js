@@ -1,23 +1,32 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Subscribe } from 'unstated'
 
 // Local
 import CircleSwitch from '../../shared/CircleSwitch'
+import CurrnecyContainer from './CurrencyContainer'
+
+const currencyList = ['$', '€', '£']
 
 export default class CurrencySwitch extends Component {
   render() {
     return (
-      <Wrapper>
-        <SwitchWrapper>
-          <CircleSwitch outline={false}>$</CircleSwitch>
-        </SwitchWrapper>
-        <SwitchWrapper>
-          <CircleSwitch outline={true}>€</CircleSwitch>
-        </SwitchWrapper>
-        <SwitchWrapper>
-          <CircleSwitch outline={true}>£</CircleSwitch>
-        </SwitchWrapper>
-      </Wrapper>
+      <Subscribe to={[CurrnecyContainer]}>
+        {currencyState => (
+          <Wrapper>
+            {currencyList.map((c, i) => (
+              <SwitchWrapper key={i}>
+                <CircleSwitch
+                  onClick={() => currencyState.switch(c)}
+                  outline={currencyState.state.active !== c}
+                >
+                  {c}
+                </CircleSwitch>
+              </SwitchWrapper>
+            ))}
+          </Wrapper>
+        )}
+      </Subscribe>
     )
   }
 }
