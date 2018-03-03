@@ -36,8 +36,46 @@ import {
   payGapComparison,
 } from './icons'
 
+const iconHeadCells = [
+  { icon: totalWorkforce, bg: theme.blueHeadBg1 },
+  { icon: femaleWorkforce, bg: theme.blueHeadBg1 },
+  { icon: percentWomen, bg: theme.blueHeadBg1 },
+
+  { icon: legislators, bg: theme.blueHeadBg2 },
+  { icon: womenInParl, bg: theme.blueHeadBg2 },
+  { icon: womenInMinis, bg: theme.blueHeadBg2 },
+
+  { icon: overallAverageWage, bg: theme.blueHeadBg1 },
+  { icon: womenAverageWage, bg: theme.blueHeadBg1 },
+  { icon: genderPayGapBlack, bg: theme.blueHeadBg1 },
+
+  { icon: techWorkforce, bg: theme.greenHeadBg1 },
+  { icon: workforceInTech, bg: theme.greenHeadBg1 },
+  { icon: femaleTechWorkforce, bg: theme.greenHeadBg1 },
+  { icon: womenInTech, bg: theme.greenHeadBg1 },
+  { icon: diffWorkforceAndTech, bg: theme.greenHeadBg1 },
+  { icon: STEM, bg: theme.greenHeadBg1 },
+  { icon: techAverageWage, bg: theme.greenHeadBg1 },
+  { icon: techWomenAverageWage, bg: theme.greenHeadBg1 },
+  { icon: genderPayGapBlack, bg: theme.greenHeadBg1 },
+
+  { icon: overallPayGap, bg: theme.greenGroupBg, light: true },
+
+  { icon: genderInequality, bg: theme.orangeHeadBg1 },
+  { icon: payGap5YearsAgo, bg: theme.orangeHeadBg1 },
+  { icon: payGapComparison, bg: theme.orangeHeadBg1 },
+]
+
 export default class DataTable extends PureComponent {
+  static defaultProps = {
+    onHeadClick: () => {},
+    sortedIndex: -1,
+    isReversed: false,
+  }
+
   render() {
+    const { onHeadClick, sortedIndex, isReversed } = this.props
+
     return (
       <thead>
         <tr>
@@ -56,75 +94,26 @@ export default class DataTable extends PureComponent {
         </tr>
         <tr>
           <NumberHeadCell>#</NumberHeadCell>
-          <CountryHeadCell>Country</CountryHeadCell>
-          <IconHeadCell bg={theme.blueHeadBg1}>
-            <img src={totalWorkforce} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.blueHeadBg1}>
-            <img src={femaleWorkforce} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.blueHeadBg1}>
-            <img src={percentWomen} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.blueHeadBg2}>
-            <img src={legislators} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.blueHeadBg2}>
-            <img src={womenInParl} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.blueHeadBg2}>
-            <img src={womenInMinis} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.blueHeadBg1}>
-            <img src={overallAverageWage} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.blueHeadBg1}>
-            <img src={womenAverageWage} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.blueHeadBg1}>
-            <img src={genderPayGapBlack} />
-          </IconHeadCell>
+          <CountryHeadCell onClick={() => onHeadClick(0)}>
+            Country
+          </CountryHeadCell>
 
-          <IconHeadCell bg={theme.greenHeadBg1}>
-            <img src={techWorkforce} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.greenHeadBg1}>
-            <img src={workforceInTech} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.greenHeadBg1}>
-            <img src={femaleTechWorkforce} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.greenHeadBg1}>
-            <img src={womenInTech} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.greenHeadBg1}>
-            <img src={diffWorkforceAndTech} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.greenHeadBg1}>
-            <img src={STEM} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.greenHeadBg1}>
-            <img src={techAverageWage} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.greenHeadBg1}>
-            <img src={techWomenAverageWage} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.greenHeadBg1}>
-            <img src={genderPayGapBlack} />
-          </IconHeadCell>
-          <IconHeadCell light={true} bg={theme.greenGroupBg}>
-            <img src={overallPayGap} />
-          </IconHeadCell>
-
-          <IconHeadCell bg={theme.orangeHeadBg1}>
-            <img src={genderInequality} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.orangeHeadBg1}>
-            <img src={payGap5YearsAgo} />
-          </IconHeadCell>
-          <IconHeadCell bg={theme.orangeHeadBg1}>
-            <img src={payGapComparison} />
-          </IconHeadCell>
+          {iconHeadCells.map(({ icon, ...cellProps }, i) => {
+            const index = i + 1
+            /* `+ 1` because 0 is country head */
+            const isActive = sortedIndex === index
+            return (
+              <IconHeadCell
+                key={i}
+                {...cellProps}
+                active={isActive}
+                reverseArrow={isActive && isReversed}
+                onClick={() => onHeadClick(index)}
+              >
+                <img src={icon} />
+              </IconHeadCell>
+            )
+          })}
         </tr>
       </thead>
     )

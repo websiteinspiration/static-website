@@ -13,7 +13,15 @@ import TableHead from './TableHead'
 import TableBody from './TableBody'
 
 export default class DataTable extends Component {
+  state = {
+    rows: data,
+    sortedIndex: 19,
+    isReversed: false,
+  }
+
   render() {
+    const { rows, sortedIndex, isReversed } = this.state
+
     return (
       <Wrapper>
         <TableScrollWrapper>
@@ -22,12 +30,62 @@ export default class DataTable extends Component {
               <NumberColumn />
               <CountryColumn />
             </colgroup>
-            <TableHead />
-            <TableBody />
+            <TableHead
+              onHeadClick={this.headClicked}
+              sortedIndex={sortedIndex}
+              isReversed={isReversed}
+            />
+            <TableBody rows={rows} />
           </Table>
         </TableScrollWrapper>
       </Wrapper>
     )
+  }
+
+  headClicked = i => {
+    const { sortedIndex } = this.state
+
+    this.setState(prev => {
+      if (i !== sortedIndex) {
+        return {
+          rows: this.sortRows(prev.rows, i, false),
+          sortedIndex: i,
+          isReversed: false,
+        }
+      } else {
+        return {
+          rows: this.sortRows(prev.rows, i, !prev.isReversed),
+          isReversed: !prev.isReversed,
+        }
+      }
+    })
+  }
+
+  sortRows = (rows, i, reverse) => {
+    let rowsClone = [...rows]
+    const reverserNum = reverse ? 1 : -1 /* reverse this if you prefer */
+
+    rowsClone.sort((a, b) => {
+      // Remove commas from numbers
+      var valueA = a[i].replace(/,/g, '')
+      var valueB = b[i].replace(/,/g, '')
+
+      if (!isNaN(parseInt(valueA, 10))) {
+        // Number
+        return (parseFloat(valueA, 10) - parseFloat(valueB, 10)) * reverserNum
+      } else {
+        // String / Not Number
+        if (valueA < valueB) {
+          return -1 * reverserNum
+        } else if (valueA > valueB) {
+          return 1 * reverserNum
+        } else {
+          return 0
+        }
+      }
+    })
+
+    return rowsClone
   }
 }
 

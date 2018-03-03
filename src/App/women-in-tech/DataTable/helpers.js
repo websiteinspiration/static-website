@@ -112,6 +112,8 @@ export const CountryCell = styled.td`
   `)};
 `
 export const CountryHeadCell = CountryCell.withComponent('th').extend`
+  cursor: pointer;
+
   ${mobile(css`
     top: ${p => p.theme.groupHeadHeight}px;
     z-index: ${p => p.theme.topLeftCornerZIndex};
@@ -128,6 +130,10 @@ export const IconHeadCell = styled.th`
   vertical-align: middle;
   text-align: center;
   background: ${p => p.bg || `white`};
+  filter: brightness(${p => (p.active ? '0.96' : '1')});
+  transition: all 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  user-select: none;
+  cursor: pointer;
 
   ${borders};
 
@@ -137,10 +143,12 @@ export const IconHeadCell = styled.th`
     width: var(--width);
     height: 7px;
     position: absolute;
-    bottom: 11px;
+    bottom: ${p => (p.active ? 6 : 11)}px;
     left: 50%;
     margin-left: calc(-1 * var(--width) / 2);
     background: url(${downArrow}) center no-repeat;
+    transform: rotate(${p => (p.reverseArrow ? '180deg' : '0')});
+    transition: all 100ms;
   }
 
   img {
