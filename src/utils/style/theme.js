@@ -6,6 +6,14 @@ export default {
   lightGray: '#EEE',
   grayText: '#888',
   dimText: 'rgba(0, 0, 0, 0.5)',
+  // -- Table
+  rowBg: '#F0F0F0',
+  blueGroupBg: '#4A90E2',
+  blueHeadBg1: '#BCD6F3',
+  blueHeadBg2: '#DCEAF9',
+  greenGroupBg: '#6DDBA4',
+  greenHeadBg1: '#CEF2E0',
+  orangeHeadBg1: '#FAE8C0',
 
   // Sizes
   // -- Container
@@ -25,6 +33,14 @@ export default {
   relativeZIndex: 5,
   // -- Circle Switch
   circleSwitchSize: 38,
+  // -- Table
+  numberWidth: 40,
+  countryWidth: 140,
+  groupHeadHeight: 38,
+  iconHeadHeight: 65,
+  topLeftCornerZIndex: 10,
+  topHeadersZIndex: 5,
+  leftHeadersZIndex: 5,
 
   // Font Sizes
   fontTiny: 13,

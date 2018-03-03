@@ -1,25 +1,31 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 
 // Local
-import { Table, Row, Cell } from '../../../shared/Table'
+import {
+  Table,
+  TableScrollWrapper,
+  NumberColumn,
+  CountryColumn,
+} from './helpers'
+import data from './data'
+import TableHead from './TableHead'
+import TableBody from './TableBody'
 
-export default class DataTable extends PureComponent {
+export default class DataTable extends Component {
   render() {
     return (
       <Wrapper>
-        <Table>
-          <Row>
-            <Cell>Hellllllo1</Cell>
-            <Cell>Hellllllo2</Cell>
-            <Cell>Hellllllo3</Cell>
-          </Row>
-          <Row>
-            <Cell>Byyyyyye1</Cell>
-            <Cell>Byyyyyye2</Cell>
-            <Cell>Byyyyyye3</Cell>
-          </Row>
-        </Table>
+        <TableScrollWrapper>
+          <Table>
+            <colgroup>
+              <NumberColumn />
+              <CountryColumn />
+            </colgroup>
+            <TableHead />
+            <TableBody />
+          </Table>
+        </TableScrollWrapper>
       </Wrapper>
     )
   }
