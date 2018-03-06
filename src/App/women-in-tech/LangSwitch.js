@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
-import { getCurrentLangKey } from 'ptz-i18n'
-import PropTypes from 'prop-types'
 
 // Utilities
 import { mobile } from '../../utils/style/media'
@@ -9,32 +7,28 @@ import siteConfig from '../../../config/SiteConfig'
 
 // Local
 import CircleSwitch from '../../shared/CircleSwitch'
+import Language from '../../shared/Language'
 
 export default class LangSwitch extends Component {
-  static propTypes = {
-    location: PropTypes.shape({
-      pathname: PropTypes.string.isRequired,
-    }).isRequired,
-  }
-
   render() {
-    const { location: { pathname } } = this.props
     const { langs, defaultLangKey } = siteConfig
-    const currentLangKey = getCurrentLangKey(langs, defaultLangKey, pathname)
-
     return (
-      <Wrapper>
-        {langs.map(lang => (
-          <SwitchWrapper key={lang}>
-            <CircleSwitch
-              outline={currentLangKey !== lang}
-              to={this.getUrlForLang(lang, defaultLangKey)}
-            >
-              {lang}
-            </CircleSwitch>
-          </SwitchWrapper>
-        ))}
-      </Wrapper>
+      <Language>
+        {currentLangKey => (
+          <Wrapper>
+            {langs.map(lang => (
+              <SwitchWrapper key={lang}>
+                <CircleSwitch
+                  outline={currentLangKey !== lang}
+                  to={this.getUrlForLang(lang, defaultLangKey)}
+                >
+                  {lang}
+                </CircleSwitch>
+              </SwitchWrapper>
+            ))}
+          </Wrapper>
+        )}
+      </Language>
     )
   }
 

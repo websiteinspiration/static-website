@@ -3,59 +3,75 @@ import styled, { css } from 'styled-components'
 
 // Utilities
 import { mobile } from '../../../utils/style/media'
-
-// Data
 import { headings } from './data'
 
-const Guide = props => (
-  <Wrapper {...props}>
-    <Column>
-      <Item {...headings[0]} />
-      <Item {...headings[1]} />
-      <Item {...headings[2]} />
-    </Column>
-    <Column>
-      <Item {...headings[3]} />
-      <Item {...headings[4]} />
-      <Item {...headings[5]} />
-    </Column>
-    <Column>
-      <Item {...headings[6]} />
-      <Item {...headings[7]} />
-      <Item {...headings[8]} />
-    </Column>
-    <Column>
-      <Item {...headings[9]} />
-      <Item {...headings[10]} />
-      <Item {...headings[11]} />
-    </Column>
-    <Column>
-      <Item {...headings[12]} />
-      <Item {...headings[13]} />
-      <Item {...headings[14]} />
-    </Column>
-    <Column>
-      <Item {...headings[15]} />
-      <Item {...headings[16]} />
-      <Item {...headings[17]} />
-      <Item {...headings[18]} />
-    </Column>
-    <Column>
-      <Item {...headings[19]} />
-      <Item {...headings[20]} />
-      <Item {...headings[21]} />
-    </Column>
-  </Wrapper>
-)
+// Local
+import Language from '../../../shared/Language'
 
+const Guide = ({ currency, ...props }) => {
+  return (
+    <Language>
+      {lang => {
+        const itemProps = {
+          currency: currency === '$' ? 'USD$' : currency,
+          lang,
+        }
+        return (
+          <Wrapper {...props}>
+            <Column>
+              <Item {...itemProps} {...headings[0]} />
+              <Item {...itemProps} {...headings[1]} />
+              <Item {...itemProps} {...headings[2]} />
+            </Column>
+            <Column>
+              <Item {...itemProps} {...headings[3]} />
+              <Item {...itemProps} {...headings[4]} />
+              <Item {...itemProps} {...headings[5]} />
+            </Column>
+            <Column>
+              <Item {...itemProps} {...headings[6]} />
+              <Item {...itemProps} {...headings[7]} />
+              <Item {...itemProps} {...headings[8]} />
+            </Column>
+            <Column>
+              <Item {...itemProps} {...headings[9]} />
+              <Item {...itemProps} {...headings[10]} />
+              <Item {...itemProps} {...headings[11]} />
+            </Column>
+            <Column>
+              <Item {...itemProps} {...headings[12]} />
+              <Item {...itemProps} {...headings[13]} />
+              <Item {...itemProps} {...headings[14]} />
+            </Column>
+            <Column>
+              <Item {...itemProps} {...headings[15]} />
+              <Item {...itemProps} {...headings[16]} />
+              <Item {...itemProps} {...headings[17]} />
+              <Item {...itemProps} {...headings[18]} />
+            </Column>
+            <Column>
+              <Item {...itemProps} {...headings[19]} />
+              <Item {...itemProps} {...headings[20]} />
+              <Item {...itemProps} {...headings[21]} />
+            </Column>
+          </Wrapper>
+        )
+      }}
+    </Language>
+  )
+}
 export default Guide
 
-const Item = ({ icon, title, bg, ...props }) => (
+const Item = ({ icon, title, bg, lang, currency, ...props }) => (
   <ItemWrapper {...props} borderColor={bg}>
     <IconWrapper bg={bg}>
       <img src={icon} />
     </IconWrapper>
-    <Label>{title}</Label>
+    <Label>
+      {typeof title === 'object'
+        ? title[lang]
+        : typeof title === 'function' ? title(currency)[lang] : title}
+    </Label>
   </ItemWrapper>
 )
 
@@ -107,6 +123,8 @@ const Column = styled.div`
   flex: 0 1 14.27%;
 
   ${mobile(css`
-    flex-basis: 50%;
+    flex: 0 0 49%;
+    white-space: wrap;
+    word-break: break-all;
   `)};
 `

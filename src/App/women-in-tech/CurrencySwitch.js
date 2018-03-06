@@ -1,32 +1,32 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Subscribe } from 'unstated'
 
 // Local
 import CircleSwitch from '../../shared/CircleSwitch'
-import CurrnecyContainer from './CurrencyContainer'
 
 const currencyList = ['$', '€', '£']
+const mapSymbolToPage = {
+  $: '/women-in-tech-2018',
+  '€': '/women-in-tech-2018/eur',
+  '£': '/women-in-tech-2018/gbp',
+}
 
 export default class CurrencySwitch extends Component {
   render() {
+    const { activeCurrency } = this.props
     return (
-      <Subscribe to={[CurrnecyContainer]}>
-        {currencyState => (
-          <Wrapper>
-            {currencyList.map((c, i) => (
-              <SwitchWrapper key={i}>
-                <CircleSwitch
-                  onClick={() => currencyState.switch(c)}
-                  outline={currencyState.state.active !== c}
-                >
-                  {c}
-                </CircleSwitch>
-              </SwitchWrapper>
-            ))}
-          </Wrapper>
-        )}
-      </Subscribe>
+      <Wrapper>
+        {currencyList.map((c, i) => (
+          <SwitchWrapper key={i}>
+            <CircleSwitch
+              to={mapSymbolToPage[c]}
+              outline={activeCurrency !== c}
+            >
+              {c}
+            </CircleSwitch>
+          </SwitchWrapper>
+        ))}
+      </Wrapper>
     )
   }
 }

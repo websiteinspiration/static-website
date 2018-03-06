@@ -4,9 +4,9 @@ import React from 'react'
 import Guide from './Guide'
 import DataTable from './DataTable'
 
-export default props => (
+export default ({ currency, ...props }) => (
   <div {...props} style={{ padding: `0 15px` }}>
-    <Guide />
-    <DataTable />
+    <Guide currency={currency} />
+    <DataTable currency={currency} />
   </div>
 )

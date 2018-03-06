@@ -13,10 +13,13 @@ import TableHead from './TableHead'
 import TableBody from './TableBody'
 
 export default class DataTable extends Component {
-  state = {
-    rows: rows,
-    sortedIndex: 19,
-    isReversed: false,
+  constructor(props) {
+    super(props)
+    this.state = {
+      rows: rows[props.currency],
+      sortedIndex: 19,
+      isReversed: false,
+    }
   }
 
   render() {
