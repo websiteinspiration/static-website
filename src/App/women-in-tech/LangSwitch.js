@@ -41,7 +41,7 @@ export default class LangSwitch extends Component {
   getUrlForLang(lang, defaultLang = '') {
     const url = `women-in-tech-2018`
     if (lang === defaultLang) {
-      return url
+      return `/${url}`
     }
 
     return `/${lang}/${url}`
