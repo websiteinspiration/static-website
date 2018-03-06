@@ -8,7 +8,8 @@ export default class Language extends React.Component {
   render() {
     const { children } = this.props
     const { langs, defaultLangKey } = siteConfig
-    const pathname = typeof window !== 'undefined' && window.location.pathname
+    const pathname =
+      typeof window !== 'undefined' ? window.location.pathname : ''
 
     // Get current active language key
     const currentLangKey = getCurrentLangKey(langs, defaultLangKey, pathname)
