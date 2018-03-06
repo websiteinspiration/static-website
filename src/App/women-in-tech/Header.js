@@ -1,9 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
 import MediaQuery from 'react-responsive'
 
 // Utilities
-import { mobileMediaString } from '../../utils/style/media'
+import { mobileMediaString, mobile } from '../../utils/style/media'
 
 // Local
 import Title from '../../shared/Section/Title'
@@ -18,7 +19,9 @@ const Header = props => (
   <Wrapper {...props}>
     <Container wide={true}>
       <LogoWrapper>
-        <img src={logo} />
+        <a href="https://honeypot.io" title="Tech Jobs in Europe - Honeypot">
+          <img src={logo} alt="Honeypot" />
+        </a>
       </LogoWrapper>
     </Container>
 
@@ -31,7 +34,7 @@ const Header = props => (
               align="left"
               style={matches ? mobileTitleStyles : titleStyles}
             >
-              2018 Women in Tech Index
+              {props.title}
             </Title>
           )}
         </MediaQuery>
@@ -39,6 +42,10 @@ const Header = props => (
     </Container>
   </Wrapper>
 )
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
+}
 
 export default Header
 
@@ -48,19 +55,29 @@ const Wrapper = styled.header`
   margin-bottom: 30px;
   background: bottom center no-repeat / auto auto url(${mask}),
     top 20% center no-repeat / cover url(${bg});
+
+  ${mobile(css`
+    min-height: 300px;
+    background: top 20% center no-repeat / cover url(${bg});
+    margin-bottom: 50px;
+  `)};
 `
 
 const LogoWrapper = styled.div``
 
 const TitleWrapper = styled.div`
   margin-top: 70px;
+
+  ${mobile(css`
+    margin-top: 20px;
+  `)};
 `
 
 const titleStyles = {
   fontSize: 80,
   fontWeight: 600,
   lineHeight: 1.1,
-  maxWidth: 560,
+  maxWidth: 590,
 }
 
 const mobileTitleStyles = {
