@@ -23,6 +23,27 @@ import {
   payGapComparison,
 } from './icons'
 
+export const headingGroups = {
+  en: {
+    Country: 'Country',
+    WorkforceToday: 'Workforce Today',
+    TechIndustryToday: 'Tech Industry Today',
+    'Inqualifty&Opportunity': 'Inqualifty & Opportunity',
+  },
+  de: {
+    Country: 'Land',
+    WorkforceToday: 'Alle Erwerbstätige',
+    TechIndustryToday: 'IT-Branche',
+    'Inqualifty&Opportunity': 'Ungleichheit und Chancen',
+  },
+  nl: {
+    Country: 'Land',
+    WorkforceToday: 'Beroepsbevolking (huidig)',
+    TechIndustryToday: 'Techindustrie (huidig)',
+    'Inqualifty&Opportunity': 'Ongelijkheid & Kansen',
+  },
+}
+
 export const headings = [
   {
     icon: totalWorkforce,
