@@ -2,7 +2,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 // Local
+import { countries } from './data'
 import { NumberCell, CountryCell, BodyCell } from './helpers'
+import Language from '../../../shared/Language'
 
 export default class TableBody extends PureComponent {
   static propTypes = {
@@ -17,18 +19,23 @@ export default class TableBody extends PureComponent {
     const { rows } = this.props
 
     return (
-      <tbody>
-        {rows.map((row, i) => {
-          const [country, ...body] = row
-          return (
-            <tr key={row[0]}>
-              <NumberCell>{i + 1}</NumberCell>
-              <CountryCell>{country}</CountryCell>
-              {body.map((cell, i) => <BodyCell key={i}>{cell}</BodyCell>)}
-            </tr>
-          )
-        })}
-      </tbody>
+      <Language>
+        {lang => (
+          <tbody>
+            {rows.map((row, i) => {
+              const country = countries[lang][i]
+              console.log(country)
+              return (
+                <tr key={country}>
+                  <NumberCell>{i + 1}</NumberCell>
+                  <CountryCell>{country}</CountryCell>
+                  {row.map((cell, i) => <BodyCell key={i}>{cell}</BodyCell>)}
+                </tr>
+              )
+            })}
+          </tbody>
+        )}
+      </Language>
     )
   }
 }

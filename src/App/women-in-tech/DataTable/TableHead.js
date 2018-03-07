@@ -42,13 +42,12 @@ export default class DataTable extends PureComponent {
               </tr>
               <tr>
                 <NumberHeadCell>#</NumberHeadCell>
-                <CountryHeadCell onClick={() => onHeadClick(0)}>
+                <CountryHeadCell>
                   {localHeadingGroups['Country']}
                 </CountryHeadCell>
 
                 {headings.map(({ icon, bg, light }, i) => {
-                  const index = i + 1
-                  /* `+ 1` because 0 is country head */
+                  const index = i
                   const isActive = sortedIndex === index
                   return (
                     <IconHeadCell

@@ -11,7 +11,7 @@ export default props => <Wrapper {...props} />
 
 const Wrapper = styled.div`
   flex: 1 1 auto;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.85;
 
   ul {

@@ -252,9 +252,146 @@ export const headings = [
   },
 ]
 
+export const countriesEN = [
+  'Portugal',
+  'United States',
+  'Latvia',
+  'Finland',
+  'France',
+  'Sweden',
+  'United Kingdom',
+  'Estonia',
+  'Spain',
+  'Cyprus',
+  'Iceland',
+  'Turkey',
+  'New Zealand',
+  'Netherlands',
+  'Canada',
+  'Croatia',
+  'Ireland',
+  'Austria',
+  'Bulgaria',
+  'South Korea',
+  'Mexico',
+  'Norway',
+  'Switzerland',
+  'Chile',
+  'Israel',
+  'Belgium',
+  'Germany',
+  'Japan',
+  'Denmark',
+  'Australia',
+  'Malta',
+  'Slovenia',
+  'Hungary',
+  'Italy',
+  'Czech Republic',
+  'Romania',
+  'Luxembourg',
+  'Slovak Republic',
+  'Greece',
+  'Lithuania',
+  'Poland',
+]
+
+export const countriesDE = [
+  'Portugal',
+  'USA',
+  'Lettland',
+  'Finnland',
+  'Frankreich',
+  'Schweden',
+  'Großbritannien',
+  'Estland',
+  'Spanien',
+  'Zypern',
+  'Island',
+  'Türkei',
+  'Neuseeland',
+  'Niederlande',
+  'Kanada',
+  'Kroatien',
+  'Irland',
+  'Österreich',
+  'Bulgarien',
+  'Süden Korea',
+  'Mexiko',
+  'Norwegen',
+  'Schweiz',
+  'Chile',
+  'Israel',
+  'Belgien',
+  'Deutschland',
+  'Japan',
+  'Dänemark',
+  'Australien',
+  'Malta',
+  'Slowenien',
+  'Ungarn',
+  'Italien',
+  'Tschechien',
+  'Rumänien',
+  'Luxemburg',
+  'Slowakische Republik',
+  'Griechenland',
+  'Litauen',
+  'Polen',
+]
+
+export const countriesNL = [
+  'Portugal',
+  'Verenigde Staten',
+  'Letland',
+  'Finland',
+  'Frankrijk',
+  'Zweden',
+  'Verenigd Koninkrijk',
+  'Estland',
+  'Spanje',
+  'Cyprus',
+  'IJsland',
+  'Turkije',
+  'Nieuw-Zeeland',
+  'Nederland',
+  'Canada',
+  'Kroatië',
+  'Ierland',
+  'Oostenrijk',
+  'Bulgarije',
+  'Zuid-Korea',
+  'Mexico',
+  'Noorwegen',
+  'Zwitserland',
+  'Chili',
+  'Israël',
+  'België',
+  'Duitsland',
+  'Japan',
+  'Denemarken',
+  'Australië',
+  'Malta',
+  'Slovenië',
+  'Hongarije',
+  'Italië',
+  'Tsjechië',
+  'Roemenië',
+  'Luxemburg',
+  'Slowakije',
+  'Griekenland',
+  'Litouwen',
+  'Polen',
+]
+
+export const countries = {
+  en: countriesEN,
+  de: countriesDE,
+  nl: countriesNL,
+}
+
 export const rowsUSD = [
   [
-    'Portugal',
     '5.18',
     '2.53',
     '48.78%',
@@ -279,7 +416,6 @@ export const rowsUSD = [
     '5.23%',
   ],
   [
-    'United States',
     '159.19',
     '74.43',
     '46.76%',
@@ -304,7 +440,6 @@ export const rowsUSD = [
     '0.07%',
   ],
   [
-    'Latvia',
     '0.99',
     '0.50',
     '50.25%',
@@ -329,7 +464,6 @@ export const rowsUSD = [
     '-0.28%',
   ],
   [
-    'Finland',
     '2.68',
     '1.29',
     '48.14%',
@@ -354,7 +488,6 @@ export const rowsUSD = [
     '-1.91%',
   ],
   [
-    'France',
     '29.56',
     '14.22',
     '48.13%',
@@ -379,7 +512,6 @@ export const rowsUSD = [
     '3.44%',
   ],
   [
-    'Sweden',
     '5.28',
     '2.51',
     '47.62%',
@@ -404,7 +536,6 @@ export const rowsUSD = [
     '-0.86%',
   ],
   [
-    'United Kingdom',
     '33.23',
     '15.51',
     '46.69%',
@@ -429,7 +560,6 @@ export const rowsUSD = [
     '-0.41%',
   ],
   [
-    'Estonia',
     '0.69',
     '0.34',
     '48.54%',
@@ -454,7 +584,6 @@ export const rowsUSD = [
     '-0.85%',
   ],
   [
-    'Spain',
     '22.82',
     '10.61',
     '46.48%',
@@ -479,7 +608,6 @@ export const rowsUSD = [
     '0.05%',
   ],
   [
-    'Cyprus',
     '0.40',
     '0.19',
     '48.61%',
@@ -504,7 +632,6 @@ export const rowsUSD = [
     '-2.80%',
   ],
   [
-    'Iceland',
     '0.20',
     '0.09',
     '46.87%',
@@ -529,7 +656,6 @@ export const rowsUSD = [
     '-2.29%',
   ],
   [
-    'Turkey',
     '30.52',
     '9.63',
     '31.55%',
@@ -554,7 +680,6 @@ export const rowsUSD = [
     '3.78%',
   ],
   [
-    'New Zealand',
     '2.60',
     '1.23',
     '47.39%',
@@ -579,7 +704,6 @@ export const rowsUSD = [
     '0.91%',
   ],
   [
-    'Netherlands',
     '8.97',
     '4.16',
     '46.42%',
@@ -604,7 +728,6 @@ export const rowsUSD = [
     '-1.74%',
   ],
   [
-    'Canada',
     '19.44',
     '9.20',
     '47.32%',
@@ -629,7 +752,6 @@ export const rowsUSD = [
     '-0.35%',
   ],
   [
-    'Croatia',
     '1.76',
     '0.81',
     '46.04%',
@@ -654,7 +776,6 @@ export const rowsUSD = [
     '4.70%',
   ],
   [
-    'Ireland',
     '2.19',
     '0.99',
     '45.09%',
@@ -679,7 +800,6 @@ export const rowsUSD = [
     '0.80%',
   ],
   [
-    'Austria',
     '4.49',
     '2.10',
     '46.82%',
@@ -704,7 +824,6 @@ export const rowsUSD = [
     '-2.22%',
   ],
   [
-    'Bulgaria',
     '3.31',
     '1.55',
     '46.91%',
@@ -729,7 +848,6 @@ export const rowsUSD = [
     '2.40%',
   ],
   [
-    'Korea, South',
     '27.25',
     '11.53',
     '42.31%',
@@ -754,7 +872,6 @@ export const rowsUSD = [
     '-2.43%',
   ],
   [
-    'Mexico',
     '53.68',
     '20.50',
     '38.20%',
@@ -779,7 +896,6 @@ export const rowsUSD = [
     '5.04%',
   ],
   [
-    'Norway',
     '2.77',
     '1.30',
     '47.03%',
@@ -804,7 +920,6 @@ export const rowsUSD = [
     '-1.07%',
   ],
   [
-    'Switzerland',
     '4.84',
     '2.26',
     '46.60%',
@@ -829,7 +944,6 @@ export const rowsUSD = [
     '-1.23%',
   ],
   [
-    'Chile',
     '8.68',
     '3.56',
     '41.04%',
@@ -854,7 +968,6 @@ export const rowsUSD = [
     '5.05%',
   ],
   [
-    'Israel',
     '3.93',
     '1.86',
     '47.30%',
@@ -879,7 +992,6 @@ export const rowsUSD = [
     '1.13%',
   ],
   [
-    'Belgium',
     '4.98',
     '2.29',
     '46.11%',
@@ -904,7 +1016,6 @@ export const rowsUSD = [
     '-2.12%',
   ],
   [
-    'Germany',
     '43.04',
     '19.95',
     '46.35%',
@@ -929,7 +1040,6 @@ export const rowsUSD = [
     '-0.57%',
   ],
   [
-    'Japan',
     '66.73',
     '28.92',
     '43.34%',
@@ -954,7 +1064,6 @@ export const rowsUSD = [
     '-2.95%',
   ],
   [
-    'Denmark',
     '3.03',
     '1.43',
     '47.30%',
@@ -979,7 +1088,6 @@ export const rowsUSD = [
     '-1.93%',
   ],
   [
-    'Australia',
     '12.67',
     '5.88',
     '46.45%',
@@ -1004,7 +1112,6 @@ export const rowsUSD = [
     '-1.04%',
   ],
   [
-    'Malta',
     '0.21',
     '0.08',
     '39.17%',
@@ -1029,7 +1136,6 @@ export const rowsUSD = [
     '3.40%',
   ],
   [
-    'Slovenia',
     '0.99',
     '0.46',
     '46.62%',
@@ -1054,7 +1160,6 @@ export const rowsUSD = [
     '7.15%',
   ],
   [
-    'Hungary',
     '4.59',
     '2.10',
     '45.71%',
@@ -1079,7 +1184,6 @@ export const rowsUSD = [
     '-0.23%',
   ],
   [
-    'Italy',
     '25.77',
     '10.92',
     '42.37%',
@@ -1104,7 +1208,6 @@ export const rowsUSD = [
     '-2.12%',
   ],
   [
-    'Czech Republic',
     '5.35',
     '2.37',
     '44.35%',
@@ -1129,7 +1232,6 @@ export const rowsUSD = [
     '0.78%',
   ],
   [
-    'Romania',
     '9.16',
     '3.93',
     '42.87%',
@@ -1154,7 +1256,6 @@ export const rowsUSD = [
     '-3.00%',
   ],
   [
-    'Luxembourg',
     '0.28',
     '0.13',
     '45.32%',
@@ -1179,7 +1280,6 @@ export const rowsUSD = [
     '-1.15%',
   ],
   [
-    'Slovak Republic',
     '2.76',
     '1.25',
     '45.24%',
@@ -1204,7 +1304,6 @@ export const rowsUSD = [
     '-1.47%',
   ],
   [
-    'Greece',
     '4.80',
     '2.15',
     '44.70%',
@@ -1229,7 +1328,6 @@ export const rowsUSD = [
     '-2.96%',
   ],
   [
-    'Lithuania',
     '1.48',
     '0.76',
     '51.17%',
@@ -1254,7 +1352,6 @@ export const rowsUSD = [
     '1.58%',
   ],
   [
-    'Poland',
     '17.26',
     '7.75',
     '44.88%',
@@ -1282,7 +1379,6 @@ export const rowsUSD = [
 
 export const rowsGBP = [
   [
-    'Portugal',
     '5.18',
     '2.53',
     '48.78%',
@@ -1307,7 +1403,6 @@ export const rowsGBP = [
     '5.23%',
   ],
   [
-    'United States',
     '159.19',
     '74.43',
     '46.76%',
@@ -1332,7 +1427,6 @@ export const rowsGBP = [
     '0.07%',
   ],
   [
-    'Latvia',
     '0.99',
     '0.50',
     '50.25%',
@@ -1357,7 +1451,6 @@ export const rowsGBP = [
     '-0.28%',
   ],
   [
-    'Finland',
     '2.68',
     '1.29',
     '48.14%',
@@ -1382,7 +1475,6 @@ export const rowsGBP = [
     '-1.91%',
   ],
   [
-    'France',
     '29.56',
     '14.22',
     '48.13%',
@@ -1407,7 +1499,6 @@ export const rowsGBP = [
     '3.44%',
   ],
   [
-    'Sweden',
     '5.28',
     '2.51',
     '47.62%',
@@ -1432,7 +1523,6 @@ export const rowsGBP = [
     '-0.86%',
   ],
   [
-    'United Kingdom',
     '33.23',
     '15.51',
     '46.69%',
@@ -1457,7 +1547,6 @@ export const rowsGBP = [
     '-0.41%',
   ],
   [
-    'Estonia',
     '0.69',
     '0.34',
     '48.54%',
@@ -1482,7 +1571,6 @@ export const rowsGBP = [
     '-0.85%',
   ],
   [
-    'Spain',
     '22.82',
     '10.61',
     '46.48%',
@@ -1507,7 +1595,6 @@ export const rowsGBP = [
     '0.05%',
   ],
   [
-    'Cyprus',
     '0.40',
     '0.19',
     '48.61%',
@@ -1532,7 +1619,6 @@ export const rowsGBP = [
     '-2.80%',
   ],
   [
-    'Iceland',
     '0.20',
     '0.09',
     '46.87%',
@@ -1557,7 +1643,6 @@ export const rowsGBP = [
     '-2.29%',
   ],
   [
-    'Turkey',
     '30.52',
     '9.63',
     '31.55%',
@@ -1582,7 +1667,6 @@ export const rowsGBP = [
     '3.78%',
   ],
   [
-    'New Zealand',
     '2.60',
     '1.23',
     '47.39%',
@@ -1607,7 +1691,6 @@ export const rowsGBP = [
     '0.91%',
   ],
   [
-    'Netherlands',
     '8.97',
     '4.16',
     '46.42%',
@@ -1632,7 +1715,6 @@ export const rowsGBP = [
     '-1.74%',
   ],
   [
-    'Canada',
     '19.44',
     '9.20',
     '47.32%',
@@ -1657,7 +1739,6 @@ export const rowsGBP = [
     '-0.35%',
   ],
   [
-    'Croatia',
     '1.76',
     '0.81',
     '46.04%',
@@ -1682,7 +1763,6 @@ export const rowsGBP = [
     '4.70%',
   ],
   [
-    'Ireland',
     '2.19',
     '0.99',
     '45.09%',
@@ -1707,7 +1787,6 @@ export const rowsGBP = [
     '0.80%',
   ],
   [
-    'Austria',
     '4.49',
     '2.10',
     '46.82%',
@@ -1732,7 +1811,6 @@ export const rowsGBP = [
     '-2.22%',
   ],
   [
-    'Bulgaria',
     '3.31',
     '1.55',
     '46.91%',
@@ -1757,7 +1835,6 @@ export const rowsGBP = [
     '2.40%',
   ],
   [
-    'Korea, South',
     '27.25',
     '11.53',
     '42.31%',
@@ -1782,7 +1859,6 @@ export const rowsGBP = [
     '-2.43%',
   ],
   [
-    'Mexico',
     '53.68',
     '20.50',
     '38.20%',
@@ -1807,7 +1883,6 @@ export const rowsGBP = [
     '5.04%',
   ],
   [
-    'Norway',
     '2.77',
     '1.30',
     '47.03%',
@@ -1832,7 +1907,6 @@ export const rowsGBP = [
     '-1.07%',
   ],
   [
-    'Switzerland',
     '4.84',
     '2.26',
     '46.60%',
@@ -1857,7 +1931,6 @@ export const rowsGBP = [
     '-1.23%',
   ],
   [
-    'Chile',
     '8.68',
     '3.56',
     '41.04%',
@@ -1882,7 +1955,6 @@ export const rowsGBP = [
     '5.05%',
   ],
   [
-    'Israel',
     '3.93',
     '1.86',
     '47.30%',
@@ -1907,7 +1979,6 @@ export const rowsGBP = [
     '1.13%',
   ],
   [
-    'Belgium',
     '4.98',
     '2.29',
     '46.11%',
@@ -1932,7 +2003,6 @@ export const rowsGBP = [
     '-2.12%',
   ],
   [
-    'Germany',
     '43.04',
     '19.95',
     '46.35%',
@@ -1957,7 +2027,6 @@ export const rowsGBP = [
     '-0.57%',
   ],
   [
-    'Japan',
     '66.73',
     '28.92',
     '43.34%',
@@ -1982,7 +2051,6 @@ export const rowsGBP = [
     '-2.95%',
   ],
   [
-    'Denmark',
     '3.03',
     '1.43',
     '47.30%',
@@ -2007,7 +2075,6 @@ export const rowsGBP = [
     '-1.93%',
   ],
   [
-    'Australia',
     '12.67',
     '5.88',
     '46.45%',
@@ -2032,7 +2099,6 @@ export const rowsGBP = [
     '-1.04%',
   ],
   [
-    'Malta',
     '0.21',
     '0.08',
     '39.17%',
@@ -2057,7 +2123,6 @@ export const rowsGBP = [
     '3.40%',
   ],
   [
-    'Slovenia',
     '0.99',
     '0.46',
     '46.62%',
@@ -2082,7 +2147,6 @@ export const rowsGBP = [
     '7.15%',
   ],
   [
-    'Hungary',
     '4.59',
     '2.10',
     '45.71%',
@@ -2107,7 +2171,6 @@ export const rowsGBP = [
     '-0.23%',
   ],
   [
-    'Italy',
     '25.77',
     '10.92',
     '42.37%',
@@ -2132,7 +2195,6 @@ export const rowsGBP = [
     '-2.12%',
   ],
   [
-    'Czech Republic',
     '5.35',
     '2.37',
     '44.35%',
@@ -2157,7 +2219,6 @@ export const rowsGBP = [
     '0.78%',
   ],
   [
-    'Romania',
     '9.16',
     '3.93',
     '42.87%',
@@ -2182,7 +2243,6 @@ export const rowsGBP = [
     '-3.00%',
   ],
   [
-    'Luxembourg',
     '0.28',
     '0.13',
     '45.32%',
@@ -2207,7 +2267,6 @@ export const rowsGBP = [
     '-1.15%',
   ],
   [
-    'Slovak Republic',
     '2.76',
     '1.25',
     '45.24%',
@@ -2232,7 +2291,6 @@ export const rowsGBP = [
     '-1.47%',
   ],
   [
-    'Greece',
     '4.80',
     '2.15',
     '44.70%',
@@ -2257,7 +2315,6 @@ export const rowsGBP = [
     '-2.96%',
   ],
   [
-    'Lithuania',
     '1.48',
     '0.76',
     '51.17%',
@@ -2282,7 +2339,6 @@ export const rowsGBP = [
     '1.58%',
   ],
   [
-    'Poland',
     '17.26',
     '7.75',
     '44.88%',
@@ -2310,7 +2366,6 @@ export const rowsGBP = [
 
 export const rowsEUR = [
   [
-    'Portugal',
     '5,18',
     '2,53',
     '48,78%',
@@ -2335,7 +2390,6 @@ export const rowsEUR = [
     '5,23%',
   ],
   [
-    'United States',
     '159,19',
     '74,43',
     '46,76%',
@@ -2360,7 +2414,6 @@ export const rowsEUR = [
     '0,07%',
   ],
   [
-    'Latvia',
     '0,99',
     '0,50',
     '50,25%',
@@ -2385,7 +2438,6 @@ export const rowsEUR = [
     '-0,28%',
   ],
   [
-    'Finland',
     '2,68',
     '1,29',
     '48,14%',
@@ -2410,7 +2462,6 @@ export const rowsEUR = [
     '-1,91%',
   ],
   [
-    'France',
     '29,56',
     '14,22',
     '48,13%',
@@ -2435,7 +2486,6 @@ export const rowsEUR = [
     '3,44%',
   ],
   [
-    'Sweden',
     '5,28',
     '2,51',
     '47,62%',
@@ -2460,7 +2510,6 @@ export const rowsEUR = [
     '-0,86%',
   ],
   [
-    'United Kingdom',
     '33,23',
     '15,51',
     '46,69%',
@@ -2485,7 +2534,6 @@ export const rowsEUR = [
     '-0,41%',
   ],
   [
-    'Estonia',
     '0,69',
     '0,34',
     '48,54%',
@@ -2510,7 +2558,6 @@ export const rowsEUR = [
     '-0,85%',
   ],
   [
-    'Spain',
     '22,82',
     '10,61',
     '46,48%',
@@ -2535,7 +2582,6 @@ export const rowsEUR = [
     '0,05%',
   ],
   [
-    'Cyprus',
     '0,40',
     '0,19',
     '48,61%',
@@ -2560,7 +2606,6 @@ export const rowsEUR = [
     '-2,80%',
   ],
   [
-    'Iceland',
     '0,20',
     '0,09',
     '46,87%',
@@ -2585,7 +2630,6 @@ export const rowsEUR = [
     '-2,29%',
   ],
   [
-    'Turkey',
     '30,52',
     '9,63',
     '31,55%',
@@ -2610,7 +2654,6 @@ export const rowsEUR = [
     '3,78%',
   ],
   [
-    'New Zealand',
     '2,60',
     '1,23',
     '47,39%',
@@ -2635,7 +2678,6 @@ export const rowsEUR = [
     '0,91%',
   ],
   [
-    'Netherlands',
     '8,97',
     '4,16',
     '46,42%',
@@ -2660,7 +2702,6 @@ export const rowsEUR = [
     '-1,74%',
   ],
   [
-    'Canada',
     '19,44',
     '9,20',
     '47,32%',
@@ -2685,7 +2726,6 @@ export const rowsEUR = [
     '-0,35%',
   ],
   [
-    'Croatia',
     '1,76',
     '0,81',
     '46,04%',
@@ -2710,7 +2750,6 @@ export const rowsEUR = [
     '4,70%',
   ],
   [
-    'Ireland',
     '2,19',
     '0,99',
     '45,09%',
@@ -2735,7 +2774,6 @@ export const rowsEUR = [
     '0,80%',
   ],
   [
-    'Austria',
     '4,49',
     '2,10',
     '46,82%',
@@ -2760,7 +2798,6 @@ export const rowsEUR = [
     '-2,22%',
   ],
   [
-    'Bulgaria',
     '3,31',
     '1,55',
     '46,91%',
@@ -2785,7 +2822,6 @@ export const rowsEUR = [
     '2,40%',
   ],
   [
-    'Korea, South',
     '27,25',
     '11,53',
     '42,31%',
@@ -2810,7 +2846,6 @@ export const rowsEUR = [
     '-2,43%',
   ],
   [
-    'Mexico',
     '53,68',
     '20,50',
     '38,20%',
@@ -2835,7 +2870,6 @@ export const rowsEUR = [
     '5,04%',
   ],
   [
-    'Norway',
     '2,77',
     '1,30',
     '47,03%',
@@ -2860,7 +2894,6 @@ export const rowsEUR = [
     '-1,07%',
   ],
   [
-    'Switzerland',
     '4,84',
     '2,26',
     '46,60%',
@@ -2885,7 +2918,6 @@ export const rowsEUR = [
     '-1,23%',
   ],
   [
-    'Chile',
     '8,68',
     '3,56',
     '41,04%',
@@ -2910,7 +2942,6 @@ export const rowsEUR = [
     '5,05%',
   ],
   [
-    'Israel',
     '3,93',
     '1,86',
     '47,30%',
@@ -2935,7 +2966,6 @@ export const rowsEUR = [
     '1,13%',
   ],
   [
-    'Belgium',
     '4,98',
     '2,29',
     '46,11%',
@@ -2960,7 +2990,6 @@ export const rowsEUR = [
     '-2,12%',
   ],
   [
-    'Germany',
     '43,04',
     '19,95',
     '46,35%',
@@ -2985,7 +3014,6 @@ export const rowsEUR = [
     '-0,57%',
   ],
   [
-    'Japan',
     '66,73',
     '28,92',
     '43,34%',
@@ -3010,7 +3038,6 @@ export const rowsEUR = [
     '-2,95%',
   ],
   [
-    'Denmark',
     '3,03',
     '1,43',
     '47,30%',
@@ -3035,7 +3062,6 @@ export const rowsEUR = [
     '-1,93%',
   ],
   [
-    'Australia',
     '12,67',
     '5,88',
     '46,45%',
@@ -3060,7 +3086,6 @@ export const rowsEUR = [
     '-1,04%',
   ],
   [
-    'Malta',
     '0,21',
     '0,08',
     '39,17%',
@@ -3085,7 +3110,6 @@ export const rowsEUR = [
     '3,40%',
   ],
   [
-    'Slovenia',
     '0,99',
     '0,46',
     '46,62%',
@@ -3110,7 +3134,6 @@ export const rowsEUR = [
     '7,15%',
   ],
   [
-    'Hungary',
     '4,59',
     '2,10',
     '45,71%',
@@ -3135,7 +3158,6 @@ export const rowsEUR = [
     '-0,23%',
   ],
   [
-    'Italy',
     '25,77',
     '10,92',
     '42,37%',
@@ -3160,7 +3182,6 @@ export const rowsEUR = [
     '-2,12%',
   ],
   [
-    'Czech Republic',
     '5,35',
     '2,37',
     '44,35%',
@@ -3185,7 +3206,6 @@ export const rowsEUR = [
     '0,78%',
   ],
   [
-    'Romania',
     '9,16',
     '3,93',
     '42,87%',
@@ -3210,7 +3230,6 @@ export const rowsEUR = [
     '-3,00%',
   ],
   [
-    'Luxembourg',
     '0,28',
     '0,13',
     '45,32%',
@@ -3235,7 +3254,6 @@ export const rowsEUR = [
     '-1,15%',
   ],
   [
-    'Slovak Republic',
     '2,76',
     '1,25',
     '45,24%',
@@ -3260,7 +3278,6 @@ export const rowsEUR = [
     '-1,47%',
   ],
   [
-    'Greece',
     '4,80',
     '2,15',
     '44,70%',
@@ -3285,7 +3302,6 @@ export const rowsEUR = [
     '-2,96%',
   ],
   [
-    'Lithuania',
     '1,48',
     '0,76',
     '51,17%',
@@ -3310,7 +3326,6 @@ export const rowsEUR = [
     '1,58%',
   ],
   [
-    'Poland',
     '17,26',
     '7,75',
     '44,88%',
