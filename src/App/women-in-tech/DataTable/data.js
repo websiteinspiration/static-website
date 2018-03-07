@@ -28,7 +28,7 @@ export const headingGroups = {
     Country: 'Country',
     WorkforceToday: 'Workforce Today',
     TechIndustryToday: 'Tech Industry Today',
-    'Inqualifty&Opportunity': 'Inqualifty & Opportunity',
+    'Inqualifty&Opportunity': 'Inequality & Opportunity',
   },
   de: {
     Country: 'Land',
@@ -235,19 +235,18 @@ export const headings = [
     icon: payGap5YearsAgo,
     bg: theme.orangeHeadBg1,
     title: {
-      en: 'Gender Pay Gap 5 Years Ago',
-      de: 'Geschlechtsspezifisches Lohngefälle vor fünf Jahren',
-      nl: 'Inkomensongelijkheid tussen Mannen en Vrouwen 5 Jaar Geleden',
+      en: 'Gender Pay Gap 2010',
+      de: 'Geschlechtsspezifisches Lohngefälle 2010',
+      nl: 'Inkomensongelijkheid tussen Mannen en Vrouwen in 2010',
     },
   },
   {
     icon: payGapComparison,
     bg: theme.orangeHeadBg1,
     title: {
-      en: 'Comparison of Gender Pay Gap From 5 Years Ago To Today',
-      de:
-        'Vergleich: geschlechtsspezifisches Lohngefälle vor fünf Jahren und aktuellen Daten',
-      nl: 'Vergelijking Inkomensongelijkheid 5 Jaar Geleden en Nu',
+      en: 'Comparison of Gender Pay Gap From 2010 To 2015',
+      de: 'Vergleich der geschlechtsspezifischen Lohngefälle von 2010 und 2015',
+      nl: 'Vergelijking Inkomensongelijkheid tussen 2010 en 2015',
     },
   },
 ]
