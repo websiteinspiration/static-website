@@ -17,6 +17,7 @@ const MainHeader = ({
   title = 'Choose a Job You Love',
   desc = `Choose a Job You Love Description as a placeholder!`,
   navTextColor = `black`,
+  mascotProps = {},
   renderButtons = () => {},
   ...props
 }) => (
@@ -43,7 +44,7 @@ const MainHeader = ({
       wide={true}
       style={{ position: 'relative', zIndex: theme.mascotZIndex }}
     >
-      <Mascot />
+      <Mascot {...mascotProps} />
     </Container>
 
     <BottomMask />
