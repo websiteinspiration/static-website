@@ -78,8 +78,9 @@ export default () => (
                 reproductieve gezondheid, empowerment en
                 arbeidsmarktparticipatie van vrouwen om te komen tot een overall
                 gelijkheidsscore. Om te bepalen of de gelijkheid de afgelopen
-                tijd is toe- of afgenomen, hebben we de inkomensongelijkheid van
-                nu vergeleken met de inkomensongelijkheid vijf jaar geleden.
+                tijd is toe- of afgenomen, hebben we de meest recente
+                beschikbare gegevens over inkomensongelijkheid vergeleken met de
+                inkomensongelijkheid van vijf jaar geleden.
               </p>
 
               <p>
