@@ -91,5 +91,5 @@ const ButtonsWrapper = styled.div`
 `
 
 const CompaniesWrapper = styled.div`
-  margin-top: 60px;
+  margin-top: 40px;
 `

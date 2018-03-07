@@ -1,10 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import Draggable from 'react-draggable'
-import MediaQuery from 'react-responsive'
 
 // Utilities
-import { notMobileMediaString, mobile } from '../../utils/style/media'
+import { mobile, notMobile } from '../../utils/style/media'
 
 // Local
 import Container from '../../shared/Container'
@@ -17,25 +15,9 @@ import kiwi from '../../static/logos/kiwi.svg'
 
 const Companies = () => (
   <Wrapper>
-    <MediaQuery query={notMobileMediaString}>
-      {matches =>
-        matches ? (
-          <Draggable
-            axis="x"
-            defaultPosition={{ x: 130, y: 0 }}
-            bounds={{ left: -130, right: 130 }}
-          >
-            <div>
-              <Logos />
-            </div>
-          </Draggable>
-        ) : (
-          <Container>
-            <Logos />
-          </Container>
-        )
-      }
-    </MediaQuery>
+    <Container narrow={true}>
+      <Logos />
+    </Container>
   </Wrapper>
 )
 
@@ -64,24 +46,11 @@ export const CompaniesNote = () => (
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   overflow: hidden;
-  padding-bottom: 25px;
-  /* TODO calc based on container width */
-  padding-right: calc((100% - 720px) / 2);
-  cursor: ew-resize;
 
   ${mobile(css`
     padding-right: 0;
-  `)};
-`
-
-const LogosWrapper = styled.div`
-  width: 850px;
-  flex: 0 0 auto;
-
-  ${mobile(css`
-    width: auto;
   `)};
 `
 
@@ -112,6 +81,27 @@ const Logo = styled.div`
     margin-right: 30px;
     margin-bottom: 20px;
     height: 25px;
+  `)};
+`
+
+const LogosWrapper = styled.div`
+  width: 930px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  transition: transform 300ms ease;
+
+  ${notMobile(css`
+    &:hover {
+      transform: translateX(-190px);
+
+      ${Logo} {
+        opacity: 0.95;
+      }
+    }
+  `)};
+
+  ${mobile(css`
+    width: auto;
   `)};
 `
 
