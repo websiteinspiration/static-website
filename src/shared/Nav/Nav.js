@@ -31,49 +31,44 @@ class Nav extends React.Component {
       <div>
         {sticky && <Placeholder key="1" />}
         <Wrapper {...props} sticky={sticky}>
-          <Container wide={true}>
-            <InnerNav>
-              <Logo>
-                <Link to="/">
-                  <img
-                    src={sticky ? blackLogo : whitelogo}
-                    alt="Honeypot logo"
-                  />
-                </Link>
-              </Logo>
+          <InnerNav>
+            <Logo>
+              <Link to="/">
+                <img src={sticky ? blackLogo : whitelogo} alt="Honeypot logo" />
+              </Link>
+            </Logo>
 
-              <Space />
+            <Space />
 
-              <MobileNavHandle onClick={this.toggleMobileNav}>
-                <Menu />
-              </MobileNavHandle>
+            <MobileNavHandle onClick={this.toggleMobileNav}>
+              <Menu />
+            </MobileNavHandle>
 
-              <NavItems openOnMobile={openOnMobile}>
-                <NavItem to="/" sticky={sticky}>
-                  Talent
-                </NavItem>
-                <NavItem to="/tech-employer" sticky={sticky}>
-                  Employers
-                </NavItem>
-                <NavItem sticky={sticky}>Community</NavItem>
-                {!sticky && <NavItem sticky={sticky}>Invite a friend</NavItem>}
-                <Separator />
-                <NavButton
-                  outline={true}
-                  sticky={sticky}
-                  href="https://app.honeypot.io/users/login"
-                >
-                  login
-                </NavButton>
-                <NavButton
-                  sticky={sticky}
-                  href="https://www.honeypot.io/users/sign_up"
-                >
-                  sign up
-                </NavButton>
-              </NavItems>
-            </InnerNav>
-          </Container>
+            <NavItems openOnMobile={openOnMobile}>
+              <NavItem to="/" sticky={sticky}>
+                Talent
+              </NavItem>
+              <NavItem to="/tech-employer" sticky={sticky}>
+                Employers
+              </NavItem>
+              <NavItem sticky={sticky}>Community</NavItem>
+              {!sticky && <NavItem sticky={sticky}>Invite a friend</NavItem>}
+              <Separator />
+              <NavButton
+                outline={true}
+                sticky={sticky}
+                href="https://app.honeypot.io/users/login"
+              >
+                login
+              </NavButton>
+              <NavButton
+                sticky={sticky}
+                href="https://www.honeypot.io/users/sign_up"
+              >
+                sign up
+              </NavButton>
+            </NavItems>
+          </InnerNav>
         </Wrapper>
       </div>
     )
@@ -95,6 +90,7 @@ const Wrapper = styled.div`
   height: ${p => p.theme.navHeight}px;
   display: flex;
   align-items: flex-end;
+  padding: 0 50px;
 
   ${p =>
     p.sticky
