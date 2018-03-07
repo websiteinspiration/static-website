@@ -50,14 +50,15 @@ Header.propTypes = {
 export default Header
 
 const Wrapper = styled.header`
-  min-height: 500px;
-  padding-top: 40px;
+  min-height: 400px;
+  padding-top: 30px;
   margin-bottom: 30px;
   background: bottom center no-repeat / auto auto url(${mask}),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.37) 100%),
     top 20% center no-repeat / cover url(${bg});
 
   ${mobile(css`
-    min-height: 300px;
+    min-height: 260px;
     background: top 20% center no-repeat / cover url(${bg});
     margin-bottom: 50px;
   `)};
@@ -66,15 +67,15 @@ const Wrapper = styled.header`
 const LogoWrapper = styled.div``
 
 const TitleWrapper = styled.div`
-  margin-top: 70px;
+  margin-top: 35px;
 
   ${mobile(css`
-    margin-top: 20px;
+    margin-top: 10px;
   `)};
 `
 
 const titleStyles = {
-  fontSize: 80,
+  fontSize: 65,
   fontWeight: 600,
   lineHeight: 1.1,
   maxWidth: 590,
