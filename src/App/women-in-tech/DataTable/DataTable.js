@@ -19,7 +19,7 @@ export default class DataTable extends Component {
     this.wrapper = null
     this.state = {
       rows: rows[props.currency],
-      sortedIndex: 19,
+      sortedIndex: 18,
       isReversed: false,
       // Scroll flags
       scrollEndRight: false,
