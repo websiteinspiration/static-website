@@ -54,7 +54,7 @@ const Wrapper = styled.header`
   padding-top: 30px;
   margin-bottom: 30px;
   background: bottom center no-repeat / auto auto url(${mask}),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.37) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.2) 100%),
     top 20% center no-repeat / cover url(${bg});
 
   ${mobile(css`
