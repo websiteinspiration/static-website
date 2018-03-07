@@ -12,7 +12,7 @@ import Card from './Card'
 const TalentSteps = props => (
   <Wrapper {...props}>
     <Container>
-      <Title align="left">Create Profile and let Companies Apply to You!</Title>
+      <Title align="left">A Simple and Quick Sign Up Process!</Title>
 
       <CardsWrapper>
         <CardWrapper>
@@ -25,21 +25,21 @@ const TalentSteps = props => (
         <CardWrapper>
           <Card
             title="Join the Community"
-            text="Pass our code screening and take an optional call with our Talent Reps. We help position you to receive the best offers possible!"
+            text="Pass our code screening and take an optional call with your Talent Rep, who positions you to receive the best offers!"
             topLineBackground="linear-gradient(-180deg, #FFEBB1 0%, #FEC829 100%)"
           />
         </CardWrapper>
         <CardWrapper>
           <Card
             title="Become Visible"
-            text="Become Visible on Honeypot for three weeks. We keep it short to make your search simple"
+            text="Become Visible on Honeypot for three weeks. We keep it short to make your search simple!"
             topLineBackground="linear-gradient(-180deg, #7CB9F1 0%, #418FD9 100%)"
           />
         </CardWrapper>
         <CardWrapper>
           <Card
-            title="Get Hired"
-            text="Interview with companies that interest you! And choose the one you like the best"
+            title="Get Hired!"
+            text="Interview with companies that interest you! And choose the one you like the best!"
             topLineBackground="linear-gradient(-180deg, #F796BF 0%, #FF0A71 100%)"
           />
         </CardWrapper>
@@ -58,6 +58,7 @@ const Wrapper = styled.section`
 const CardsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
   margin-top: 50px;
 
   ${mobile(css`
@@ -69,6 +70,8 @@ const CardsWrapper = styled.div`
 const CardWrapper = styled.div`
   flex: 1 1 33%;
   margin-right: 25px;
+  display: flex;
+  align-items: stretch;
 
   &:last-child {
     margin-right: 0;

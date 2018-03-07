@@ -18,27 +18,27 @@ import PinLine from '../../../shared/vectors/PinLine'
 const TalentBenefits = props => (
   <Wrapper {...props}>
     <Container>
-      <Title>Create Profile and let Companies Apply to You!</Title>
+      <Title>Create Profile and let Companies Apply to You</Title>
 
       <CardsWrapper>
         <CardWrapper>
           <Card
-            title="Join an Engineering Team in Your Ideal Role."
-            text="On Honeypot, over 1000 companies are hiring Software Developers, DevOps,Data Scientists, Product Owners, QA and Engineering Leaders just like you!"
+            title="Join an Engineering Team in Your Ideal Role"
+            text="On Honeypot, over 1000 companies are hiring Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers and Engineering Leaders just like you!"
             renderIcon={() => <PersonLine />}
           />
         </CardWrapper>
         <CardWrapper>
           <Card
-            title="Work with a Tech Stack You Love."
-            text="Whether it’s Ruby, Scala, PHP, JavaScript or anything else, we make sure you only get offers from companies for your preferred tech stack and desired salary."
+            title="Work with a Tech Stack You Love"
+            text="Whether it’s Ruby, Scala, JavaScript or anything else, on Honeypot you only get offers from companies for your preferred tech stack and desired salary."
             renderIcon={() => <ToolLine />}
           />
         </CardWrapper>
         <CardWrapper>
           <Card
-            title="Choose the Location that Suits you."
-            text="Honeypot operates in Europe’s most exciting tech cities, across Germany and the Netherlands."
+            title="Choose the Locations that Suit You"
+            text="Honeypot operates in Europe’s most exciting tech cities, across Germany, the Netherlands. Set your location preference and companies apply to you!"
             renderIcon={() => <PinLine />}
           />
         </CardWrapper>

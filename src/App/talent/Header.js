@@ -18,7 +18,7 @@ class Header extends React.Component {
         bg="linear-gradient(-158deg, #5dc0f9 0%, #418fd9 75%)"
         navTextColor={theme.blue}
         title="Choose a Job You Love"
-        desc="Honeypot is Europe’s tech job platform for Software Developers, DevOps, Data Scientists, Product Owners, QA and Engineering Leaders."
+        desc="Honeypot is Europe’s tech job platform for Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engineering Leaders and CTOs."
         mascotProps={{ happy: primaryHovered }}
         renderButtons={() => [
           <Button
@@ -28,10 +28,10 @@ class Header extends React.Component {
             onMouseEnter={() => this.setState({ primaryHovered: true })}
             onMouseLeave={() => this.setState({ primaryHovered: false })}
           >
-            Find a Job
+            Find me a Job!
           </Button>,
           <Button key={2} white={true} linkStyle={true} to="/tech-employer">
-            I'm hiring
+            I'm Hiring!
           </Button>,
         ]}
       />

@@ -8,7 +8,6 @@ import { mobile } from '../../utils/style/media'
 
 // Local
 import Menu from '../../shared/vectors/Menu'
-import Container from '../../shared/Container'
 import NavButton from './NavButton'
 import NavItem from './NavItem'
 
