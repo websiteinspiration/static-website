@@ -34,9 +34,9 @@ export default ({ location }) => (
               </p>
 
               <p>
-                Die Studie umfasst 41 Länder der OECD und der EU und enthält
+                Die Studie umfasst 41 Länder der OECD sowie der EU und enthält
                 vergleichbare Daten über die IT-Branche und das Lohngefälle. Die
-                Daten umfassen folgende Bereiche: "
+                Daten umfassen folgende Bereiche:
               </p>
 
               <ul>
@@ -75,28 +75,26 @@ export default ({ location }) => (
                 identifizieren, die Hürden für Frauen darstellen und um die
                 vielversprechendsten Chancen für Frauen hervorzuheben. Der Index
                 untersucht die reproduktive Gesundheit von Frauen sowie ihre
-                wirtschaftliche Emanzipation und Teilnahme am Arbeitsmarkt und
+                wirtschaftliche Emanzipation sowie Teilnahme am Arbeitsmarkt und
                 ermöglicht Schlussfolgerungen über die Gleichberechtigung
-                allgemein. Um festzustellen, ob die Gleichberechtigung in der
-                Vergangenheit zu- oder abgenommen hat, wurde zudem das
-                geschlechtsspezifische Lohngefälle von vor fünf Jahren mit den
-                aktuellen Daten der Studie verglichen.
+                allgemein. Um zu ermitteln, ob die Gleichstellung von Männern
+                und Frauen in den vergangenen Jahren besser oder.
               </p>
 
               <p>
-                “Das geschlechtsspezifische Lohngefälle in der IT-Branche
-                beträgt in Deutschland 25 %. Dies stellt den schlechtesten Wert
-                in Westeuropa dar und ist doppelt so hoch wie in Belgien und
-                Frankreich, wo die Lohnlücke zwischen Männern und Frauen 11,8 %
-                beträgt. Dies deutet darauf hin, dass der IT-Sektor in
-                Deutschland in Sachen Gleichberechtigung hinter anderen
-                westlichen Ländern zurückliegt”, sagt Emma Tracey, Co-Founder
-                von Honeypot. “Zwar unternimmt die deutsche Regierung Schritte,
-                die sich positiv auf die Gleichberechtigung in der Wirtschaft
-                auswirken sollen, wie das Lohntransparenzgesetz, das im Juli
-                2017 in Kraft getreten ist, jedoch bleibt abzuwarten, ob dieses
-                tatsächlich Wirkung zeigt oder lediglich zu mehr Bürokratie
-                führt.“
+                &nbsp;&nbsp;&nbsp;&nbsp;„Das geschlechtsspezifische Lohngefälle
+                in der IT-Branche beträgt in Deutschland 25 %. Dies stellt den
+                schlechtesten Wert in Westeuropa dar und ist doppelt so hoch wie
+                in Belgien und Frankreich, wo die Lohnlücke zwischen Männern und
+                Frauen 11,8 % beträgt. Dies deutet darauf hin, dass der
+                IT-Sektor in Deutschland in Sachen Gleichberechtigung hinter
+                anderen westlichen Ländern zurückliegt”, sagt Emma Tracey,
+                Co-Founder von Honeypot. „Zwar unternimmt die deutsche Regierung
+                Schritte, die sich positiv auf die Gleichberechtigung in der
+                Wirtschaft auswirken sollen, wie das Lohntransparenzgesetz, das
+                im Juli 2017 in Kraft getreten ist, jedoch bleibt abzuwarten, ob
+                dieses tatsächlich Wirkung zeigt oder lediglich zu mehr
+                Bürokratie führt.“
               </p>
 
               <p>
@@ -174,8 +172,8 @@ export default ({ location }) => (
                 <li>
                   <strong>Frauen in Ministerämtern (in %):</strong> Report des
                   Weltwirtschaftsforums: Prozentualer Frauentanteil in
-                  Ministerämtern, wie Premierminister oder Finanzminister. In
-                  einigen Fällen können Überschneidungen vorkommen, falls ein
+                  Ministerämtern, wie Premierminister in oder Finanzministerin.
+                  In einigen Fällen können Überschneidungen vorkommen, falls ein
                   Ministeramt vom Staatsoberhaupt besetzt wird. Quelle:
                   Interparlamentarische Union, „Women in Politics 2015”,
                   berücksichtigt wurden Benennungen bis zum 1. Januar 2015. Die
@@ -188,7 +186,8 @@ export default ({ location }) => (
                   </strong>{' '}
                   Das Durchschnittsgehalt von Männern und Frauen für alle Berufe
                   und der prozentuale Unterschied zwischen beiden Geschlechtern
-                  wird als geschlechtsspezifisches Lohngefälle bezeichnet.
+                  wird als geschlechtsspezifisches Lohngefälle bezeichnet. Dafür
+                  wurden die aktuellsten, verfügbaren Daten genutzt (2015).
                   Quellen: OECD, Eurostat. Der Durchschnitt beider Quellen.
                   Eurostat: Der Unterschied zwischen den durchschnittlichen
                   Bruttostundenlöhnen von Männern und Frauen, dargestellt als
@@ -241,7 +240,7 @@ export default ({ location }) => (
                   Untersucht wird der prozentuale Anteil von Frauen und Männern
                   unter Absolventen von ISCED-5-8-Studiengängen der Mathematik,
                   Informatik, Naturwissenschaft und Technik (prozentualer Anteil
-                  aller Absolventen).
+                  aller Absolventen und Absolventinnen).
                 </li>
                 <li>
                   <strong>Durchschnittsgehalt in der IT-Branche (in €):</strong>{' '}
@@ -290,10 +289,7 @@ export default ({ location }) => (
                   Quelle: Human Development Report.
                 </li>
                 <li>
-                  <strong>
-                    Geschlechtsspezifisches Lohngefälle fünf Jahren vor
-                    aktuellen Daten:
-                  </strong>{' '}
+                  <strong>Geschlechtsspezifisches Lohngefälle 2010:</strong>{' '}
                   Geschlechtsspezifisches Lohngefälle (wie oben definiert),
                   Daten von 2010 (Daten über das aktuelle Lohngefälle sind von
                   2015). Im Fall von Chile von 2011, da keine Daten für 2010
@@ -301,8 +297,8 @@ export default ({ location }) => (
                 </li>
                 <li>
                   <strong>
-                    Vergleich des geschlechtsspezifischen Lohngefälles vor fünf
-                    Jahren mit den aktuellen Daten:
+                    Vergleich der geschlechtsspezifischen Lohngefälle von 2010
+                    und 2015:
                   </strong>{' '}
                   Differenz zwischen dem aktuellen Lohngefälle der Studie und
                   der Lohnlücke fünf Jahre früher. Ein positiver Wert steht für
