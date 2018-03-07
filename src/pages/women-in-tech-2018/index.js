@@ -313,6 +313,13 @@ export default ({ currency = '$' }) => {
                     I.E. the gender pay gap has increased. A negative number
                     implies that the gender pay gap has decreased.
                   </li>
+
+                  <li>
+                    <em>
+                      Exchange rate correct as of 26.02.2018. 1 USD =0.81 Euro,
+                      0.71 British Pound.
+                    </em>
+                  </li>
                 </ul>
               </TextContent>
             </FlexWrapper>
