@@ -82,8 +82,8 @@ class Nav extends React.Component {
 export default Nav
 
 const fadeInDown = keyframes`
-  from { opacity: 0; transform: translateY(-100px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translate3d(0, -100px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
 `
 
 const Wrapper = styled.div`
