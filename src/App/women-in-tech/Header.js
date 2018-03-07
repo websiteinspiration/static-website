@@ -14,9 +14,12 @@ import Container from './Container'
 import bg from '../../static/images/women-in-tech.jpg'
 import mask from '../../static/graphics/curved-mask-flat.svg'
 import logo from '../../static/honeypot-white-logo.svg'
+import Seo from '../../shared/Seo'
 
 const Header = props => (
   <Wrapper {...props}>
+    <Seo pageTitle={props.title} />
+
     <Container wide={true}>
       <LogoWrapper>
         <a href="https://honeypot.io" title="Tech Jobs in Europe - Honeypot">
