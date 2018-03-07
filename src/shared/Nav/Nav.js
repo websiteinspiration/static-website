@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import Link from 'gatsby-link'
 
 // Utilities
@@ -28,48 +28,54 @@ class Nav extends React.Component {
     const { openOnMobile } = this.state
 
     return (
-      <Wrapper {...props} sticky={sticky}>
-        <Container wide={true}>
-          <InnerNav>
-            <Logo>
-              <Link to="/">
-                <img src={sticky ? blackLogo : whitelogo} alt="Honeypot logo" />
-              </Link>
-            </Logo>
+      <div>
+        {sticky && <Placeholder key="1" />}
+        <Wrapper {...props} sticky={sticky}>
+          <Container wide={true}>
+            <InnerNav>
+              <Logo>
+                <Link to="/">
+                  <img
+                    src={sticky ? blackLogo : whitelogo}
+                    alt="Honeypot logo"
+                  />
+                </Link>
+              </Logo>
 
-            <Space />
+              <Space />
 
-            <MobileNavHandle onClick={this.toggleMobileNav}>
-              <Menu />
-            </MobileNavHandle>
+              <MobileNavHandle onClick={this.toggleMobileNav}>
+                <Menu />
+              </MobileNavHandle>
 
-            <NavItems openOnMobile={openOnMobile}>
-              <NavItem to="/" sticky={sticky}>
-                Talent
-              </NavItem>
-              <NavItem to="/tech-employer" sticky={sticky}>
-                Employers
-              </NavItem>
-              <NavItem sticky={sticky}>Community</NavItem>
-              <NavItem sticky={sticky}>Invite a friend</NavItem>
-              <Separator />
-              <NavButton
-                outline={true}
-                sticky={sticky}
-                href="https://app.honeypot.io/users/login"
-              >
-                login
-              </NavButton>
-              <NavButton
-                sticky={sticky}
-                href="https://www.honeypot.io/users/sign_up"
-              >
-                sign up
-              </NavButton>
-            </NavItems>
-          </InnerNav>
-        </Container>
-      </Wrapper>
+              <NavItems openOnMobile={openOnMobile}>
+                <NavItem to="/" sticky={sticky}>
+                  Talent
+                </NavItem>
+                <NavItem to="/tech-employer" sticky={sticky}>
+                  Employers
+                </NavItem>
+                <NavItem sticky={sticky}>Community</NavItem>
+                {!sticky && <NavItem sticky={sticky}>Invite a friend</NavItem>}
+                <Separator />
+                <NavButton
+                  outline={true}
+                  sticky={sticky}
+                  href="https://app.honeypot.io/users/login"
+                >
+                  login
+                </NavButton>
+                <NavButton
+                  sticky={sticky}
+                  href="https://www.honeypot.io/users/sign_up"
+                >
+                  sign up
+                </NavButton>
+              </NavItems>
+            </InnerNav>
+          </Container>
+        </Wrapper>
+      </div>
     )
   }
 
@@ -80,26 +86,34 @@ class Nav extends React.Component {
 
 export default Nav
 
+const fadeInDown = keyframes`
+  from { opacity: 0; transform: translateY(-100px); }
+  to { opacity: 1; transform: translateY(0); }
+`
+
 const Wrapper = styled.div`
   height: ${p => p.theme.navHeight}px;
   display: flex;
   align-items: flex-end;
 
-  top: -${p => p.theme.navHeight}px;
-  transition: background 100ms, top 150ms;
-
   ${p =>
     p.sticky
       ? css`
+          height: ${p.theme.innerNavHeight + 10}px;
           position: fixed;
           top: 0;
           left: 0;
           right: 0;
-          background: white;
+          background: rgba(255, 255, 255, 0.94);
           box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.07);
           z-index: ${p => p.theme.stickyNavZIndex};
+          animation: ${fadeInDown} 300ms ease;
         `
       : null};
+`
+
+const Placeholder = styled.div`
+  height: ${p => p.theme.navHeight}px;
 `
 
 const InnerNav = styled.nav`
