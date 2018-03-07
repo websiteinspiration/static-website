@@ -16,6 +16,7 @@ const borders = css`
 export const TableScrollWrapper = styled.div`
   width: 100%;
   overflow: auto;
+  position: relative;
 
   ${mobile(css`
     height: 400px;
@@ -28,6 +29,7 @@ export const Table = styled.table`
   min-width: 1400px;
   table-layout: fixed;
   border-collapse: collapse;
+  margin-bottom: 0;
 
   tbody tr:nth-child(2n + 1) td,
   tbody tr:nth-child(2n + 1) th {
@@ -53,20 +55,18 @@ export const GroupHeadCell = styled.th`
   border-bottom: none;
   z-index: ${p => p.theme.topHeadersZIndex};
 
-  ${mobile(css`
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
 
-    ${p =>
-      p.topLeftCorner
-        ? css`
-            width: 180px;
-            left: 0;
-            z-index: ${p => p.theme.topLeftCornerZIndex};
-            background: white;
-          `
-        : null};
-  `)};
+  ${p =>
+    p.topLeftCorner
+      ? css`
+          width: 180px;
+          left: 0;
+          z-index: ${p => p.theme.topLeftCornerZIndex};
+          background: white;
+        `
+      : null};
 `
 
 // Number
@@ -81,18 +81,14 @@ export const NumberCell = styled.td`
 
   ${borders};
 
-  ${mobile(css`
-    position: sticky;
-    left: 0;
-    z-index: ${p => p.theme.leftHeadersZIndex};
-  `)};
+  position: sticky;
+  left: 0;
+  z-index: ${p => p.theme.leftHeadersZIndex};
 `
 export const NumberHeadCell = NumberCell.withComponent('th').extend`
-  ${mobile(css`
-    top: ${p => p.theme.groupHeadHeight}px;
-    z-index: ${p => p.theme.topLeftCornerZIndex};
-    background: white;
-  `)};
+  top: ${p => p.theme.groupHeadHeight}px;
+  z-index: ${p => p.theme.topLeftCornerZIndex};
+  background: white;
 `
 
 // Country
@@ -105,20 +101,16 @@ export const CountryCell = styled.td`
 
   ${borders};
 
-  ${mobile(css`
-    position: sticky;
-    left: ${p => p.theme.numberWidth}px;
-    z-index: ${p => p.theme.leftHeadersZIndex};
-  `)};
+  position: sticky;
+  left: ${p => p.theme.numberWidth}px;
+  z-index: ${p => p.theme.leftHeadersZIndex};
 `
 export const CountryHeadCell = CountryCell.withComponent('th').extend`
   cursor: pointer;
 
-  ${mobile(css`
-    top: ${p => p.theme.groupHeadHeight}px;
-    z-index: ${p => p.theme.topLeftCornerZIndex};
-    background: white;
-  `)};
+  top: ${p => p.theme.groupHeadHeight}px;
+  z-index: ${p => p.theme.topLeftCornerZIndex};
+  background: white;
 `
 
 // Icon Head Cell
@@ -169,10 +161,8 @@ export const IconHeadCell = styled.th`
         `
       : null};
 
-  ${mobile(css`
-    position: sticky;
-    top: ${p => p.theme.groupHeadHeight}px;
-  `)};
+  position: sticky;
+  top: ${p => p.theme.groupHeadHeight}px;
 `
 
 export const BodyCell = styled.td`

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 // Local
 import {
@@ -15,34 +15,98 @@ import TableBody from './TableBody'
 export default class DataTable extends Component {
   constructor(props) {
     super(props)
+    this.table = null
+    this.wrapper = null
     this.state = {
       rows: rows[props.currency],
       sortedIndex: 19,
       isReversed: false,
+      // Scroll flags
+      scrollEndRight: false,
+      scrollEndBottom: false,
     }
   }
 
   render() {
-    const { rows, sortedIndex, isReversed } = this.state
+    const {
+      rows,
+      sortedIndex,
+      isReversed,
+      scrollEndRight,
+      scrollEndBottom,
+    } = this.state
+    const wrapperHeight = window.innerHeight - 150
 
     return (
       <Wrapper>
-        <TableScrollWrapper>
-          <Table>
-            <colgroup>
-              <NumberColumn />
-              <CountryColumn />
-            </colgroup>
-            <TableHead
-              onHeadClick={this.headClicked}
-              sortedIndex={sortedIndex}
-              isReversed={isReversed}
-            />
-            <TableBody rows={rows} />
-          </Table>
-        </TableScrollWrapper>
+        <Shadows
+          isRightHidden={scrollEndRight}
+          isBottomHidden={scrollEndBottom}
+        >
+          <TableScrollWrapper
+            style={{ height: wrapperHeight }}
+            onScroll={this.scrolled}
+            innerRef={ref => {
+              this.wrapper = ref
+            }}
+          >
+            <Table
+              innerRef={ref => {
+                this.table = ref
+              }}
+            >
+              <colgroup>
+                <NumberColumn />
+                <CountryColumn />
+              </colgroup>
+              <TableHead
+                onHeadClick={this.headClicked}
+                sortedIndex={sortedIndex}
+                isReversed={isReversed}
+              />
+              <TableBody rows={rows} />
+            </Table>
+          </TableScrollWrapper>
+        </Shadows>
       </Wrapper>
     )
+  }
+
+  componentDidMount() {
+    if (this.table && this.wrapper) {
+      this.scrolled()
+    }
+  }
+
+  scrolled = () => {
+    const { scrollEndRight, scrollEndBottom } = this.state
+    const {
+      offsetWidth: wrapperWidth,
+      offsetHeight: wrapperHeight,
+      scrollTop,
+      scrollLeft,
+    } = this.wrapper
+    const { offsetWidth: tableWidth, offsetHeight: tableHeight } = this.table
+
+    // Horizental scroll
+    if (scrollLeft >= tableWidth - wrapperWidth && scrollEndRight === false) {
+      this.setState({ scrollEndRight: true })
+    } else if (
+      scrollLeft < tableWidth - wrapperWidth &&
+      scrollEndRight === true
+    ) {
+      this.setState({ scrollEndRight: false })
+    }
+
+    // Vertical scroll
+    if (scrollTop >= tableHeight - wrapperHeight && scrollEndBottom === false) {
+      this.setState({ scrollEndBottom: true })
+    } else if (
+      scrollTop < tableHeight - wrapperHeight &&
+      scrollEndBottom === true
+    ) {
+      this.setState({ scrollEndBottom: false })
+    }
   }
 
   headClicked = i => {
@@ -94,4 +158,58 @@ export default class DataTable extends Component {
 
 const Wrapper = styled.div`
   margin: 30px 0 75px 0;
+`
+
+const Shadows = styled.div`
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    z-index: 999;
+    height: 100%;
+    background: linear-gradient(
+      -90deg,
+      rgba(0, 0, 0, 0.2) -30%,
+      rgba(0, 0, 0, 0.02) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    transition: all 200ms ease;
+
+    ${p =>
+      p.isRightHidden &&
+      css`
+        opacity: 0;
+        width: 0;
+      `};
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) -30%,
+      rgba(0, 0, 0, 0.02) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    transition: all 200ms ease;
+
+    ${p =>
+      p.isBottomHidden &&
+      css`
+        opacity: 0;
+        width: 0;
+      `};
+  }
 `
