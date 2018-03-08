@@ -47,7 +47,8 @@ export default class DataTable extends PureComponent {
                 </CountryHeadCell>
 
                 {headings.map(({ icon, bg, light }, i) => {
-                  const index = i
+                  // First cell is country index
+                  const index = i + 1
                   const isActive = sortedIndex === index
                   return (
                     <IconHeadCell

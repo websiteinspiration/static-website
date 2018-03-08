@@ -23,12 +23,14 @@ export default class TableBody extends PureComponent {
         {lang => (
           <tbody>
             {rows.map((row, i) => {
-              const country = countries[lang][i]
+              const country = countries[lang][row[0]]
               return (
                 <tr key={country}>
                   <NumberCell>{i + 1}</NumberCell>
                   <CountryCell>{country}</CountryCell>
-                  {row.map((cell, i) => <BodyCell key={i}>{cell}</BodyCell>)}
+                  {row.map(
+                    (cell, i) => i !== 0 && <BodyCell key={i}>{cell}</BodyCell>
+                  )}
                 </tr>
               )
             })}
