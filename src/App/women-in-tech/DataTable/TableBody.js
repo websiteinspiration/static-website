@@ -24,7 +24,6 @@ export default class TableBody extends PureComponent {
           <tbody>
             {rows.map((row, i) => {
               const country = countries[lang][i]
-              console.log(country)
               return (
                 <tr key={country}>
                   <NumberCell>{i + 1}</NumberCell>
