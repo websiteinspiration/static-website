@@ -2,6 +2,7 @@ import React from 'react'
 
 // Local
 import SharedFeatureAndQuotes from '../../shared/FeatureAndQuotes'
+import Anchor from '../../shared/Anchor'
 
 // Images
 import featuresBg from '../../static/graphics/curved-bg-lightblue.svg'
@@ -9,15 +10,18 @@ import photo1 from '../../static/images/peter_ringelmann.jpg'
 import photo2 from '../../static/images/emil.jpg'
 import photo3 from '../../static/images/shuhei.jpg'
 
-const IndexPage = () => (
-  <SharedFeatureAndQuotes
-    rows={featuresAndQuotes}
-    joinButton={true}
-    bg={featuresBg}
-  />
+const TalentFeaturesAndQuotes = () => (
+  <div>
+    <Anchor id="success-stories" />
+    <SharedFeatureAndQuotes
+      rows={featuresAndQuotes}
+      joinButton={true}
+      bg={featuresBg}
+    />
+  </div>
 )
 
-export default IndexPage
+export default TalentFeaturesAndQuotes
 
 const featuresAndQuotes = [
   {

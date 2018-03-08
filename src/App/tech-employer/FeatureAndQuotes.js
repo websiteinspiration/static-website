@@ -2,6 +2,7 @@ import React from 'react'
 
 // Local
 import SharedFeatureAndQuotes from '../../shared/FeatureAndQuotes'
+import Anchor from '../../shared/Anchor'
 
 // Images
 import featuresBg from '../../static/graphics/curved-bg-pink.svg'
@@ -9,11 +10,14 @@ import photo1 from '../../static/images/klimmen.jpg'
 import photo2 from '../../static/images/tanja-heffner.jpg'
 import photo3 from '../../static/images/thijs.jpg'
 
-const IndexPage = () => (
-  <SharedFeatureAndQuotes rows={featuresAndQuotes} bg={featuresBg} />
+const EmployerFeaturesAndQuotes = () => (
+  <div>
+    <Anchor id="user-stories" />
+    <SharedFeatureAndQuotes rows={featuresAndQuotes} bg={featuresBg} />
+  </div>
 )
 
-export default IndexPage
+export default EmployerFeaturesAndQuotes
 
 const featuresAndQuotes = [
   {
