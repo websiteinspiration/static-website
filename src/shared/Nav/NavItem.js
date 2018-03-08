@@ -15,17 +15,19 @@ const NavItem = props => {
 }
 
 NavItem.propTypes = {
+  children: PropTypes.string,
   active: PropTypes.bool,
   sticky: PropTypes.bool,
   href: PropTypes.string,
   to: PropTypes.string,
+  subItemsClassName: PropTypes.any,
 }
 
 export default NavItem
 
 const styles = css`
   position: relative;
-  height: ${p => p.theme.innerNavHeight}px;
+  min-height: ${p => p.theme.innerNavHeight}px;
   line-height: ${p => p.theme.innerNavHeight}px;
   padding-right: 12px;
   padding-left: 12px;
@@ -39,20 +41,34 @@ const styles = css`
   cursor: pointer;
 
   /* Active indicator border */
-  &:after {
+  &::after {
+    content: '';
     height: 2px;
-    width: 100%;
+    width: 0;
     background-image: linear-gradient(-180deg, #79c6f0 0%, #4494dd 100%);
     /* stick to the bottom */
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
     right: 0;
+    transition: all 100ms ease;
   }
 
   &:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
+    ${p =>
+      p.subItemsClassName
+        ? css`
+            ${p.subItemsClassName} {
+              opacity: 1;
+              transform: scale(1);
+            }
+          `
+        : css`
+            &::after {
+              width: 100%;
+              left: 0;
+            }
+          `}
   }
 
   ${mobile(css`
@@ -68,7 +84,8 @@ const styles = css`
         ? css`
             font-weight: 700;
             &:after {
-              content: '';
+              width: 100%;
+              left: 0;
             }
           `
         : css`
@@ -79,9 +96,15 @@ const styles = css`
       return active
         ? css`
             font-weight: 700;
+            &:after {
+              background: white;
+            }
           `
         : css`
             font-weight: 600;
+            &:after {
+              background: white;
+            }
           `
     }
   }}};

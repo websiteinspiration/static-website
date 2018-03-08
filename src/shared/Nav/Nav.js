@@ -10,6 +10,7 @@ import { mobile } from '../../utils/style/media'
 import Menu from '../../shared/vectors/Menu'
 import NavButton from './NavButton'
 import NavItem from './NavItem'
+import SubItem, { NavSubItemsWrapper } from './SubItem'
 
 // Images
 import whitelogo from '../../static/honeypot-white-logo.svg'
@@ -50,7 +51,19 @@ class Nav extends React.Component {
               <NavItem to="/tech-employer" sticky={sticky}>
                 Employers
               </NavItem>
-              <NavItem sticky={sticky}>Community</NavItem>
+              <NavItem sticky={sticky} subItemsClassName={NavSubItemsWrapper}>
+                Community
+                <NavSubItemsWrapper>
+                  <SubItem href="http://blog.honeypot.io/">Blog</SubItem>
+                  <SubItem>Events</SubItem>
+                  <SubItem href="https://www.honeypot.io/pages/faq">
+                    FAQ
+                  </SubItem>
+                  <SubItem href="https://jobs.lever.co/honeypot">
+                    Careers
+                  </SubItem>
+                </NavSubItemsWrapper>
+              </NavItem>
               {!sticky && <NavItem sticky={sticky}>Invite a friend</NavItem>}
               <Separator />
               <NavButton
@@ -90,6 +103,10 @@ const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
   padding: 0 50px;
+
+  ${mobile(css`
+    padding: 0 25px;
+  `)};
 
   ${p =>
     p.sticky
