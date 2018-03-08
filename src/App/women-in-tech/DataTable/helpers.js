@@ -40,6 +40,12 @@ export const Table = styled.table`
   tbody tr:nth-child(2n) th {
     background: white;
   }
+
+  tbody tr:hover td,
+  tbody tr:hover th {
+    background: #cceae5;
+    transition: background 60ms ease-in;
+  }
 `
 
 // Wide Group Heads (Text-only)
