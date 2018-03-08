@@ -18,33 +18,33 @@ const Benefits = props => (
   <Wrapper {...props}>
     <Container>
       <Title align="left">
-        Honeypots Mission is to Build Great Engineering Teams
+        Honeypot Helps You Build Great Engineering Teams
       </Title>
 
       <Flex>
         <ItemsWrapper>
           <ItemWrapper>
             <Item
-              title="Acces the Top 10% of Tech Candidates "
-              text="Our candidates are prescreened through a video call and a technical assessment. You only pay when you hire. And for growing teams we offer competitive pricing!  "
+              title="Hire Software Developers"
+              text="Find frontend, backend, devops, mobile and game developers on Honeypot, with skills ranging from JavaScript, Ruby, PHP, Android, iOS, Scala, Java and many more."
             />
           </ItemWrapper>
           <ItemWrapper>
             <Item
-              title="Tech Recruitment Education"
-              text="Your Customer Success Manager will guide you through the hiring process, provide active support and help you benchmark your salaries and processes."
+              title="Hire Product Talent"
+              text="Build your pipeline of QA Testers and Product Owners to give vision and direction to your product. "
             />
           </ItemWrapper>
           <ItemWrapper>
             <Item
-              title="Free Visa Support"
-              text="70% of Honeypot talents are European, but if you do hire somebody from outside the EU, we offer full visa support for free! "
+              title="Hire Engineering Leaders"
+              text="Hire CTOs, VPs of Engineering, Technical Leads and all other senior Engineering Leaders on Honeypot. "
             />
           </ItemWrapper>
           <ItemWrapper>
             <Item
-              title="Hire Quicker"
-              text="With 95% response rates, you can fill your pipeline and build your team quicker than other channels. 80% of companies hire within 4 weeks."
+              title="Hire Data Experts"
+              text="Hire Data Scientists and Data Engineers to help you draw actionable insights from your company’s data."
             />
           </ItemWrapper>
         </ItemsWrapper>

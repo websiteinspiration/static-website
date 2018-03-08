@@ -15,7 +15,7 @@ export default Card
 
 const Wrapper = styled.article``
 
-const Title = styled.h3`
+const Title = styled.h2`
   margin-bottom: 18px;
   padding-left: 3px;
   line-height: 1.8;

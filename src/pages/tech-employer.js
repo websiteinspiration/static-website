@@ -15,7 +15,7 @@ const TechEmployerPage = () => (
   <div>
     <Seo
       pageTitle="Hire IT talents in Germany and Netherlands"
-      description="Honeypot is Europe’s tech job platform for Software Developers, DevOps, Data Scientists, Product Owners, QA and Engineering Leaders"
+      description="Honeypot is  the easiest way to hire Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers and Engineering Leaders."
     />
 
     <Header />

@@ -7,16 +7,15 @@ import Button from '../../shared/Button'
 const Header = () => (
   <MainHeader
     bg="linear-gradient(-170deg, #FF5A91 0%, #DB0F53 62%)"
-    navTextColor="red"
+    navTextColor="#EE1B6F"
     title="Build Your Tech Team."
-    desc="Honeypot is Europe’s tech job platform for Software Developers, DevOps,
-    Data Scientists, Product Owners, QA and Engineering Leaders."
+    desc="Honeypot is the easiest way to hire Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers and Engineering Leaders."
     renderButtons={() => [
-      <Button key={1} white={true} href="#plans" textColor="red">
-        Our plans
+      <Button key={1} white={true} href="#plans" textColor="#EE1B6F">
+        Start Hiring!
       </Button>,
       <Button key={2} white={true} linkStyle={true} to="/">
-        Find a job
+        I'm looking for a job!
       </Button>,
     ]}
   />
