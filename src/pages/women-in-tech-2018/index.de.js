@@ -78,7 +78,10 @@ export default ({ location }) => (
                 wirtschaftliche Emanzipation sowie Teilnahme am Arbeitsmarkt und
                 ermöglicht Schlussfolgerungen über die Gleichberechtigung
                 allgemein. Um zu ermitteln, ob die Gleichstellung von Männern
-                und Frauen in den vergangenen Jahren besser oder.
+                und Frauen in den vergangenen Jahren besser oder schlechter
+                geworden ist, haben wir die derzeit verfügbaren Lohnlücken-Daten
+                mit den Daten, die es vor fünf Jahren gab, miteinander
+                verglichen.
               </p>
 
               <p>
