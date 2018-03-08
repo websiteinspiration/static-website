@@ -9,13 +9,15 @@ import { mobile } from '../../utils/style/media'
 const NavItem = props => {
   if (props.to) {
     return <ItemLink {...props} />
-  } else {
+  } else if (props.href) {
     return <ItemA {...props} />
+  } else {
+    return <ItemDiv {...props} />
   }
 }
 
 NavItem.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.any,
   active: PropTypes.bool,
   sticky: PropTypes.bool,
   href: PropTypes.string,
@@ -114,5 +116,8 @@ const ItemA = styled.a`
   ${styles};
 `
 const ItemLink = styled(Link)`
+  ${styles};
+`
+const ItemDiv = styled.div`
   ${styles};
 `

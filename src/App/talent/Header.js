@@ -25,8 +25,8 @@ class Header extends React.Component {
             key={1}
             white={true}
             href="https://www.honeypot.io/users/sign_up"
-            onMouseEnter={() => this.setState({ primaryHovered: true })}
-            onMouseLeave={() => this.setState({ primaryHovered: false })}
+            onMouseOver={this.mouseEntered}
+            onMouseOut={this.mouseLeaved}
           >
             Find me a Job!
           </Button>,
@@ -37,6 +37,9 @@ class Header extends React.Component {
       />
     )
   }
+
+  mouseEntered = () => this.setState({ primaryHovered: true })
+  mouseLeaved = () => this.setState({ primaryHovered: false })
 }
 
 export default Header
