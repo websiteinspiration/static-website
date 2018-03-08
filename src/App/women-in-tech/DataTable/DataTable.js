@@ -35,7 +35,8 @@ export default class DataTable extends Component {
       scrollEndRight,
       scrollEndBottom,
     } = this.state
-    const wrapperHeight = window.innerHeight - 150
+    const wrapperHeight =
+      typeof window !== 'undefined' ? window.innerHeight - 150 : 500
 
     return (
       <Wrapper>
