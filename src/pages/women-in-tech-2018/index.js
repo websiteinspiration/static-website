@@ -15,7 +15,7 @@ export default ({ currency = '$' }) => {
   const currencyName = currency === '$' ? 'US$' : currency
   return (
     <Provider>
-      <div>
+      <div id="table-content">
         <Header title="2018 Women in Tech Index" />
 
         <article>
@@ -201,7 +201,8 @@ export default ({ currency = '$' }) => {
                     </strong>{' '}
                     The average wage, across all professions, for both men and
                     women and the percentage difference between them, known as
-                    the Gender Pay Gap.{' '}
+                    the Gender Pay Gap, using most current available data
+                    (2015).{' '}
                     <em>
                       Sources: OECD, Eurostat. Average of both sources.
                       Eurostat: difference between the average gross hourly
@@ -299,19 +300,20 @@ export default ({ currency = '$' }) => {
                   </li>
 
                   <li>
-                    <strong>Gender Pay Gap 5 Years Ago:</strong> Gender pay gap
-                    (as defined above), data from 2010. In the case of Chile:
-                    2011 as 2010 was not available.
+                    <strong>Gender Pay Gap 2010:</strong> Gender pay gap (as
+                    defined above), data from 2010. In the case of Chile: 2011
+                    as 2010 was not available.
                   </li>
 
                   <li>
                     <strong>
-                      Comparison of Gender Pay Gap From 5 Years Ago To Today:
+                      Comparison of Gender Pay Gap From 2010 to 2015:
                     </strong>{' '}
-                    Difference between the current wage gap and the wage gap 5
-                    years ago. A positive number implies a positive increase,
-                    I.E. the gender pay gap has increased. A negative number
-                    implies that the gender pay gap has decreased.
+                    Difference between the wage gap from 2010 and the wage gap
+                    from most current available data 2015. A positive number
+                    implies a positive increase, I.E. the gender pay gap has
+                    increased. A negative number implies that the gender pay gap
+                    has decreased.
                   </li>
 
                   <li>
