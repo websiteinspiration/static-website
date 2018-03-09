@@ -78,8 +78,8 @@ export default ({ currency = '$' }) => {
                   analyses women’s reproductive health, empowerment and labor
                   market participation to conclude overall parity. To determine
                   if equality has increased or decreased in recent history, we
-                  then calculated the difference between the gender pay gap five
-                  years ago, as compared to today’s wage gap.
+                  then calculated the difference between the current available
+                  wage gap data, as compared to five years previous.
                 </p>
 
                 <p>
