@@ -315,7 +315,7 @@ export const countriesDE = [
   'Irland',
   'Österreich',
   'Bulgarien',
-  'Süden Korea',
+  'Südkorea',
   'Mexiko',
   'Norwegen',
   'Schweiz',
