@@ -186,14 +186,15 @@ export default () => (
                   </strong>{' '}
                   De inkomensongelijkheid tussen mannen en vrouwen is het
                   verschil in gemiddeld inkomen over alle beroepen tussen mannen
-                  en vrouwen, uitgedrukt in percentage(s). Bron: OECD, Eurostat.
-                  Gemiddelde van beide bronnen. Eurostat: verschil tussen het
-                  gemiddelde bruto-uurloon van mannen en vrouwen uitgedrukt als
-                  percentage van het gemiddelde bruto-uurloon van mannen. OECD:
-                  verschil tussen het mediane inkomen van mannen en vrouwen
-                  vergeleken met het mediane inkomen van mannen. Data hebben
-                  betrekking op werknemers die voltijd werken en op
-                  zelfstandigen.
+                  en vrouwen, uitgedrukt in percentage(s). We hebben de meest
+                  recente beschikbare gegevens hiervoor gebruikt, daterend uit
+                  2015. Bron: OECD, Eurostat. Gemiddelde van beide bronnen.
+                  Eurostat: verschil tussen het gemiddelde bruto-uurloon van
+                  mannen en vrouwen uitgedrukt als percentage van het gemiddelde
+                  bruto-uurloon van mannen. OECD: verschil tussen het mediane
+                  inkomen van mannen en vrouwen vergeleken met het mediane
+                  inkomen van mannen. Data hebben betrekking op werknemers die
+                  voltijd werken en op zelfstandigen.
                 </li>
                 <li>
                   <strong>Tech Beroepsbevolking (x 1.000):</strong> IT Personen,
@@ -283,8 +284,7 @@ export default () => (
                 </li>
                 <li>
                   <strong>
-                    Inkomensongelijkheid tussen Mannen en Vrouwen 5 Jaar
-                    Geleden:
+                    Inkomensongelijkheid tussen Mannen en Vrouwen in 2010:
                   </strong>{' '}
                   Inkomensongelijkheid tussen mannen en vrouwen (zoals boven
                   gedefinieerd), data uit 2010. In het geval van Chili: 2011,
@@ -292,7 +292,7 @@ export default () => (
                 </li>
                 <li>
                   <strong>
-                    Vergelijking Inkomensongelijkheid 5 Jaar Geleden en Nu:
+                    Vergelijking Inkomensongelijkheid tussen 2010 en 2015:
                   </strong>{' '}
                   Verschil tussen de huidige inkomensongelijkheid en de
                   inkomensongelijkheid 5 jaar geleden. Een positieve waarde
