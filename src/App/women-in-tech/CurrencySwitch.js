@@ -19,7 +19,7 @@ export default class CurrencySwitch extends Component {
         {currencyList.map((c, i) => (
           <SwitchWrapper key={i}>
             <CircleSwitch
-              href={`${mapSymbolToPage[c]}#table-content`}
+              to={`${mapSymbolToPage[c]}#table-content`}
               outline={activeCurrency !== c}
             >
               {c}
