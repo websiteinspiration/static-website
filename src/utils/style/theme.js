@@ -47,6 +47,7 @@ export default {
   // Font Sizes
   fontTiny: 13,
   fontBase: 14,
+  font15: 15,
   font16: 16,
   font17: 17,
   fontSecondary: 18,

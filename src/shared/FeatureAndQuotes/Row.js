@@ -4,22 +4,38 @@ import styled, { css } from 'styled-components'
 // Utilities
 import { mobile, notMobile } from '../../utils/style/media'
 
+// Images
+import quoteeCurvedBg from '../../static/graphics/person-curved-bg.svg'
+import quoteeCurvedBgRed from '../../static/graphics/person-curved-bg-red.svg'
+
 const Row = ({
   title,
   desc,
   quote,
   quotee,
+  position,
+  company,
   photoUrl,
   reverse,
   textsFlexAlign = 'center',
-  smallQuote = false,
   littleRectColor = p => p.theme.primary,
+  red = false,
   ...props
 }) => (
   <Wrapper {...props} reverse={reverse}>
-    <QuoteBox photoUrl={photoUrl} smallQuote={smallQuote}>
-      <QuoteText smallQuote={smallQuote}>“{quote}”</QuoteText>
-      <Quotee>{quotee}</Quotee>
+    <QuoteBox>
+      <QuoteText>“{quote}”</QuoteText>
+      <QuoteeLowerRow red={red}>
+        <QuoteeTexts>
+          <QuoteeName>{quotee}</QuoteeName>
+          <QuoteePosition>
+            {position}
+            <br />
+            {company}
+          </QuoteePosition>
+        </QuoteeTexts>
+        <QuoteeImage src={photoUrl} />
+      </QuoteeLowerRow>
     </QuoteBox>
 
     <Texts reverse={reverse} flexAlign={textsFlexAlign}>
@@ -44,18 +60,14 @@ const Wrapper = styled.div`
 const QuoteBox = styled.blockquote`
   flex: 0 0 auto;
   width: 365px;
-  height: 315px;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  padding: ${p =>
-    p.smallQuote ? `22px 20px 32px 30px` : `22px 55px 32px 42px`};
-  box-sizing: border-box;
-  margin: 0;
+  height: auto;
+  padding: 0;
 
-  box-shadow: 0 2px 10px 0 rgba(3, 54, 96, 0.15);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    center / cover no-repeat url(${p => p.photoUrl});
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.07);
 
   ${mobile(css`
     max-width: 100%;
@@ -63,18 +75,52 @@ const QuoteBox = styled.blockquote`
 `
 
 const QuoteText = styled.p`
+  flex: 1 1 auto;
+  padding: 40px 30px 0 30px;
   margin: 0;
-  color: white;
-  font-size: ${p => (p.smallQuote ? p.theme.font17 : p.theme.font20)}px;
+  margin-bottom: 30px;
+
+  font-size: ${p => p.theme.font15}px;
   font-weight: bold;
-  line-height: 1.72;
+  line-height: 1.85;
+  color: #7d6666;
 `
 
-const Quotee = styled.div`
-  margin-top: 18px;
-  padding-left: 5px;
-  font-size: ${p => p.theme.font16}px;
-  color: rgba(255, 255, 255, 0.7);
+const QuoteeLowerRow = styled.div`
+  display: flex;
+  align-items: flex-end;
+  flex: 1 1 100px;
+  padding: 0 25px 20px 30px;
+  background: url(${p => (p.red ? quoteeCurvedBgRed : quoteeCurvedBg)})
+    no-repeat;
+  background-size: cover;
+`
+
+const QuoteeTexts = styled.div`
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: -5px;
+`
+
+const QuoteeName = styled.div`
+  font-size: ${p => p.theme.font15}px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2px;
+`
+
+const QuoteePosition = styled.div`
+  font-size: ${p => p.theme.font14}px;
+  color: white;
+`
+
+const QuoteeImage = styled.img`
+  width: 75px;
+  height: 75px;
+  display: block;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 `
 
 const Texts = styled.div`
@@ -118,4 +164,5 @@ const Desc = styled.p`
   max-width: 253px;
   font-size: ${p => p.theme.fontBase}px;
   line-height: 1.64;
+  opacity: 0.6;
 `
