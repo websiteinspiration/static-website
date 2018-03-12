@@ -9,9 +9,11 @@ import Container from '../../shared/Container'
 
 // Images
 import zalando from '../../static/logos/zalando.svg'
-import goup from '../../static/logos/goup.svg'
+import travisCi from '../../static/logos/Travisci-logo.svg'
+import zenmate from '../../static/logos/Zenmate-logo.svg'
+import n26 from '../../static/logos/N26-logo.svg'
+import helping from '../../static/logos/Helpling-logo.svg'
 import onefootball from '../../static/logos/onefootball.svg'
-import kiwi from '../../static/logos/kiwi.svg'
 
 const Companies = () => (
   <Wrapper>
@@ -29,13 +31,19 @@ const Logos = () => (
       <img src={zalando} draggable={false} />
     </Logo>
     <Logo>
-      <img src={goup} draggable={false} />
+      <img src={travisCi} draggable={false} />
+    </Logo>
+    <Logo>
+      <img src={n26} draggable={false} />
     </Logo>
     <Logo>
       <img src={onefootball} draggable={false} />
     </Logo>
     <Logo>
-      <img src={kiwi} draggable={false} />
+      <img src={zenmate} draggable={false} />
+    </Logo>
+    <Logo>
+      <img src={helping} draggable={false} />
     </Logo>
   </LogosWrapper>
 )
@@ -85,14 +93,22 @@ const Logo = styled.div`
 `
 
 const LogosWrapper = styled.div`
-  width: 930px;
+  width: 1250px;
   padding-top: 20px;
   padding-bottom: 25px;
-  transition: transform 300ms ease;
+  transition: transform 600ms ease-in-out;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  ${Logo}:nth-child(n+5) {
+    opacity: 0;
+    transition-delay: 200ms;
+  }
 
   ${notMobile(css`
     &:hover {
-      transform: translateX(-190px);
+      transform: translateX(-650px);
 
       ${Logo} {
         opacity: 0.95;
