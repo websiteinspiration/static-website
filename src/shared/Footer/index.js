@@ -80,7 +80,7 @@ export default Footer
 
 const Wrapper = styled.footer`
   padding: 50px 0 60px 0;
-  background-image: linear-gradient(-175deg, #007bc2 10%, #0062bf 180%);
+  background-image: linear-gradient(159deg, #007bc2 0%, #0062bf 80%);
   color: white;
 `
 

@@ -23,7 +23,7 @@ export default {
   // -- Navbar
   navHeight: 70,
   innerNavHeight: 48,
-  logoHeight: 33,
+  logoHeight: 34,
   mobileNavZIndex: 6,
   stickyNavZIndex: 20,
   // -- Header

@@ -62,6 +62,7 @@ const QuoteBox = styled.blockquote`
   width: 365px;
   height: auto;
   padding: 0;
+  margin: 0;
 
   display: flex;
   flex-direction: column;
