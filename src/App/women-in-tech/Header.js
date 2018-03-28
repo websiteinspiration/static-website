@@ -56,9 +56,12 @@ const Wrapper = styled.header`
   min-height: 400px;
   padding-top: 30px;
   margin-bottom: 30px;
-  background: bottom center no-repeat / auto auto url(${mask}),
+  background-image: url(${mask}),
     linear-gradient(0deg, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.2) 100%),
-    top 20% center no-repeat / cover url(${bg});
+    url(${bg});
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-position: center bottom, center, top 20% center;
+  background-size: auto auto, auto, cover;
 
   ${mobile(css`
     min-height: 260px;
