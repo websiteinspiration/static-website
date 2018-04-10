@@ -24,12 +24,15 @@ const Wrapper = styled.footer`
   margin-top: 100px;
   padding-top: 40px;
   padding-bottom: 90px;
-  background: linear-gradient(
+  background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.3) 0%,
       rgba(0, 0, 0, 0.2) 100%
     ),
-    bottom center no-repeat / cover url(${bg});
+    url(${bg});
+  background-repeat: repeat, no-repeat;
+  background-position: center, bottom center;
+  background-size: auto, cover;
 `
 
 const LogoWrapper = styled.div``
