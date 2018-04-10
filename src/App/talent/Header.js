@@ -30,7 +30,7 @@ class Header extends React.Component {
           >
             Find me a Job!
           </Button>,
-          <Button key={2} white={true} linkStyle={true} to="/tech-employer">
+          <Button key={2} white={true} linkStyle={true} to="/tech-hiring">
             I'm Hiring!
           </Button>,
         ]}

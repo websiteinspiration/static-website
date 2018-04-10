@@ -48,7 +48,7 @@ class Nav extends React.Component {
               <NavItem to="/" sticky={sticky}>
                 Talent
               </NavItem>
-              <NavItem to="/tech-employer" sticky={sticky}>
+              <NavItem to="/tech-hiring" sticky={sticky}>
                 Employers
               </NavItem>
               <NavItem sticky={sticky} subItemsClassName={NavSubItemsWrapper}>

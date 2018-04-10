@@ -27,8 +27,8 @@ const Footer = props => (
         </Column>
         <Column>
           <Title>Employers</Title>
-          <LinkItem href="/tech-employer#plans">Pricing</LinkItem>
-          <LinkItem href="/tech-employer#user-stories">User Stories</LinkItem>
+          <LinkItem href="/tech-hiring#plans">Pricing</LinkItem>
+          <LinkItem href="/tech-hiring#user-stories">User Stories</LinkItem>
         </Column>
         <Column>
           <Title>Community</Title>
