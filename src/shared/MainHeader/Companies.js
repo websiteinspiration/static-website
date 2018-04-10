@@ -49,7 +49,7 @@ const Logos = () => (
 )
 
 export const CompaniesNote = () => (
-  <Note>Over 1000 Companies are Hiring on Honeypot</Note>
+  <Note>Over 1000 Companies Are Hiring on Honeypot</Note>
 )
 
 const Wrapper = styled.div`

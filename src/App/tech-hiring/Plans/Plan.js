@@ -87,7 +87,7 @@ const Spec = styled.li`
   line-height: 1.5;
   font-size: ${p => p.theme.fontBase}px;
   color: ${p => (!p.disabled ? `black` : `rgba(0, 0, 0, 0.5)`)};
-  list-style-image: url(${check});
+  list-style: ${p => (p.disabled ? `none` : `url(${check})`)};
 
   &:last-child {
     margin-bottom: 0;

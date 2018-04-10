@@ -23,7 +23,7 @@ const Benefits = props => (
       <CardsWrapper>
         <CardWrapper>
           <Card
-            title="Access the Top 10% of Tech Candidates on the market"
+            title="Access the Top 10% of Tech Candidates on the Market"
             text="Our candidates are prescreened through a video call and a technical assessment. You only pay when you hire. And for growing teams we offer competitive pricing!"
             renderIcon={() => <CogLine />}
           />

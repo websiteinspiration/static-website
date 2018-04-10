@@ -42,7 +42,8 @@ const featuresAndQuotes = [
     red: true,
     textsFlexAlign: 'flex-end',
     title: 'Innovative Recruitment of Tech Talent',
-    desc: 'The workplace is changing. Honeypot is candidate-led recruitment.',
+    desc:
+      'The workplace is changing. Honeypot’s focus is on candidate-led recruitment.',
     quote: `Very innovative way of recruitment. High quality candidates. The profiles we look for continuously change and with Honeypot I don't have to inform an agency, because we are free to approach the people that are interesting for us at any time`,
     quotee: 'Maud Aertsen',
     position: 'Talent Manager',
@@ -53,7 +54,7 @@ const featuresAndQuotes = [
   {
     red: true,
     reverse: true,
-    title: 'Fill your Pipeline with Pre-qualified Candidates',
+    title: 'Fill your Pipeline with Pre-Qualified Candidates',
     desc: 'Find the best tech talent on Honeypot. Fast.',
     quote: `The platform is well designed and easy to use. We've hired great frontend and backend developers through Honeypot!`,
     quotee: 'Dineke Mulder',

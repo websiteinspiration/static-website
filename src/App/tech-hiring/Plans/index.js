@@ -20,16 +20,16 @@ const basicSpecs = [
 ]
 
 const customOnlySpecs = [
-  'Acces to Passive Candidates',
-  'Educational Training',
-  'Employer Branding',
+  'Acces to All Candidates',
+  'Access to Honeypot’s Tech Recruitment Training Academy',
+  'Custom Employer Branding ',
 ]
 
 const Plans = props => (
   <Wrapper id="plans" {...props}>
     <Container>
       <Title styleType="light">
-        Honeypot has Payment Options Depending on your Hiring Plan
+        Honeypot has Payment Options Depending on Your Hiring Plan
       </Title>
 
       <Desc>
@@ -42,7 +42,7 @@ const Plans = props => (
         <PlanWrapper>
           <Plan
             title="Basic"
-            desc="Pay per Hire"
+            desc="Pay Per Hire"
             specs={basicSpecs}
             disabledSpecs={customOnlySpecs}
             planColor="rgba(73, 151, 221, 0.45)"

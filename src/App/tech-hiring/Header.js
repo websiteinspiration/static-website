@@ -15,7 +15,7 @@ const Header = () => (
         Start Hiring!
       </Button>,
       <Button key={2} white={true} linkStyle={true} to="/">
-        I'm looking for a job!
+        I’m Looking for a Job!
       </Button>,
     ]}
   />
