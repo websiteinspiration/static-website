@@ -54,14 +54,14 @@ const featuresAndQuotes = [
     title: 'Top Jobs for Top Tech Talent',
     desc:
       'Be part of the top 10% and connect with Europe’s top tech companies.',
-    quote: `After only two weeks I received 13 interview invites from a great selection of companies. From these I could choose the cones that best suited me and wound up finding the perfect startup job.`,
+    quote: `After only two weeks I received 13 interview invites from a great selection of companies. From these I could choose the ones that best suited me and ended up finding the perfect startup job.`,
     quotee: 'Emil Ahlbäck',
     position: 'Senior Frontend Developer',
     company: 'Weissmaler',
     photoUrl: photo2,
   },
   {
-    title: 'Know your worth!',
+    title: 'Know Your Worth!',
     desc: `Companies apply directly to you so you can compare offers side by side. No more job applications or clumsy back and forths with headhunters.`,
     quote:
       "I like Honeypot because companies offer interviews with minimum salary. It saved the effort of applying for jobs, doing interviews, getting offers, and finally finding out that the salary didn't meet my requirements",

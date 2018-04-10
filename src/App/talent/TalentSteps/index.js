@@ -32,7 +32,7 @@ const TalentSteps = props => (
         <CardWrapper>
           <Card
             title="Become Visible"
-            text="Become Visible on Honeypot for three weeks. We keep it short to make your search simple!"
+            text="Become visible on Honeypot so that companies can find your profile and make you offers with salary and tech stack up front."
             topLineBackground="linear-gradient(-180deg, #7CB9F1 0%, #418FD9 100%)"
           />
         </CardWrapper>

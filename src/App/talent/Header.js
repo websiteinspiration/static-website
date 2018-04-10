@@ -28,7 +28,7 @@ class Header extends React.Component {
             onMouseOver={this.mouseEntered}
             onMouseOut={this.mouseLeaved}
           >
-            Find me a Job!
+            Find Me a Job!
           </Button>,
           <Button key={2} white={true} linkStyle={true} to="/tech-hiring">
             I'm Hiring!

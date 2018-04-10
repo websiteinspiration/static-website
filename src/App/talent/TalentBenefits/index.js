@@ -18,7 +18,7 @@ import PinLine from '../../../shared/vectors/PinLine'
 const TalentBenefits = props => (
   <Wrapper {...props}>
     <Container>
-      <Title>Create Profile and let Companies Apply to You</Title>
+      <Title>Create a Profile and Let Companies Apply to You</Title>
 
       <CardsWrapper>
         <CardWrapper>
