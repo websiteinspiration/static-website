@@ -64,7 +64,7 @@ class Nav extends React.Component {
                   </SubItem>
                 </NavSubItemsWrapper>
               </NavItem>
-              {!sticky && <NavItem sticky={sticky}>Invite a friend</NavItem>}
+              {!sticky && <NavItem sticky={sticky}>Invite a Friend</NavItem>}
               <Separator />
               <NavButton
                 outline={true}
