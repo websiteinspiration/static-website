@@ -1,6 +1,10 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import Link from 'gatsby-link'
+import { I18n } from 'react-i18next'
+
+// Utils
+import i18n from '../../utils/i18n'
 
 // Local
 import Container from '../../shared/Container'
@@ -11,69 +15,77 @@ import logo from '../../static/honeypot-white-logo.svg'
 import { mobile } from '../../utils/style/media'
 
 const Footer = props => (
-  <Wrapper {...props}>
-    <Container wide={true}>
-      <Columns>
-        <Column fullOnMobile={true}>
-          <Logo>
-            <Link to="/">
-              <img src={logo} alt="Honeypot logo" />
-            </Link>
-          </Logo>
-        </Column>
-        <Column>
-          <Title>Talent</Title>
-          <LinkItem href="/#success-stories">Success Stories</LinkItem>
-        </Column>
-        <Column>
-          <Title>Employers</Title>
-          <LinkItem href="/tech-hiring#plans">Pricing</LinkItem>
-          <LinkItem href="/tech-hiring#user-stories">User Stories</LinkItem>
-        </Column>
-        <Column>
-          <Title>Community</Title>
-          <LinkItem href="/#ss">Events</LinkItem>
-          <LinkItem href="/#ss">GraphQL Europe</LinkItem>
-          <LinkItem href="/#ss">Blog</LinkItem>
-          <LinkItem href="/#ss">FAQ</LinkItem>
-          <LinkItem href="/#ss">Careers</LinkItem>
-        </Column>
-        <Column>
-          <LinkItem href="/#ss" bold={true}>
-            About
-          </LinkItem>
-          <LinkItem href="/#ss" bold={true}>
-            Terms of Legal Notice
-          </LinkItem>
-          <LinkItem href="/#ss" bold={true}>
-            Privacy Policy
-          </LinkItem>
-          <LinkItem href="/#ss" bold={true}>
-            AutoTech
-          </LinkItem>
-        </Column>
-        <Column>
-          <Social>
-            <a href="https://instagram.com/honeypotio">
-              <Instagram />
-            </a>
-            <a href="https://twitter.com/honeypotio">
-              <Twitter />
-            </a>
-            <a href="https://facebook.com/honeypotio">
-              <Facebook />
-            </a>
-            <a href="https://www.linkedin.com/company/honeypot">
-              <LinkedIn />
-            </a>
-            <a href="https://github.com/honeypotio">
-              <Github />
-            </a>
-          </Social>
-        </Column>
-      </Columns>
-    </Container>
-  </Wrapper>
+  <I18n i18n={i18n} ns="footer">
+    {t => (
+      <Wrapper {...props}>
+        <Container wide={true}>
+          <Columns>
+            <Column fullOnMobile={true}>
+              <Logo>
+                <Link to="/">
+                  <img src={logo} alt="Honeypot logo" />
+                </Link>
+              </Logo>
+            </Column>
+            <Column>
+              <Title>{t('Talent')}</Title>
+              <LinkItem href="/#success-stories">
+                {t('Success-Stories')}
+              </LinkItem>
+            </Column>
+            <Column>
+              <Title>{t('Employers')}</Title>
+              <LinkItem href="/tech-hiring#plans">{t('Pricing')}</LinkItem>
+              <LinkItem href="/tech-hiring#user-stories">
+                {t('User-Stories')}
+              </LinkItem>
+            </Column>
+            <Column>
+              <Title>{t('Community')}</Title>
+              <LinkItem href="/#ss">{t('Events')}</LinkItem>
+              <LinkItem href="/#ss">{t('GraphQL-Europe')}</LinkItem>
+              <LinkItem href="/#ss">{t('Blog')}</LinkItem>
+              <LinkItem href="/#ss">{t('FAQ')}</LinkItem>
+              <LinkItem href="/#ss">{t('Careers')}</LinkItem>
+            </Column>
+            <Column>
+              <LinkItem href="/#ss" bold={true}>
+                {t('About')}
+              </LinkItem>
+              <LinkItem href="/#ss" bold={true}>
+                {t('Terms-of-legal-notice')}
+              </LinkItem>
+              <LinkItem href="/#ss" bold={true}>
+                {t('Privacy-policy')}
+              </LinkItem>
+              <LinkItem href="/#ss" bold={true}>
+                {t('AutoTech')}
+              </LinkItem>
+            </Column>
+            <Column>
+              <Social>
+                <a href="https://instagram.com/honeypotio">
+                  <Instagram />
+                </a>
+                <a href="https://twitter.com/honeypotio">
+                  <Twitter />
+                </a>
+                <a href="https://facebook.com/honeypotio">
+                  <Facebook />
+                </a>
+                <a href="https://www.linkedin.com/company/honeypot">
+                  <LinkedIn />
+                </a>
+                <a href="https://github.com/honeypotio">
+                  <Github />
+                </a>
+              </Social>
+            </Column>
+          </Columns>
+        </Container>
+      </Wrapper>
+    )}
+  </I18n>
 )
 
 export default Footer

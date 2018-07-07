@@ -10,10 +10,10 @@ import Title from '../../../shared/Section/Title'
 import Card from './Card'
 
 // Icons
-import CheckCircle from '../../../shared/vectors/CheckCircle'
-import BubbleLine from '../../../shared/vectors/BubbleLine'
-import VisaLine from '../../../shared/vectors/VisaLine'
-import CogLine from '../../../shared/vectors/CogLine'
+import CheckCircle from '../../../vectors/CheckCircle'
+import BubbleLine from '../../../vectors/BubbleLine'
+import VisaLine from '../../../vectors/VisaLine'
+import CogLine from '../../../vectors/CogLine'
 
 const Benefits = props => (
   <Wrapper {...props}>

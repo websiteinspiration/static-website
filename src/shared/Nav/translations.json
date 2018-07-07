@@ -1,0 +1,35 @@
+{
+  "en": {
+    "Talent": "Talent",
+    "Employers": "Employers",
+    "Community": "Community",
+    "Blog": "Blog",
+    "Events": "Events",
+    "FAQ": "FAQ",
+    "Career": "Career",
+    "Login": "Log in",
+    "Signup": "Signup"
+  },
+  "de": {
+    "Talent": "Talent",
+    "Employers": "Unternehmen",
+    "Community": "Community",
+    "Blog": "Blog",
+    "Events": "Events",
+    "FAQ": "FAQ",
+    "Career": "Karriere",
+    "Login": "Log in",
+    "Signup": "Signup"
+  },
+  "nl": {
+    "Talent": "Talente",
+    "Employers": "Bedrijfs",
+    "Community": "Community",
+    "Blog": "Blog",
+    "Events": "Evenementen",
+    "FAQ": "FAQ",
+    "Career": "Carrière",
+    "Login": "Log in",
+    "Signup": "Signup"
+  }
+}

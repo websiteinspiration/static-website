@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css, keyframes } from 'styled-components'
 import Link from 'gatsby-link'
+import { I18n } from 'react-i18next'
 
 // Utilities
 import { mobile } from '../../utils/style/media'
 
 // Local
-import Menu from '../../shared/vectors/Menu'
+import Menu from '../../vectors/Menu'
 import NavButton from './NavButton'
 import NavItem from './NavItem'
 import SubItem, { NavSubItemsWrapper } from './SubItem'
@@ -28,61 +29,75 @@ class Nav extends React.Component {
     const { openOnMobile } = this.state
 
     return (
-      <div>
-        {sticky && <Placeholder key="1" />}
-        <Wrapper {...props} sticky={sticky}>
-          <InnerNav>
-            <Logo>
-              <Link to="/">
-                <img src={sticky ? blackLogo : whitelogo} alt="Honeypot logo" />
-              </Link>
-            </Logo>
+      <I18n ns="nav">
+        {t => (
+          <div>
+            {sticky && <Placeholder key="1" />}
+            <Wrapper {...props} sticky={sticky}>
+              <InnerNav>
+                <Logo>
+                  <Link to="/">
+                    <img
+                      src={sticky ? blackLogo : whitelogo}
+                      alt="Honeypot logo"
+                    />
+                  </Link>
+                </Logo>
 
-            <Space />
+                <Space />
 
-            <MobileNavHandle onClick={this.toggleMobileNav}>
-              <Menu />
-            </MobileNavHandle>
+                <MobileNavHandle onClick={this.toggleMobileNav}>
+                  <Menu />
+                </MobileNavHandle>
 
-            <NavItems openOnMobile={openOnMobile}>
-              <NavItem to="/" sticky={sticky}>
-                Talent
-              </NavItem>
-              <NavItem to="/tech-hiring" sticky={sticky}>
-                Employers
-              </NavItem>
-              <NavItem sticky={sticky} subItemsClassName={NavSubItemsWrapper}>
-                Community
-                <NavSubItemsWrapper>
-                  <SubItem href="http://blog.honeypot.io/">Blog</SubItem>
-                  <SubItem>Events</SubItem>
-                  <SubItem href="https://www.honeypot.io/pages/faq">
-                    FAQ
-                  </SubItem>
-                  <SubItem href="https://jobs.lever.co/honeypot">
-                    Careers
-                  </SubItem>
-                </NavSubItemsWrapper>
-              </NavItem>
-              {!sticky && <NavItem sticky={sticky}>Invite a Friend</NavItem>}
-              <Separator />
-              <NavButton
-                outline={true}
-                sticky={sticky}
-                href="https://app.honeypot.io/users/login"
-              >
-                login
-              </NavButton>
-              <NavButton
-                sticky={sticky}
-                href="https://www.honeypot.io/users/sign_up"
-              >
-                sign up
-              </NavButton>
-            </NavItems>
-          </InnerNav>
-        </Wrapper>
-      </div>
+                <NavItems openOnMobile={openOnMobile}>
+                  <NavItem to="/" sticky={sticky}>
+                    {t('Talent')}
+                  </NavItem>
+                  <NavItem to="/tech-hiring" sticky={sticky}>
+                    {t('Employers')}
+                  </NavItem>
+                  <NavItem
+                    sticky={sticky}
+                    subItemsClassName={NavSubItemsWrapper}
+                  >
+                    {t('Community')}
+                    <NavSubItemsWrapper>
+                      <SubItem href="http://blog.honeypot.io/">
+                        {t('Blog')}
+                      </SubItem>
+                      <SubItem>{t('Events')}</SubItem>
+                      <SubItem href="https://www.honeypot.io/pages/faq">
+                        {t('FAQ')}
+                      </SubItem>
+                      <SubItem href="https://jobs.lever.co/honeypot">
+                        {t('Careers')}
+                      </SubItem>
+                    </NavSubItemsWrapper>
+                  </NavItem>
+                  {!sticky && (
+                    <NavItem sticky={sticky}>Invite a Friend</NavItem>
+                  )}
+                  <Separator />
+                  <NavButton
+                    outline={true}
+                    sticky={sticky}
+                    href="https://app.honeypot.io/users/login"
+                  >
+                    {t('Login')}
+                  </NavButton>
+                  <NavButton
+                    sticky={sticky}
+                    href="https://www.honeypot.io/users/sign_up"
+                  >
+                    {t('Signup')}
+                  </NavButton>
+                </NavItems>
+              </InnerNav>
+            </Wrapper>
+          </div>
+        )}
+      </I18n>
     )
   }
 

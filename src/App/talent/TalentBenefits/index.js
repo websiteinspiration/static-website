@@ -11,9 +11,9 @@ import Button from '../../../shared/Button'
 import Card from './Card'
 
 // Icons
-import PersonLine from '../../../shared/vectors/PersonLine'
-import ToolLine from '../../../shared/vectors/ToolLine'
-import PinLine from '../../../shared/vectors/PinLine'
+import PersonLine from '../../../vectors/PersonLine'
+import ToolLine from '../../../vectors/ToolLine'
+import PinLine from '../../../vectors/PinLine'
 
 const TalentBenefits = props => (
   <Wrapper {...props}>
