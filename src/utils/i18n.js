@@ -4,6 +4,7 @@ import i18next from 'i18next'
 import shared from '../shared/translations.json'
 import nav from '../shared/Nav/translations.json'
 import footer from '../shared/Footer/translations.json'
+import talent from '../App/talent/translations.json'
 
 i18next.init({
   interpolation: {
@@ -17,16 +18,25 @@ i18next.init({
       shared: shared.en,
       nav: nav.en,
       footer: footer.en,
+
+      // Pages
+      talent: talent.en,
     },
     de: {
       shared: shared.de,
       nav: nav.de,
       footer: footer.de,
+
+      // Pages
+      talent: talent.de,
     },
     nl: {
       shared: shared.nl,
       nav: nav.nl,
       footer: footer.nl,
+
+      // Pages
+      talent: talent.nl,
     },
   },
 })

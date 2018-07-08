@@ -8,6 +8,7 @@ import { mobile } from '../../../utils/style/media'
 import Container from '../../../shared/Container'
 import Title from '../../../shared/Section/Title'
 import Button from '../../../shared/Button'
+import I18n from '../../../shared/I18n'
 import Card from './Card'
 
 // Icons
@@ -16,44 +17,48 @@ import ToolLine from '../../../vectors/ToolLine'
 import PinLine from '../../../vectors/PinLine'
 
 const TalentBenefits = props => (
-  <Wrapper {...props}>
-    <Container>
-      <Title>Create a Profile and Let Companies Apply to You</Title>
+  <I18n ns="talent">
+    {t => (
+      <Wrapper {...props}>
+        <Container>
+          <Title>{t('benefits.title')}</Title>
 
-      <CardsWrapper>
-        <CardWrapper>
-          <Card
-            title="Join an Engineering Team in Your Ideal Role"
-            text="On Honeypot, over 1000 companies are hiring Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers and Engineering Leaders just like you!"
-            renderIcon={() => <PersonLine />}
-          />
-        </CardWrapper>
-        <CardWrapper>
-          <Card
-            title="Work with a Tech Stack You Love"
-            text="Whether it’s Ruby, Scala, JavaScript or anything else, on Honeypot you only get offers from companies for your preferred tech stack and desired salary."
-            renderIcon={() => <ToolLine />}
-          />
-        </CardWrapper>
-        <CardWrapper>
-          <Card
-            title="Choose the Locations that Suit You"
-            text="Honeypot operates in Europe’s most exciting tech cities, across Germany, the Netherlands. Set your location preference and companies apply to you!"
-            renderIcon={() => <PinLine />}
-          />
-        </CardWrapper>
-      </CardsWrapper>
+          <CardsWrapper>
+            <CardWrapper>
+              <Card
+                title={t('benefits.ideal-role-title')}
+                text={t('benefits.ideal-role-desc')}
+                renderIcon={() => <PersonLine />}
+              />
+            </CardWrapper>
+            <CardWrapper>
+              <Card
+                title={t('benefits.tech-stack-title')}
+                text={t('benefits.tech-stack-desc')}
+                renderIcon={() => <ToolLine />}
+              />
+            </CardWrapper>
+            <CardWrapper>
+              <Card
+                title={t('benefits.location-title')}
+                text={t('benefits.location-desc')}
+                renderIcon={() => <PinLine />}
+              />
+            </CardWrapper>
+          </CardsWrapper>
 
-      <ButtonWrapper>
-        <Button
-          href="https://www.honeypot.io/users/sign_up"
-          style={{ paddingRight: 58, paddingLeft: 58 }}
-        >
-          Join
-        </Button>
-      </ButtonWrapper>
-    </Container>
-  </Wrapper>
+          <ButtonWrapper>
+            <Button
+              href="https://www.honeypot.io/users/sign_up"
+              style={{ paddingRight: 58, paddingLeft: 58 }}
+            >
+              {t('Join')}
+            </Button>
+          </ButtonWrapper>
+        </Container>
+      </Wrapper>
+    )}
+  </I18n>
 )
 
 export default TalentBenefits

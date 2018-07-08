@@ -1,0 +1,24 @@
+{
+  "en": {
+    "headline": "Choose a Job You Love",
+    "description":
+      "Honeypot is Europe’s tech job platform for Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engineering Leaders and CTOs.",
+    "Find-Me-a-Job": "Find Me a Job!",
+    "Im-Hiring": "I'm Hiring",
+    "benefits": {
+      "title": "Create a Profile and Let Companies Apply to You",
+      "ideal-role-title": "Join an Engineering Team in Your Ideal Role",
+      "ideal-role-desc":
+        "On Honeypot, over 1000 companies are hiring Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers and Engineering Leaders just like you!",
+      "tech-stack-title": "Work with a Tech Stack You Love",
+      "tech-stack-desc":
+        "Whether it’s Ruby, Scala, JavaScript or anything else, on Honeypot you only get offers from companies for your preferred tech stack and desired salary.",
+      "location-title": "Choose the Locations that Suit You",
+      "location-desc":
+        "Honeypot operates in Europe’s most exciting tech cities, across Germany, the Netherlands. Set your location preference and companies apply to you!"
+    },
+    "Join": "Join"
+  },
+  "de": {},
+  "nl": {}
+}

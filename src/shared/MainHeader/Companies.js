@@ -20,6 +20,9 @@ import catawiki from '../../static/logos/catawiki.png'
 import ayden from '../../static/logos/ayden.png'
 import aperto from '../../static/logos/Aperto.png'
 
+// Local
+import I18n from '../I18n'
+
 class Companies extends PureComponent {
   state = {
     isMobile: false,
@@ -243,7 +246,7 @@ class Logos extends PureComponent {
 }
 
 export const CompaniesNote = () => (
-  <Note>Over 1000 Companies Are Hiring on Honeypot</Note>
+  <I18n ns="shared">{t => <Note>{t('companies-hiring')}</Note>}</I18n>
 )
 
 const Wrapper = styled.div`
