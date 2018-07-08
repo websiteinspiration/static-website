@@ -1,12 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import Link from 'gatsby-link'
-import { I18n } from 'react-i18next'
-
-// Utils
-import i18n from '../../utils/i18n'
 
 // Local
+import I18n from '../../shared/I18n'
 import Container from '../../shared/Container'
 import { Instagram, Twitter, Facebook, LinkedIn, Github } from './vectors'
 
@@ -15,28 +12,30 @@ import logo from '../../static/honeypot-white-logo.svg'
 import { mobile } from '../../utils/style/media'
 
 const Footer = props => (
-  <I18n i18n={i18n} ns="footer">
-    {t => (
+  <I18n ns="footer">
+    {(t, { i18n: { language: lang } }) => (
       <Wrapper {...props}>
         <Container wide={true}>
           <Columns>
             <Column fullOnMobile={true}>
               <Logo>
-                <Link to="/">
+                <Link to={`/${lang}`}>
                   <img src={logo} alt="Honeypot logo" />
                 </Link>
               </Logo>
             </Column>
             <Column>
               <Title>{t('Talent')}</Title>
-              <LinkItem href="/#success-stories">
+              <LinkItem href={`/${lang}/#success-stories`}>
                 {t('Success-Stories')}
               </LinkItem>
             </Column>
             <Column>
               <Title>{t('Employers')}</Title>
-              <LinkItem href="/tech-hiring#plans">{t('Pricing')}</LinkItem>
-              <LinkItem href="/tech-hiring#user-stories">
+              <LinkItem href={`/${lang}/tech-hiring#plans`}>
+                {t('Pricing')}
+              </LinkItem>
+              <LinkItem href={`/${lang}/tech-hiring#user-stories/`}>
                 {t('User-Stories')}
               </LinkItem>
             </Column>

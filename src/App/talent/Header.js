@@ -16,7 +16,7 @@ class Header extends React.Component {
 
     return (
       <I18n ns="talent">
-        {t => (
+        {(t, { i18n }) => (
           <MainHeader
             bg="linear-gradient(-158deg, #5dc0f9 0%, #418fd9 75%)"
             navTextColor={theme.blue}
@@ -33,7 +33,12 @@ class Header extends React.Component {
               >
                 {t('Find-Me-a-Job')}
               </Button>,
-              <Button key={2} white={true} linkStyle={true} to="/tech-hiring">
+              <Button
+                key={2}
+                white={true}
+                linkStyle={true}
+                to={`/${i18n.language}/tech-hiring`}
+              >
                 {t('Im-Hiring')}
               </Button>,
             ]}

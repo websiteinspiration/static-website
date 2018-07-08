@@ -30,13 +30,13 @@ class Nav extends React.Component {
 
     return (
       <I18n ns="nav">
-        {t => (
+        {(t, { i18n: { language: lang } }) => (
           <div>
             {sticky && <Placeholder key="1" />}
             <Wrapper {...props} sticky={sticky}>
               <InnerNav>
                 <Logo>
-                  <Link to="/">
+                  <Link to={`/${lang}`}>
                     <img
                       src={sticky ? blackLogo : whitelogo}
                       alt="Honeypot logo"
@@ -51,10 +51,10 @@ class Nav extends React.Component {
                 </MobileNavHandle>
 
                 <NavItems openOnMobile={openOnMobile}>
-                  <NavItem to="/" sticky={sticky}>
+                  <NavItem to={`/${lang}`} sticky={sticky}>
                     {t('Talent')}
                   </NavItem>
-                  <NavItem to="/tech-hiring" sticky={sticky}>
+                  <NavItem to={`/${lang}/tech-hiring`} sticky={sticky}>
                     {t('Employers')}
                   </NavItem>
                   <NavItem
