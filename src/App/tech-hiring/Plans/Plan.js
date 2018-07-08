@@ -14,6 +14,7 @@ const Plan = ({
   specs,
   disabledSpecs,
   planColor,
+  buttonText,
   buttonProps,
   ...props
 }) => (
@@ -30,7 +31,7 @@ const Plan = ({
     </Specs>
     <ButtonWrapper>
       <Button style={{ paddingRight: 50, paddingLeft: 50 }} {...buttonProps}>
-        Start Now
+        {buttonText}
       </Button>
     </ButtonWrapper>
   </Wrapper>

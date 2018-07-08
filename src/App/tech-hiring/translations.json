@@ -1,0 +1,367 @@
+{
+  "en": {
+    "headline": "Build Your Tech Team.",
+    "description":
+      "Honeypot is the easiest way to hire Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers and Engineering Leaders.",
+    "Start-Hiring": "Start-Hiring",
+    "Im-Looking-for-a-Job": "I’m Looking for a Job!",
+    "Join": "Join",
+
+    "benefits": {
+      "title": "Access New Tech Talents Every Monday",
+
+      "1-title": "Access the Top 10% of Tech Candidates on the Market",
+      "1-desc":
+        "Our candidates are prescreened through a video call and a technical assessment. You only pay when you hire. And for growing teams we offer competitive pricing!",
+
+      "2-title": "Hire Quicker",
+      "2-desc":
+        "With 95% response rates, you can fill your pipeline and build your team quicker than other channels. 80% of companies hire within 4 weeks.",
+
+      "3-title": "Free Visa Support",
+      "3-desc":
+        "70% of Honeypot talents are European, but if you do hire somebody from outside the EU, we offer full visa support for free!",
+
+      "4-title": "Tech Recruitment Education",
+      "4-desc":
+        "Your Customer Success Manager will guide you through the hiring process, provide active support and help you benchmark your salaries and processes."
+    },
+
+    "quotes": {
+      "1-title": "Innovative Recruitment of Tech Talent",
+      "1-desc":
+        "The workplace is changing. Honeypot’s focus is on candidate-led recruitment.",
+      "1-quote":
+        "Very innovative way of recruitment. High quality candidates. The profiles we look for continuously change and with Honeypot I don't have to inform an agency, because we are free to approach the people that are interesting for us at any time",
+      "1-quotee": "Maud Aertsen",
+      "1-position": "Talent Manager",
+      "1-company": "MediaMonks",
+
+      "2-title": "Fill your Pipeline with Pre-Qualified Candidates",
+      "2-desc": "Find the best tech talent on Honeypot. Fast.",
+      "2-quote":
+        "The platform is well designed and easy to use. We've hired great frontend and backend developers through Honeypot!",
+      "2-quotee": "Dineke Mulder",
+      "2-position": "Global Recruiter",
+      "2-company": "Adyen",
+
+      "3-title": "Build your Employer Brand",
+      "3-desc":
+        "Find candidates when they want to be found! No more brand-damaging direct sourcing.",
+      "3-quote":
+        "We love Honeypot, not only for their refreshing view on developer recruitment, but also for their active participation in the developer community.",
+      "3-quotee": "Thijs Slijkhuis",
+      "3-position": "CTO",
+      "3-company": "United Wardrobe",
+
+      "4-quote":
+        "I logged into Honeypot, screened ten profiles, and within two weeks found the ideal German-speaking candidate who we ended up hiring for our Java Developer position.",
+      "4-quotee": "Raphael Seitz",
+      "4-first-line": "Talent Manager",
+      "4-second-line": "Optivo",
+
+      "5-quote":
+        "We love Honeypot because it has put everything into one place and the team behind it is great! Thank you for creating a platform that's so easy to use and helping us hire a kickass developer.",
+      "5-quotee": "Selin Songur",
+      "5-first-line": "Tech Recruiting",
+      "5-second-line": "SoundCloud",
+
+      "6-quote":
+        "Honeypot is easy and efficient. It is a great tool for any company looking to hire good, international developers in a short amount of time and at a very reasonable price.",
+      "6-quotee": "Rebecca Belknap",
+      "6-first-line": "Talent Manager",
+      "6-second-line": "Payconiq",
+
+      "7-quote":
+        "Thanks to Honeypot and their match-making process, we were able to hire our Frontend Developer in only 8 days!",
+      "7-quotee": "Michal Franczak",
+      "7-first-line": "Head of IT",
+      "7-second-line": "Vimeda"
+    },
+
+    "mission": {
+      "title": "Honeypot Helps You Build Great Engineering Teams",
+
+      "1-title": "Hire Software Developers",
+      "1-desc":
+        "Find frontend, backend, devops, mobile and game developers on Honeypot, with skills ranging from JavaScript, Ruby, PHP, Android, iOS, Scala, Java and many more.",
+
+      "2-title": "Hire Product Talent",
+      "2-desc":
+        "Build your pipeline of QA Testers and Product Owners to give vision and direction to your product.",
+
+      "3-title": "Hire Engineering Leaders",
+      "3-desc":
+        "Hire CTOs, VPs of Engineering, Technical Leads and all other senior Engineering Leaders on Honeypot.",
+
+      "4-title": "Hire Data Experts",
+      "4-desc":
+        "Hire Data Scientists and Data Engineers to help you draw actionable insights from your company’s data."
+    },
+
+    "plans": {
+      "title": "Honeypot has Payment Options Depending on Your Hiring Plan",
+      "desc":
+        "Hiring more than one talent? Sync your hiring plan with our Team Building Plan and benefit from customized pricing and additional recruitment support.",
+      "Start-Now": "Start Now",
+
+      "Basic": "Basic",
+      "Pay-Per-Hire": "Pay Per Hire",
+      "Pro": "Pro",
+      "Custom-Plan": "Custom Plan",
+
+      "15%-Per-Hire": "15% Per Hire",
+      "free-visa": "Free Visa Support",
+      "dedicated-customer-success": "Dedicated Customer Succes Manager",
+      "access-all-candidates": "Acces to All Candidates",
+      "access-honeypot-academy":
+        "Access to Honeypot’s Tech Recruitment Training Academy",
+      "custom-branding": "Custom Employer Branding"
+    }
+  },
+
+  "de": {
+    "headline": "Wähle einen Job, den Du liebst",
+    "description":
+      "Honeypot ist Europas Tech-Job Plattform für Softwareentwickler, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engeneering Leaders und CTOs.",
+    "Start-Hiring": "Ich stelle ein!",
+    "Im-Looking-for-a-Job": "Finde einen Job für mich!",
+    "Join": "Join",
+
+    "benefits": {
+      "title": "Jeden Montag Zugriff auf neue Tech Talente",
+
+      "1-title": "Zugang zu den Top 10% der Tech Kandidat/innen auf dem Markt",
+      "1-desc":
+        "Unsere Kandidat/innen sind durch ein Video Interview und eine technische Einstufung vorausgewählt. Du zahlst nur, wenn Du jemanden einstellst. Und für wachsende Teams bieten wir eine wettbewerbsfähige Preisanpassung!",
+
+      "2-title": "Stell schneller ein!",
+      "2-desc":
+        "Mit einer 95% Antwortrate hast Du schnell eine gute Auswahl und kannst Dein Team schneller zusammenstellen als über andere Plattformen. 80% der Unternehmen können ihr Team innerhalb von vier Wochen mit unseren Talenten besetzen.",
+
+      "3-title": "Kostenloser Visa Support",
+      "3-desc":
+        "70% der Honeypot Talente sind aus Europa. Wenn Du jemanden ausserhalb von Europa einstellst, bieten wir kostenlos einen umfassenden Visa Support",
+
+      "4-title": "Hilfe beim Tech-Recruitment",
+      "4-desc":
+        "Dein Customer Success Manager wird Dich durch den Einstellungsprozess führen, Dich aktiv unterstützen und Dir bei der Gehaltsberechnung und weiteren Prozessen helfen."
+    },
+
+    "quotes": {
+      "1-title": "Innovatives Recruiting von Tech Talenten",
+      "1-desc":
+        "Der Arbeitsplatz verändert sich. Honeypots Fokus liegt auf einem von den Kandidat/innen ausgehenden Einstellungsprozess.",
+      "1-quote":
+        "Eine sehr innovative Art des Recruitings. Qualitätskandidaten. Wir suchen ständig neue Profile und mit Honeypot müssen wir keine Agentur auf dem Laufenden halten, sondern können einfach die Leute ansprechen, die für uns in dem Moment interessant sind.",
+      "1-quotee": "Maud Aertsen",
+      "1-position": "Talent Manager",
+      "1-company": "MediaMonks",
+
+      "2-title": "Erhöhe Deine Auswahl mit vor-qualifizierten Kandidat/innen",
+      "2-desc": "Finde die besten Tech Talente auf Honeypot. Schnell",
+      "2-quote":
+        "Die Plattform ist gut gestaltet und einfach zu benutzen. Wir haben durch Honeypot großartige Frontend und Backend Entwickler gefunden!",
+      "2-quotee": "Dineke Mulder",
+      "2-position": "Global Recruiter",
+      "2-company": "Ayden",
+
+      "3-title": "Baue Deine Employer Brand auf",
+      "3-desc":
+        "Finde Deine Kandidat/innen wenn sie gefunden werden möchten! Kein markenschädigendes Direct Sourcing mehr!- ",
+      "3-quote":
+        "Wir lieben Honeypot nicht nur wegen deren erfrischender Sicht auf Entwickler/innen Recruiting, sondern auch wegen deren aktiver Teilnahme an der Entwickler/innen Community.",
+      "3-quotee": "Thijs Slijkhuis",
+      "3-position": "CTO",
+      "3-company": "United Wardrobe",
+
+      "4-quote":
+        "Ich habe mich bei Honeypot eingeloggt, zehn Profile durchgesehen und innerhalb von zwei Wochen den idealen deutschsprachigen Kandidaten gefunden, mit dem wir am Ende unsere Java Delevoper Position besetzen konnten.",
+      "4-quotee": "Raphael Seitz",
+      "4-first-line": "Talent Manager",
+      "4-second-line": "Optivo",
+
+      "5-quote":
+        "Wir lieben Honeypot, weil alles an einem Ort und das Team hinter den Kulissen großartig ist! Vielen Dank, dass ihr eine Plattform geschaffen habt, die so einfach zu benutzen ist und die uns hilft fantastische Entwickler einzustellen",
+      "5-quotee": "Selin Songur",
+      "5-first-line": "Tech Recruiting",
+      "5-second-line": "SoundCloud",
+
+      "6-quote":
+        "Honeypot ist einfach und effizient. Es ist ein großartiges Werkzeug für jedes Unternehmen, das gute und internationale Entwickler/innen, in kurzer Zeit und zu einem sehr vernünftigen Preis sucht.",
+      "6-quotee": "Rebecca Belknap",
+      "6-first-line": "Talent Manager",
+      "6-second-line": "Payconiq",
+
+      "7-quote":
+        "Dank Honeypot und deren Vermittlungsprozess, konnten wir unseren Frontend Developer in nur acht Tagen rekrutieren!",
+      "7-quotee": "Michal Franczak",
+      "7-first-line": "Head of IT",
+      "7-second-line": "Vimeda"
+    },
+
+    "mission": {
+      "title":
+        "Honeypot hilft Dir großartige Engineering-Teams zusammenzustellen",
+
+      "1-title": "Stell Software Entwickler ein ",
+      "1-desc":
+        "Finde Frontend, Backend, DevOps, Mobile und Game Entwickler auf Honeypot, mit Skills in JavaScript, Ruby, PHP, Android, iOS, Scala, Java und vielen mehr.",
+
+      "2-title": "Stelle Product Talente ein",
+      "2-desc":
+        "Bau Dir ein Team mit QA Testern und Product Ownern, um Deinem Produkt Vision und Richtung zu geben.",
+
+      "3-title": "Stell Engineering Leaders ein ",
+      "3-desc":
+        "Rekrutiere CTOs, Vps of Engineering, Technical Leads und alle anderen Senior Engineering Leaders mit Honeypot.",
+
+      "4-title": "Stell Data Experts ein",
+      "4-desc":
+        "Stell Data Scientists und Data Engineers ein, um Dir wertvolle Einblicke in die Daten Deines Unternehmens zu verschaffen."
+    },
+
+    "plans": {
+      "title": "Honeypot hat Zahlungsoptionen je nach Deinem Einstellungsplan",
+      "desc":
+        "Du willst mehr als nur ein Talent einstellen? Verbinde Deinen Einstellungsplan mit Eurem Team Building Plan und profitiere von maßgeschneidertem Pricing und zusätzlicher Unterstützung beim Recruiting.",
+      "Start-Now": "Jetzt beginnen",
+
+      "Basic": "Basic",
+      "Pay-Per-Hire": "Zahl pro Einstellung",
+      "Pro": "Pro",
+      "Custom-Plan": "Individuelles Pricing",
+
+      "15%-Per-Hire": "15% Pro Einstellung",
+      "free-visa": "Kostenloser Visa Support",
+      "dedicated-customer-success": "Motivierter Customer Success Manager",
+      "access-all-candidates": "Zugang zu allen Kandidaten",
+      "access-honeypot-academy":
+        "Zugang zu Honeypots Tech Recruitment Training Academy",
+      "custom-branding": "Custom Employer Branding"
+    }
+  },
+
+  "nl": {
+    "headline": "Kies een baan waar je van houdt",
+    "description":
+      "Honeypot is Europa’s Tech werkplatform voor Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engineering Leaders en CTOs.",
+    "Start-Hiring": "Ik ben aan het werven!",
+    "Im-Looking-for-a-Job": "Zoek een baan voor me!",
+    "Join": "Join",
+
+    "benefits": {
+      "title": "Iedere Maandag Toegang tot Nieuw Tech Talent",
+
+      "1-title":
+        "Krijg toegang tot de top 10% van de Tech kandidaten op de markt",
+      "1-desc":
+        "Onze kandidaten worden van tevoren gescreend door middel van een videogesprek en een technische beoordeling. Je betaalt alleen als je iemand aanneemt. En voor snelgroeiende teams bieden we concurrerende prijzen!",
+
+      "2-title": "Sneller werven",
+      "2-desc":
+        "Met een responspercentage van 95% kun je de pijplijn sneller vullen en je team sneller opbouwen dan via andere kanalen. 80% van bedrijven slaagt binnen 4 weken.",
+
+      "3-title": "Kostenloser Visa Support",
+      "3-desc":
+        "70% der Honeypot Talente sind aus Europa. Wenn Du jemanden ausserhalb von Europa einstellst, bieten wir kostenlos einen umfassenden Visa Support",
+
+      "4-title": "Gratis visumondersteuning",
+      "4-desc":
+        "70% van de Honeypot talenten zijn van Europese afkomst, maar als je iemand van buiten de EU aanneemt, bieden wij volledige, gratis visumondersteuning!"
+    },
+
+    "quotes": {
+      "1-title": "Innovatieve werving van Tech Talent",
+      "1-desc":
+        "De werkplek verandert. Bij Honeypot ligt de focus op kandidaat-geleide werving.",
+      "1-quote":
+        "Zeer innovatieve manier van werven. Kwalitatief hoogwaardige kandidaten. De profielen waarnaar we zoeken, veranderen voortdurend en met Honeypot hoef ik geen bureau op de hoogte te stellen, omdat we op elk moment vrij zijn om de mensen te benaderen die ons interesseren",
+      "1-quotee": "Maud Aertsen",
+      "1-position": "Talent Manager",
+      "1-company": "MediaMonks",
+
+      "2-title": "Vul je pijplijn met reeds gekwalificeerde kandidaten",
+      "2-desc": "Vind het beste Tech-talent op Honeypot. Snel.",
+      "2-quote":
+        "Het platform is goed ontworpen en eenvoudig in gebruik. We hebben geweldige front-end en back-end developers gevonden via Honeypot!",
+      "2-quotee": "Dineke Mulder",
+      "2-position": "Global Recruiter",
+      "2-company": "Adyen",
+
+      "3-title": "Versterk je Employer Brand",
+      "3-desc":
+        "Vind kandidaten wanneer ze gevonden willen worden! Geen merkbeschadigende directe werving.",
+      "3-quote":
+        "We houden van Honeypot, niet alleen vanwege hun verfrissende kijk op het werven van developers, maar ook vanwege hun actieve deelname binnen de developer-gemeenschap.",
+      "3-quotee": "Thijs Slijkhuis",
+      "3-position": "CTO",
+      "3-company": "United Wardrobe",
+
+      "4-quote":
+        "Ik heb ingelogd op Honeypot, tien profielen gescreend, en binnen twee weken had ik de ideale Duitssprekende kandidaat die we aangenomen hebben voor onze Java developer-functie.",
+      "4-quotee": "Raphael Seitz",
+      "4-first-line": "Talent Manager",
+      "4-second-line": "Optivo",
+
+      "5-quote":
+        "We vinden Honeypot echt geweldig omdat ze alles op één plek bij elkaar hebben gehaald en het team dat alles runt het heel goed doet! Hartelijk dank dat jullie een platform gemaakt hebben dat zo eenvoudig werkt en voor jullie hulp bij het vinden van een kick-ass developer",
+      "5-quotee": "Selin Songur",
+      "5-first-line": "Tech Recruiting",
+      "5-second-line": "SoundCloud",
+
+      "6-quote":
+        "Honeypot is eenvoudig in gebruik en efficiënt. Het is een geweldig hulpmiddel voor elk bedrijf dat goede, internationale developers wil werven in korte tijd en tegen een zeer redelijke prijs.",
+      "6-quotee": "Rebecca Belknap",
+      "6-first-line": "Talent Manager",
+      "6-second-line": "Payconiq",
+
+      "7-quote":
+        "Dankzij Honeypot en hun matchmaking-proces slaagden wij erin binnen 8 dagen onze Front-end developer aan te nemen!",
+      "7-quotee": "Michal Franczak",
+      "7-first-line": "Head of IT",
+      "7-second-line": "Vimeda"
+    },
+
+    "mission": {
+      "title":
+        "Honeypot helpt je bij het bouwen van geweldige engineering teams",
+
+      "1-title": "Software Developers werven",
+      "1-desc":
+        "Vind front-end, back-end, devops, mobile en game developers op Honeypot, met vaardigheden zoals JavaScript, Ruby, PHP, Android, iOS, Scala, Java en nog veel meer.",
+
+      "2-title": "Product Talent werven",
+      "2-desc":
+        "Bouw je pijplijn van QA Testers en Product Owners om je product visie en koers te geven.",
+
+      "3-title": "Engineering Leaders werven",
+      "3-desc":
+        "Neem CTOs, VPs of Engineering, Technical Leads en vele andere soorten Engineering Leaders aan op Honeypot.",
+
+      "4-title": "Data Experts werven",
+      "4-desc":
+        "Vind Data Scientists en Data Engineers om je te helpen praktische inzichten te krijgen in de gegevens van je bedrijf."
+    },
+
+    "plans": {
+      "title": "Honeypot heeft betalingsopties die passen bij je wervingsplan",
+      "desc":
+        "Wil je meer dan één talent werven? Stem je wervingsplan dan af op ons Team Building Plan en geniet van op maat gemaakte prijzen en extra wervingsondersteuning",
+      "Start-Now": "Nu beginnen",
+
+      "Basic": "Basic",
+      "Pay-Per-Hire": "Pay Per Hire",
+      "Pro": "Pro",
+      "Custom-Plan": "Custom Plan",
+
+      "15%-Per-Hire": "15% per werving",
+      "free-visa": "Gratis visumondersteuning",
+      "dedicated-customer-success": "Je eigen Customer Succes Manager",
+      "access-all-candidates": "Toegang tot alle kandidaten",
+      "access-honeypot-academy":
+        "Toegang tot Honeypot’s Tech Recruitment Training Academy",
+      "custom-branding": "Op maat gemaakte Employer Branding"
+    }
+  }
+}

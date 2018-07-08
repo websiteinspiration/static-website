@@ -7,58 +7,59 @@ import { mobile, retina } from '../../../utils/style/media'
 // Local
 import Container from '../../../shared/Container'
 import Title from '../../../shared/Section/Title'
+import I18n from '../../../shared/I18n'
 import Plan from './Plan'
 
 // Images
 import bg from '../../../static/graphics/curved-bg-red.png'
 import retinaBg from '../../../static/graphics/curved-bg-red@2x.png'
 
-const basicSpecs = [
-  '15% Per Hire',
-  'Free Visa Support',
-  'Dedicated Customer Succes Manager',
+const basicSpecs = t => [
+  t('plans.15%-Per-Hire'),
+  t('plans.free-visa'),
+  t('plans.dedicated-customer-success'),
 ]
 
-const customOnlySpecs = [
-  'Acces to All Candidates',
-  'Access to Honeypot’s Tech Recruitment Training Academy',
-  'Custom Employer Branding ',
+const customOnlySpecs = t => [
+  t('plans.access-all-candidates'),
+  t('plans.access-honeypot-academy'),
+  t('plans.custom-branding'),
 ]
 
 const Plans = props => (
-  <Wrapper id="plans" {...props}>
-    <Container>
-      <Title styleType="light">
-        Honeypot has Payment Options Depending on Your Hiring Plan
-      </Title>
+  <I18n ns="employer">
+    {t => (
+      <Wrapper id="plans" {...props}>
+        <Container>
+          <Title styleType="light">{t('plans.title')}</Title>
 
-      <Desc>
-        Hiring more than one talent? Sync your hiring plan with our Team
-        Building Plan and benefit from customized pricing and additional
-        recruitment support.
-      </Desc>
+          <Desc>{t('plans.desc')}</Desc>
 
-      <PlansWrapper>
-        <PlanWrapper>
-          <Plan
-            title="Basic"
-            desc="Pay Per Hire"
-            specs={basicSpecs}
-            disabledSpecs={customOnlySpecs}
-            planColor="rgba(73, 151, 221, 0.45)"
-          />
-        </PlanWrapper>
-        <PlanWrapper>
-          <Plan
-            title="Pro"
-            desc="Custom Plan"
-            specs={[...basicSpecs, ...customOnlySpecs]}
-            planColor="#4997DD"
-          />
-        </PlanWrapper>
-      </PlansWrapper>
-    </Container>
-  </Wrapper>
+          <PlansWrapper>
+            <PlanWrapper>
+              <Plan
+                title={t('plans.Basic')}
+                desc={t('plans.Pay-Per-Hire')}
+                specs={basicSpecs(t)}
+                disabledSpecs={customOnlySpecs(t)}
+                planColor="rgba(73, 151, 221, 0.45)"
+                buttonText={t('plans.Start-Now')}
+              />
+            </PlanWrapper>
+            <PlanWrapper>
+              <Plan
+                title={t('plans.Pro')}
+                desc={t('plans.Custom-Plan')}
+                specs={[...basicSpecs(t), ...customOnlySpecs(t)]}
+                planColor="#4997DD"
+                buttonText={t('plans.Start-Now')}
+              />
+            </PlanWrapper>
+          </PlansWrapper>
+        </Container>
+      </Wrapper>
+    )}
+  </I18n>
 )
 
 export default Plans

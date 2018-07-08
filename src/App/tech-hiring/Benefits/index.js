@@ -7,6 +7,7 @@ import { mobile } from '../../../utils/style/media'
 // Local
 import Container from '../../../shared/Container'
 import Title from '../../../shared/Section/Title'
+import I18n from '../../../shared/I18n'
 import Card from './Card'
 
 // Icons
@@ -16,42 +17,46 @@ import VisaLine from '../../../vectors/VisaLine'
 import CogLine from '../../../vectors/CogLine'
 
 const Benefits = props => (
-  <Wrapper {...props}>
-    <Container>
-      <Title>Create a Profile and Let Companies Apply to You!</Title>
+  <I18n ns="employer">
+    {t => (
+      <Wrapper {...props}>
+        <Container>
+          <Title>{t('benefits.title')}</Title>
 
-      <CardsWrapper>
-        <CardWrapper>
-          <Card
-            title="Access the Top 10% of Tech Candidates on the Market"
-            text="Our candidates are prescreened through a video call and a technical assessment. You only pay when you hire. And for growing teams we offer competitive pricing!"
-            renderIcon={() => <CogLine />}
-          />
-        </CardWrapper>
-        <CardWrapper>
-          <Card
-            title="Hire Quicker"
-            text="With 95% response rates, you can fill your pipeline and build your team quicker than other channels. 80% of companies hire within 4 weeks."
-            renderIcon={() => <CheckCircle />}
-          />
-        </CardWrapper>
-        <CardWrapper>
-          <Card
-            title="Free Visa Support"
-            text="70% of Honeypot talents are European, but if you do hire somebody from outside the EU, we offer full visa support for free!"
-            renderIcon={() => <VisaLine />}
-          />
-        </CardWrapper>
-        <CardWrapper>
-          <Card
-            title="Tech Recruitment Education"
-            text="Your Customer Success Manager will guide you through the hiring process, provide active support and help you benchmark your salaries and processes."
-            renderIcon={() => <BubbleLine />}
-          />
-        </CardWrapper>
-      </CardsWrapper>
-    </Container>
-  </Wrapper>
+          <CardsWrapper>
+            <CardWrapper>
+              <Card
+                title={t('benefits.1-title')}
+                text={t('benefits.1-desc')}
+                renderIcon={() => <CogLine />}
+              />
+            </CardWrapper>
+            <CardWrapper>
+              <Card
+                title={t('benefits.2-title')}
+                text={t('benefits.2-desc')}
+                renderIcon={() => <CheckCircle />}
+              />
+            </CardWrapper>
+            <CardWrapper>
+              <Card
+                title={t('benefits.3-title')}
+                text={t('benefits.3-desc')}
+                renderIcon={() => <VisaLine />}
+              />
+            </CardWrapper>
+            <CardWrapper>
+              <Card
+                title={t('benefits.4-title')}
+                text={t('benefits.4-desc')}
+                renderIcon={() => <BubbleLine />}
+              />
+            </CardWrapper>
+          </CardsWrapper>
+        </Container>
+      </Wrapper>
+    )}
+  </I18n>
 )
 
 export default Benefits

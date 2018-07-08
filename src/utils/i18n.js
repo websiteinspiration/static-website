@@ -5,6 +5,7 @@ import shared from '../shared/translations.json'
 import nav from '../shared/Nav/translations.json'
 import footer from '../shared/Footer/translations.json'
 import talent from '../App/talent/translations.json'
+import employer from '../App/tech-hiring/translations.json'
 
 i18next.init({
   interpolation: {
@@ -21,6 +22,7 @@ i18next.init({
 
       // Pages
       talent: talent.en,
+      employer: employer.en,
     },
     de: {
       shared: shared.de,
@@ -29,6 +31,7 @@ i18next.init({
 
       // Pages
       talent: talent.de,
+      employer: employer.de,
     },
     nl: {
       shared: shared.nl,
@@ -37,6 +40,7 @@ i18next.init({
 
       // Pages
       talent: talent.nl,
+      employer: employer.nl,
     },
   },
 })
