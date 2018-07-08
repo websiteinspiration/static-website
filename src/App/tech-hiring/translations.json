@@ -3,7 +3,7 @@
     "headline": "Build Your Tech Team.",
     "description":
       "Honeypot is the easiest way to hire Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers and Engineering Leaders.",
-    "Start-Hiring": "Start-Hiring",
+    "Start-Hiring": "Start Hiring",
     "Im-Looking-for-a-Job": "I’m Looking for a Job!",
     "Join": "Join",
 
@@ -121,11 +121,11 @@
   },
 
   "de": {
-    "headline": "Wähle einen Job, den Du liebst",
+    "headline": "Stell Dein Tech Team zusammen",
     "description":
-      "Honeypot ist Europas Tech-Job Plattform für Softwareentwickler, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engeneering Leaders und CTOs.",
+      "Honeypot ist die einfachste Art Software Developer, DevOps Engineers, Data Scientists, Product Owners, QA Testers und Engineering Leaders einzustellen.",
     "Start-Hiring": "Ich stelle ein!",
-    "Im-Looking-for-a-Job": "Finde einen Job für mich!",
+    "Im-Looking-for-a-Job": "Ich suche einen Job!",
     "Join": "Join",
 
     "benefits": {
@@ -243,11 +243,11 @@
   },
 
   "nl": {
-    "headline": "Kies een baan waar je van houdt",
+    "headline": "Bouw Je Tech Team Op.",
     "description":
-      "Honeypot is Europa’s Tech werkplatform voor Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engineering Leaders en CTOs.",
-    "Start-Hiring": "Ik ben aan het werven!",
-    "Im-Looking-for-a-Job": "Zoek een baan voor me!",
+      "Honeypot is eenvoudigste manier om Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers en Engineering Leaders te werven.",
+    "Start-Hiring": "Beginnen met werven!",
+    "Im-Looking-for-a-Job": "Ik zoek een baan!",
     "Join": "Join",
 
     "benefits": {

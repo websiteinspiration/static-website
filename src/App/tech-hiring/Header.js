@@ -7,7 +7,7 @@ import I18n from '../../shared/I18n'
 
 const Header = () => (
   <I18n ns="employer">
-    {t => (
+    {(t, { i18n }) => (
       <MainHeader
         bg="linear-gradient(-170deg, #FF5A91 0%, #DB0F53 62%)"
         navTextColor="#EE1B6F"
@@ -17,7 +17,12 @@ const Header = () => (
           <Button key={1} white={true} href="#plans" textColor="#EE1B6F">
             {t('Start-Hiring')}
           </Button>,
-          <Button key={2} white={true} linkStyle={true} to="/">
+          <Button
+            key={2}
+            white={true}
+            linkStyle={true}
+            to={`/${i18n.language}`}
+          >
             {t('Im-Looking-for-a-Job')}
           </Button>,
         ]}

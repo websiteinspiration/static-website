@@ -16,27 +16,29 @@ import { mobile } from '../../utils/style/media'
 
 const Footer = props => (
   <I18n i18n={i18n} ns="footer">
-    {t => (
+    {(t, { i18n: { language: lang } }) => (
       <Wrapper {...props}>
         <Container wide={true}>
           <Columns>
             <Column fullOnMobile={true}>
               <Logo>
-                <Link to="/">
+                <Link to={`/${lang}`}>
                   <img src={logo} alt="Honeypot logo" />
                 </Link>
               </Logo>
             </Column>
             <Column>
               <Title>{t('Talent')}</Title>
-              <LinkItem href="/#success-stories">
+              <LinkItem href={`/${lang}/#success-stories`}>
                 {t('Success-Stories')}
               </LinkItem>
             </Column>
             <Column>
               <Title>{t('Employers')}</Title>
-              <LinkItem href="/tech-hiring#plans">{t('Pricing')}</LinkItem>
-              <LinkItem href="/tech-hiring#user-stories">
+              <LinkItem href={`/${lang}/tech-hiring#plans`}>
+                {t('Pricing')}
+              </LinkItem>
+              <LinkItem href={`/${lang}/tech-hiring#user-stories/`}>
                 {t('User-Stories')}
               </LinkItem>
             </Column>
