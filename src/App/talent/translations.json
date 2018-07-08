@@ -17,6 +17,58 @@
       "location-desc":
         "Honeypot operates in Europe’s most exciting tech cities, across Germany, the Netherlands. Set your location preference and companies apply to you!"
     },
+    "quotes": {
+      "1-title": "Free Career Support and Guidance",
+      "1-desc":
+        "Your Talent Rep will guide you through from start to finish, providing guidance on resume and interviews, helping you benchmark your salary, evaluate offers and find a job you love",
+      "1-quote":
+        "Honeypot was fantastic! I was surprised by the sheer amount of interview offers and the diversity of companies. My Talent Rep gave me solid advice on how to structure a professional-looking CV, which is something I've always struggled with in the past.",
+      "1-quotee": "Peter Ringelmann",
+      "1-position": "Frontend Developer",
+      "1-company": "Deutsche Post E-Post Development",
+
+      "2-title": "Top Jobs for Top Tech Talent",
+      "2-desc":
+        "Be part of the top 10% and connect with Europe’s top tech companies.",
+      "2-quote":
+        "After only two weeks I received 13 interview invites from a great selection of companies. From these I could choose the ones that best suited me and ended up finding the perfect startup job.",
+      "2-quotee": " Emil Ahlbäck",
+      "2-position": "Senior Frontend Developer",
+      "2-company": "Weissmaler",
+
+      "3-title": "Know Your Worth!",
+      "3-desc":
+        "Be part of the top 10% and connect with Europe’s top tech companies.",
+      "3-quote":
+        "I like Honeypot because companies offer interviews with minimum salary. It saved the effort of applying for jobs, doing interviews, getting offers, and finally finding out that the salary didn't meet my requirements",
+      "3-quotee": "Shuhei Kagawa",
+      "3-position": "Frontend Developer",
+      "3-company": "Zalando",
+
+      "4-quote":
+        "Honeypot makes me feel valued and supported in my search for new opportunities at interesting technological and modern companies.",
+      "4-quotee": "Alvean Ekman",
+      "4-first-line": "Java Developer",
+      "4-second-line": "Idealo",
+
+      "5-quote":
+        "Honeypot helped me find my dream job in my dream country! Honeypot puts their developers first - even the CEO called me personally to address all my queries!",
+      "5-quotee": "Nilufar Bava",
+      "5-first-line": "International Talent",
+      "5-second-line": "Acquisition, Glispa",
+
+      "6-quote":
+        "Getting interviews through Honeypot was a breeze. For a person who wanted to find a job and relocate first time it was superb experience!",
+      "6-quotee": "Tönis Anton",
+      "6-first-line": "Javascript",
+      "6-second-line": "ProfitBricks",
+
+      "7-quote":
+        "Honeypot helps with every aspect of the hiring process. It feels so great to have a bunch of companies interested in your profile and all the information about the role and salary upfront.",
+      "7-quotee": "Hemerson Carlin",
+      "7-first-line": "Fullstack",
+      "7-second-line": "Signavio"
+    },
     "Join": "Join"
   },
   "de": {},

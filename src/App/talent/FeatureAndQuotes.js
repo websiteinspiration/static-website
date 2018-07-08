@@ -4,6 +4,7 @@ import React from 'react'
 import SharedFeatureAndQuotes from '../../shared/FeatureAndQuotes'
 import Anchor from '../../shared/Anchor'
 import Button from '../../shared/Button'
+import I18n from '../../shared/I18n'
 
 // Images
 import featuresBg from '../../static/graphics/curved-bg-lightblue.svg'
@@ -17,88 +18,89 @@ import cardPhoto3 from '../../static/images/tonis.jpg'
 import cardPhoto4 from '../../static/images/hemerson.jpg'
 
 const TalentFeaturesAndQuotes = () => (
-  <div>
-    <Anchor id="success-stories" />
-    <SharedFeatureAndQuotes
-      bg={featuresBg}
-      rows={featuresAndQuotes}
-      quoteCards={quoteCards}
-      renderButton={() => (
-        <Button
-          href="https://www.honeypot.io/users/sign_up"
-          style={{ paddingRight: 58, paddingLeft: 58 }}
-        >
-          Join
-        </Button>
-      )}
-    />
-  </div>
+  <I18n ns="talent">
+    {t => (
+      <div>
+        <Anchor id="success-stories" />
+        <SharedFeatureAndQuotes
+          bg={featuresBg}
+          rows={featuresAndQuotes(t)}
+          quoteCards={quoteCards(t)}
+          renderButton={() => (
+            <Button
+              href="https://www.honeypot.io/users/sign_up"
+              style={{ paddingRight: 58, paddingLeft: 58 }}
+            >
+              {t('Join')}
+            </Button>
+          )}
+        />
+      </div>
+    )}
+  </I18n>
 )
 
 export default TalentFeaturesAndQuotes
 
-const featuresAndQuotes = [
+const featuresAndQuotes = t => [
   {
     textsFlexAlign: 'flex-end',
-    title: 'Free Career Support and Guidance',
-    desc:
-      'Your Talent Rep will guide you through from start to finish, providing guidance on resume and interviews, helping you benchmark your salary, evaluate offers and find a job you love',
-    quote: `Honeypot was fantastic! I was surprised by the sheer amount of interview offers and the diversity of companies. My Talent Rep gave me solid advice on how to structure a professional-looking CV, which is something I've always struggled with in the past.`,
-    quotee: 'Peter Ringelmann',
-    position: 'Frontend Developer',
-    company: 'Deutsche Post E-Post Development',
+    title: t('quotes.1-title'),
+    desc: t('quotes.1-desc'),
+    quote: t('quotes.1-quote'),
+    quotee: t('quotes.1-quotee'),
+    position: t('quotes.1-position'),
+    company: t('quotes.1-company'),
     photoUrl: photo1,
   },
   {
     reverse: true,
-    title: 'Top Jobs for Top Tech Talent',
-    desc:
-      'Be part of the top 10% and connect with Europe’s top tech companies.',
-    quote: `After only two weeks I received 13 interview invites from a great selection of companies. From these I could choose the ones that best suited me and ended up finding the perfect startup job.`,
-    quotee: 'Emil Ahlbäck',
-    position: 'Senior Frontend Developer',
-    company: 'Weissmaler',
+    title: t('quotes.2-title'),
+    desc: t('quotes.2-desc'),
+    quote: t('quotes.2-quote'),
+    quotee: t('quotes.2-quotee'),
+    position: t('quotes.2-position'),
+    company: t('quotes.2-company'),
     photoUrl: photo2,
   },
   {
-    title: 'Know Your Worth!',
-    desc: `Companies apply directly to you so you can compare offers side by side. No more job applications or clumsy back and forths with headhunters.`,
-    quote:
-      "I like Honeypot because companies offer interviews with minimum salary. It saved the effort of applying for jobs, doing interviews, getting offers, and finally finding out that the salary didn't meet my requirements",
-    quotee: 'Shuhei Kagawa',
-    position: 'Frontend Developer',
-    company: 'Zalando',
+    title: t('quotes.3-title'),
+    desc: t('quotes.3-desc'),
+    quote: t('quotes.3-quote'),
+    quotee: t('quotes.3-quotee'),
+    position: t('quotes.3-position'),
+    company: t('quotes.3-company'),
     photoUrl: photo3,
   },
 ]
 
-const quoteCards = [
+const quoteCards = t => [
   {
-    quote: `Honeypot makes me feel valued and supported in my search for new opportunities at interesting technological and modern companies.`,
-    quotee: 'Alvean Ekman',
-    quoteeFirstLine: 'Java Developer',
-    quoteeSecondLine: 'Idealo',
+    quote: t('quotes.4-quote'),
+    quotee: t('quotes.4-quotee'),
+    quoteeFirstLine: t('quotes.4-first-line'),
+    quoteeSecondLine: t('quotes.4-second-line'),
     photoUrl: cardPhoto1,
   },
   {
-    quote: `Honeypot helped me find my dream job in my dream country! Honeypot puts their developers first - even the CEO called me personally to address all my queries!`,
-    quotee: 'Nilufar Bava',
-    quoteeFirstLine: 'International Talent',
-    quoteeSecondLine: 'Acquisition, Glispa',
+    quote: t('quotes.5-quote'),
+    quotee: t('quotes.5-quotee'),
+    quoteeFirstLine: t('quotes.5-first-line'),
+    quoteeSecondLine: t('quotes.5-second-line'),
     photoUrl: cardPhoto2,
   },
   {
-    quote: `Getting interviews through Honeypot was a breeze. For a person who wanted to find a job and relocate first time it was superb experience!`,
-    quotee: 'Tönis Anton',
-    quoteeFirstLine: 'Javascript',
-    quoteeSecondLine: 'ProfitBricks',
+    quote: t('quotes.6-quote'),
+    quotee: t('quotes.6-quotee'),
+    quoteeFirstLine: t('quotes.6-first-line'),
+    quoteeSecondLine: t('quotes.6-second-line'),
     photoUrl: cardPhoto3,
   },
   {
-    quote: `Honeypot helps with every aspect of the hiring process. It feels so great to have a bunch of companies interested in your profile and all the information about the role and salary upfront.`,
-    quotee: 'Hemerson Carlin',
-    quoteeFirstLine: 'Fullstack',
-    quoteeSecondLine: 'Signavio',
+    quote: t('quotes.7-quote'),
+    quotee: t('quotes.7-quotee'),
+    quoteeFirstLine: t('quotes.7-first-line'),
+    quoteeSecondLine: t('quotes.7-second-line'),
     photoUrl: cardPhoto4,
   },
 ]
