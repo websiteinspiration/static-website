@@ -5,6 +5,7 @@
       "Honeypot is Europe’s tech job platform for Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engineering Leaders and CTOs.",
     "Find-Me-a-Job": "Find Me a Job!",
     "Im-Hiring": "I'm Hiring",
+    "Join": "Join",
 
     "benefits": {
       "title": "Create a Profile and Let Companies Apply to You",
@@ -40,7 +41,7 @@
 
       "3-title": "Know Your Worth!",
       "3-desc":
-        "Be part of the top 10% and connect with Europe’s top tech companies.",
+        "Companies apply directly to you so you can compare offers side by side. No more job applications or clumsy back and forths with headhunters.",
       "3-quote":
         "I like Honeypot because companies offer interviews with minimum salary. It saved the effort of applying for jobs, doing interviews, getting offers, and finally finding out that the salary didn't meet my requirements",
       "3-quotee": "Shuhei Kagawa",
@@ -91,6 +92,196 @@
         "Interview with companies that interest you! And choose the one you like the best!"
     }
   },
-  "de": {},
-  "nl": {}
+
+  "de": {
+    "headline": "Wähle einen Job, den Du liebst",
+    "description":
+      "Honeypot ist Europas Tech-Job Plattform für Softwareentwickler, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engeneering Leaders und CTOs.",
+    "Find-Me-a-Job": "Finde einen Job für mich!",
+    "Im-Hiring": "Ich stelle ein!",
+    "Join": "Join",
+
+    "benefits": {
+      "title":
+        "Erstell Dir ein Profil und lass die Unternehmen sich bei Dir bewerben",
+      "ideal-role-title":
+        "Werde Teil eines Engeneering Teams in deiner idealen Rolle",
+      "ideal-role-desc":
+        "Auf Honeypot stellen über 1000 Unternehmen Softwareentwickler, DevOps Engineers, Data Scientists, Product Owners, QA Testers und Engeneering Leaders wie Dich ein!",
+      "tech-stack-title": "Arbeite mit einem Tech-Stack, den Du liebst",
+      "tech-stack-desc":
+        "Ob es Ruby, Scala, JavaScript oder irgendetwas anderes ist, auf Honeypot bekommst Du nur Angebote von Unternehmen, für Deinen bevorzugten Tech-Stack und Dein gewünschtes Gehalt.",
+      "location-title": "Wähle die Stadt, die Dir passt",
+      "location-desc":
+        "Honeypot ist in Europas aufregendsten Tech Städten aktiv, an vielen Orten in Deutschland und den Niederlanden. Nenne Deinen Lieblingsort und die Unternehmen bewerben sich bei Dir!"
+    },
+
+    "quotes": {
+      "1-title": "Kostenlose Karriere Beratung",
+      "1-desc":
+        "Dein/e Talentberater/in wird Dich von Anfang bis Ende durch den Prozess begleiten und Dir beim Schreiben des Lebenslaufs, der Jobinterview Vorbereitung, der Berechnung des Wunschgehalts und der Einschätzung der Angebote helfen. Damit Du einen Job findest, den Du liebst.",
+      "1-quote":
+        "Honeypot war fantastisch! Ich war überrascht von den vielen Interview Anfragen und der Vielfalt der Unternehmen. Mein Talent Berater hat mir geholfen einen professionell aussehenden CV zu strukturieren, etwas was mir vorher immer schwer gefallen ist.",
+      "1-quotee": "Peter Ringelmann",
+      "1-position": "Frontend Developer",
+      "1-company": "Deutsche Post E-Post Development",
+
+      "2-title": "Top Jobs für Top Tech Talente",
+      "2-desc":
+        "Werde Teil der Top 10% und komm mit Europas Top Tech Unternehmen ins Gespräch",
+      "2-quote":
+        "Nach nur zwei Wochen hatte ich 13 Einladungen zu Vorstellungsgesprächen von sehr guten Unternehmen. Aus diesen konnte ich diejenigen aussuchen, die am besten zu mir gepasst haben und am Ende hatte ich den besten Startup-Job.",
+      "2-quotee": "Emil Ahläback",
+      "2-position": "Senior Frontend",
+      "2-company": "Weissmaler",
+
+      "3-title": "Kenne Deinen Wert!",
+      "3-desc":
+        "Unternehmen bewerben sich direkt bei Dir. So kannst Du Angebote direkt vergleichen. Keine Bewerbungen mehr oder umständliches Hin und Her mit Personalern",
+      "3-quote":
+        "Ich mag Honeypot, weil Unternehmen normalerweise Interviews nur mit einem Minimalgehalt anbieten. So habe ich mir die Anstrengung erspart mich für Jobs zu bewerben, Interviewprozesse zu durchlaufen, Angebote zu bekommen und am Ende herauszufinden, dass das Gehalt nicht meinen Anforderungen entsprach.",
+      "3-quotee": "Shuhei Kagawa",
+      "3-position": "Frontend Developer",
+      "3-company": "Zalando",
+
+      "4-quote":
+        "Honeypot gibt mir das Gefühl der Wertschätzung und Unterstützung bei meiner Suche nach neuen Möglichkeiten bei interessanten und modernen Tech-Unternehmen.",
+      "4-quotee": "Alvean Akeman",
+      "4-first-line": "Java",
+      "4-second-line": "Idealo",
+
+      "5-quote":
+        "Honeypot hat mir geholfen meinen Traumjob in meinem Traumland zu finden! Bei Honeypot stehen die Entwickler/innen an erster Stelle - Sogar der CEO hat mich persönlich angerufen um all meine Fragen zu besprechen!",
+      "5-quotee": "Nilufar Bava",
+      "5-first-line": "International Talent",
+      "5-second-line": "Acquisition, Glispa",
+
+      "6-quote":
+        "Interviews auf Honeypot zu bekommen war ein Leichtes. Für jemanden, der einen Job finden und zum ersten Mal umziehen wollte, war das eine tolle Erfahrung!",
+      "6-quotee": "Tönis Anton",
+      "6-first-line": "Javascript",
+      "6-second-line": "ProfitBricks",
+
+      "7-quote":
+        "Honeypot hilft bei jedem Aspekt des Einstellungsprozesses. Es fühlt sich großartig an, so viele an deinem Profil interessierte Unternehmen zu haben und die ganzen Infos zur Position und Gehalt im Vorfeld schon zu haben.",
+      "7-quotee": "Hemerson Carlin",
+      "7-first-line": "Fullstack",
+      "7-second-line": "Signavio"
+    },
+
+    "steps": {
+      "title": "Ein einfacher und schneller Anmeldungsprozess",
+      "1-title": "Erstelle ein Profil ",
+      "1-desc":
+        "Das ist Deine Chance uns zu sagen was Du in Deiner nächsten Rolle möchtest – und es dauert weniger als fünf Minuten!",
+
+      "2-title": "Werde Teil der Community",
+      "2-desc":
+        "Bestehe unseren Code Test und führe ein optionales Gespräch mit unseren Talent Berater/innen, die Dich so positionieren, dass Du die besten Angebote erhältst! ",
+
+      "3-title": "Werde sichtbar!",
+      "3-desc":
+        "Werde sichtbar auf Honeypot, damit Unternehmen Dein Profil finden und Dir Angebote mit Gehaltsangabe und Tech-Stack schon im Vorfeld machen können.",
+
+      "4-title": "Hol Dir Deinen Job!",
+      "4-desc":
+        "Führe Interviews mit Unternehmen, die dich interessieren! Und wähle das Unternehmen, das Dir am besten gefällt!"
+    }
+  },
+
+  "nl": {
+    "headline": "Kies een baan waar je van houdt",
+    "description":
+      "Honeypot is Europa’s Tech werkplatform voor Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engineering Leaders en CTOs.",
+    "Find-Me-a-Job": "Zoek een baan voor me!",
+    "Im-Hiring": "Ik ben aan het werven!",
+    "Join": "Join",
+
+    "benefits": {
+      "title": "Maak een profiel aan en laat bedrijven bij jou solliciteren",
+      "ideal-role-title":
+        "Maak deel uit van een engineering team in je ideale functie",
+      "ideal-role-desc":
+        "Op Honeypot zijn meer dan 1000 bedrijven bezig om Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers en Engineering Leaders zoals jij te werven!",
+      "tech-stack-title": "Werk met een technologiestapel die bij je past",
+      "tech-stack-desc":
+        "Of het nu Ruby, Scala, JavaScript of iets anders is, op Honeypot krijg je alleen aanbiedingen van bedrijven voor de technologiestapel en het salaris waar jij naar zoekt.",
+      "location-title": "Kies je favoriete plek",
+      "location-desc":
+        "Honeypot is actief in de spannendste Tech-steden van Europa en in zowel Duitsland als Nederland. Stel je locatievoorkeur in en laat de bedrijven je benaderen!"
+    },
+
+    "quotes": {
+      "1-title": "Gratis carrièreondersteuning en -begeleiding",
+      "1-desc":
+        "Je Talent-vertegenwoordiger begeleid je van A – Z, met advies over je CV en sollicitatiegesprekken, en met hulp om je salaris te benchmarken, aanbiedingen te evalueren en een geweldige baan te vinden ",
+      "1-quote":
+        "Honeypot was geweldig! Ik stond verbaasd over het grote aantal sollicitatieaanbiedingen en de verscheidenheid van de bedrijven. Mijn Talent-vertegenwoordiger gaf me goed advies over hoe ik een professioneel uitziend CV op moest stellen, iets waar ik in het verleden altijd mee worstelde.",
+      "1-quotee": "Peter Ringelmann",
+      "1-position": "Frontend Developer",
+      "1-company": "Deutsche Post E-Post Development",
+
+      "2-title": "Topbanen voor top Tech-talent",
+      "2-desc":
+        "Maak deel uit van de top 10% en trek de aandacht van Europa’s top technologiebedrijven.",
+      "2-quote":
+        "Na 2 weken had ik al 13 interviewaanvragen ontvangen van een geweldige selectie aan bedrijven. Hieruit kon ik de uitnodigingen kiezen die het beste bij me pasten, en ik vond daardoor een prachtige startbaan.",
+      "2-quotee": " Emil Ahlbäck",
+      "2-position": "Senior Frontend Developer",
+      "2-company": "Weissmaler",
+
+      "3-title": "Weet wat je waard bent!",
+      "3-desc":
+        "Bedrijven benaderen je direct zodat je aanbiedingen met elkaar kunt vergelijken. Geen sollicitaties of omslachtig heen-en-weer gedoe met headhunters.",
+      "3-quote":
+        "Wat mij beviel over Honeypot was dat bedrijven interviews aanbieden met een minimumsalaris. Het bespaarde de moeite om sollicitaties aan te vragen, interviews bij te wonen, aanbiedingen te krijgen en dan uiteindelijk te ontdekken dat het salaris niet aan mijn eisen voldeed",
+      "3-quotee": "Shuhei Kagawa",
+      "3-position": "Frontend Developer",
+      "3-company": "Zalando",
+
+      "4-quote":
+        "Honeypot zorgt ervoor dat ik me gewaardeerd en gesteund voel in mijn zoektocht naar nieuwe kansen bij interessante technologiebedrijven.",
+      "4-quotee": "Alvean Ekman",
+      "4-first-line": "Java Developer",
+      "4-second-line": "Idealo",
+
+      "5-quote":
+        "Honeypot hielp mij om de baan van mijn dromen te vinden in het land van mijn dromen! Honeypot zet hun developers op de eerste plaats - de CEO belde me zelfs persoonlijk om al mijn vragen te beantwoorden!",
+      "5-quotee": "Nilufar Bava",
+      "5-first-line": "International Talent",
+      "5-second-line": "Acquisition, Glispa",
+
+      "6-quote":
+        "Interviews krijgen via Honeypot was een koud kunstje. Voor iemand die een baan zocht en voor het eerst verhuisde, was het een geweldige ervaring!",
+      "6-quotee": "Tönis Anton",
+      "6-first-line": "Javascript",
+      "6-second-line": "ProfitBricks",
+
+      "7-quote":
+        "Honeypot helpt met elk aspect van het wervingsproces. Het voelt geweldig als een groep bedrijven interesse heeft in je profiel en dat je alle informatie over de functie en het salaris al voorop krijgt.",
+      "7-quotee": "Hemerson Carlin",
+      "7-first-line": "Fullstack",
+      "7-second-line": "Signavio"
+    },
+
+    "steps": {
+      "title": "Een simpel en snel registratieproces!",
+
+      "1-title": "Maak een profiel aan",
+      "1-desc":
+        "Dit is jouw kans om ons te vertellen hoe je volgende functie eruit moet zien – en je hebt er maar 5 minuten voor nodig!",
+
+      "2-title": "Meld je aan bij de gemeenschap",
+      "2-desc":
+        "Doorloop onze code screening en voer eventueel een gesprek met je Talent-vertegenwoordiger, die je helpt om de beste aanbiedingen te ontvangen!",
+
+      "3-title": "Word zichtbaar",
+      "3-desc":
+        "Word zichtbaar op Honeypot zodat bedrijven je profiel kunnen vinden en je aanbiedingen kunnen sturen compleet met salaris en technologiestapel.",
+
+      "4-title": "Word aangenomen!",
+      "4-desc":
+        "Spreek met de bedrijven die je interesseren! En kies hieruit je favoriet!"
+    }
+  }
 }

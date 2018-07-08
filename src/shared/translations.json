@@ -9,10 +9,20 @@
   },
   "de": {
     "honeypot": "Honeypot",
-    "companies-hiring": "Über 1000 Unternehmen stellen mit Honeypot ein"
+    "companies-hiring": "Über 1000 Unternehmen stellen mit Honeypot ein",
+
+    "join-community": "Werde Teil der Honeypot Community",
+    "devs-signing-up":
+      "Über 1000 Entwickler/innen melden sich jede Woche neu bei Honeypot an!",
+    "Join": "Join"
   },
   "nl": {
     "honeypot": "Honeypot",
-    "companies-hiring": "Meer dan 1000 bedrijven werven al op Honeypot"
+    "companies-hiring": "Meer dan 1000 bedrijven werven al op Honeypot",
+
+    "join-community": "Meld je aan bij de Honeypot gemeenschap",
+    "devs-signing-up":
+      "Meer dan 1.000 developers melden zich aan iedere week bij Honeypot!",
+    "Join": "Join"
   }
 }
