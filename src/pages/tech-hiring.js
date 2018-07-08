@@ -3,13 +3,13 @@ import React from 'react'
 // Local
 import Seo from '../shared/Seo'
 import Footer from '../shared/Footer'
+import JoinCommunity from '../shared/JoinCommunity'
+import JoinCommunityBg from '../shared/JoinCommunity/Bg'
 import Header from '../App/tech-hiring/Header'
 import Benefits from '../App/tech-hiring/Benefits'
 import Mission from '../App/tech-hiring/Mission'
 import Plans from '../App/tech-hiring/Plans'
 import FeatureAndQuotes from '../App/tech-hiring/FeatureAndQuotes'
-import JoinCommunity from '../App/JoinCommunity'
-import JoinCommunityBg from '../App/JoinCommunity/Bg'
 
 const TechEmployerPage = () => (
   <div>

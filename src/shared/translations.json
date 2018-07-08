@@ -1,7 +1,11 @@
 {
   "en": {
     "honeypot": "Honeypot",
-    "companies-hiring": "Over 1000 Companies Are Hiring on Honeypot"
+    "companies-hiring": "Over 1000 Companies Are Hiring on Honeypot",
+
+    "join-community": "Join the Honeypot Community",
+    "devs-signing-up": "Over 1,000 developers sign-up to Honeypot every week!",
+    "Join": "Join"
   },
   "de": {
     "honeypot": "Honeypot",

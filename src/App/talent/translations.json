@@ -5,6 +5,7 @@
       "Honeypot is Europe’s tech job platform for Software Developers, DevOps Engineers, Data Scientists, Product Owners, QA Testers, Engineering Leaders and CTOs.",
     "Find-Me-a-Job": "Find Me a Job!",
     "Im-Hiring": "I'm Hiring",
+
     "benefits": {
       "title": "Create a Profile and Let Companies Apply to You",
       "ideal-role-title": "Join an Engineering Team in Your Ideal Role",
@@ -17,6 +18,7 @@
       "location-desc":
         "Honeypot operates in Europe’s most exciting tech cities, across Germany, the Netherlands. Set your location preference and companies apply to you!"
     },
+
     "quotes": {
       "1-title": "Free Career Support and Guidance",
       "1-desc":
@@ -69,7 +71,25 @@
       "7-first-line": "Fullstack",
       "7-second-line": "Signavio"
     },
-    "Join": "Join"
+
+    "steps": {
+      "title": "A Simple and Quick Sign Up Process!",
+      "1-title": "Create a Profile",
+      "1-desc":
+        "It’s your chance to tell us what you want in your next role - and it takes less than 5 minutes!",
+
+      "2-title": "Join the Community",
+      "2-desc":
+        "Pass our code screening and take an optional call with your Talent Rep, who positions you to receive the best offers!",
+
+      "3-title": "Become Visible",
+      "3-desc":
+        "Become visible on Honeypot so that companies can find your profile and make you offers with salary and tech stack up front.",
+
+      "4-title": "Get Hired!",
+      "4-desc":
+        "Interview with companies that interest you! And choose the one you like the best!"
+    }
   },
   "de": {},
   "nl": {}

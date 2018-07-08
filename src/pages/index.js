@@ -3,12 +3,12 @@ import React from 'react'
 // Local
 import Seo from '../shared/Seo'
 import Footer from '../shared/Footer'
+import JoinCommunity from '../shared/JoinCommunity'
+import JoinCommunityBg from '../shared/JoinCommunity/Bg'
 import Header from '../App/talent/Header'
 import TalentBenefits from '../App/talent/TalentBenefits'
 import FeatureAndQuotes from '../App/talent/FeatureAndQuotes'
 import TalentSteps from '../App/talent/TalentSteps'
-import JoinCommunity from '../App/JoinCommunity'
-import JoinCommunityBg from '../App/JoinCommunity/Bg'
 
 const IndexPage = () => (
   <div>
