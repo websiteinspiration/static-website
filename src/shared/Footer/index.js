@@ -35,7 +35,7 @@ const Footer = props => (
               <LinkItem href={`/${lang}/tech-hiring#plans`}>
                 {t('Pricing')}
               </LinkItem>
-              <LinkItem href={`/${lang}/tech-hiring#user-stories/`}>
+              <LinkItem href={`/${lang}/tech-hiring#user-stories`}>
                 {t('User-Stories')}
               </LinkItem>
             </Column>
