@@ -1,1 +1,1 @@
-export { default } from './tech-hiring'
+export { default } from '../views/tech-hiring'
