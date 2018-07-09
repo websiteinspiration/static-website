@@ -16,6 +16,13 @@ module.exports = {
         langKeyForNull: 'any',
       },
     },
+    {
+      resolve: 'gatsby-plugin-copy',
+      options: {
+        verbose: true, // outputs a message for each file copied
+        _redirects: 'public/_redirects', // Add one entry per file to copy
+      },
+    },
     'gatsby-plugin-styled-components',
   ],
 }
