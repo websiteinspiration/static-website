@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 // Local
 import { Container, Wrapper } from './Containers'
@@ -11,61 +11,88 @@ import avatar1 from '../../static/images/jeri-doris.jpg'
 import avatar2 from '../../static/images/kevin-goldsmith.jpg'
 import avatar3 from '../../static/images/mark-levy.jpg'
 
-const Speakers = () => (
-  <Container>
-    <Wrapper min="618">
-      <SectionTitle color="dark">Speakers.</SectionTitle>
-      <SpeakersContainer>
-        <SpeakersItem>
-          <Avatar>
-            <img src={avatar1} />
-          </Avatar>
-          <Name>Jeri Doris</Name>
-          <Info>Chief People Officer @ Delivery Hero.</Info>
-        </SpeakersItem>
-        <SpeakersItem>
-          <Avatar>
-            <img src={avatar2} />
-          </Avatar>
+// Utils
+import { mobile } from '../../utils/style/media'
 
-          <Name>Kevin Goldsmith</Name>
-          <Info>
-            VPE @ AstrumU (Former CTO @ Avvo, Former VPE @ Spotify, DoE @ Adobe
-          </Info>
-        </SpeakersItem>
-        <SpeakersItem>
-          <Avatar>
-            <img src={avatar3} />
-          </Avatar>
-          <Name>Mark Levy</Name>
-          <Info>Former AirBnb Employee Experience Pioneer.</Info>
-        </SpeakersItem>
-      </SpeakersContainer>
-      <Text>… and many more to be announced.</Text>
-      <Center>
-        <TicketButton color="blue" />
-      </Center>
-    </Wrapper>
-  </Container>
+const Speakers = () => (
+  <SectionWrapper id="speakers">
+    <Container>
+      <Wrapper>
+        <SectionTitle color="dark">Speakers.</SectionTitle>
+        <SpeakersContainer>
+          <SpeakersItem>
+            <Avatar>
+              <img src={avatar1} />
+            </Avatar>
+            <Name>Jeri Doris</Name>
+            <Info>Chief People Officer @ Delivery Hero.</Info>
+          </SpeakersItem>
+          <SpeakersItem>
+            <Avatar>
+              <img src={avatar2} />
+            </Avatar>
+
+            <Name>Kevin Goldsmith</Name>
+            <Info>
+              VPE @ AstrumU (Former CTO @ Avvo, Former VPE @ Spotify, DoE @
+              Adobe
+            </Info>
+          </SpeakersItem>
+          <SpeakersItem>
+            <Avatar>
+              <img src={avatar3} />
+            </Avatar>
+            <Name>Mark Levy</Name>
+            <Info>Former AirBnb Employee Experience Pioneer.</Info>
+          </SpeakersItem>
+        </SpeakersContainer>
+        <Text>… and many more to be announced.</Text>
+        <Center>
+          <TicketButton color="blue" />
+        </Center>
+      </Wrapper>
+    </Container>
+  </SectionWrapper>
 )
 
 export default Speakers
 
 // Styles
+const SectionWrapper = styled.div`
+  padding-bottom: 50px;
+`
+
 const SpeakersContainer = styled.div`
-  margin-top: 30px;
   max-width: 590px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
+
+  ${mobile(css`
+    flex-direction: column;
+    align-items: center;
+  `)};
 `
 
 const SpeakersItem = styled.div`
   width: 140px;
-  margin-right: 86px;
+  margin-right: 85px;
   text-align: center;
-  :last-child {
+
+  &:last-child {
     margin-right: 0;
   }
+
+  ${mobile(css`
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  `)};
 `
 
 const Avatar = styled.div`

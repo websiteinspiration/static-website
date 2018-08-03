@@ -11,7 +11,7 @@ import Topic from './Topic'
 import topicsBg from '../../static/images/topics-bg.png'
 
 const Topics = () => (
-  <StyledContainer>
+  <StyledContainer id="topics">
     <LargeWrapper>
       <SectionTitle>Topics.</SectionTitle>
       <TopicList>
@@ -29,10 +29,9 @@ const Topics = () => (
           alignSelf="flex-end"
           maxWidth={440}
         >
-          Listen to CTOs, Engineering Leaders and HR Leaders <br />who have
-          built products and scaled teams through<br /> booms and busts. From
-          onboarding and training to feedback, promotion and employee
-          experience.
+          Listen to CTOs, Engineering Leaders and HR Leaders who have built
+          products and scaled teams through booms and busts. From onboarding and
+          training to feedback, promotion and employee experience.
         </Topic>
 
         <Topic
@@ -45,8 +44,8 @@ const Topics = () => (
           maxWidth={440}
           top={-10}
         >
-          How should HR and Tech work together to build the<br /> most effective
-          processes to recruit and retain top<br /> engineering teams?
+          How should HR and Tech work together to build the most effective
+          processes to recruit and retain top engineering teams?
         </Topic>
 
         <Topic
@@ -58,7 +57,7 @@ const Topics = () => (
           maxWidth={470}
           top={15}
         >
-          Learn how to build an organization which rewards technical<br />
+          Learn how to build an organization which rewards technical
           contributors and those interested in management.
         </Topic>
       </TopicList>

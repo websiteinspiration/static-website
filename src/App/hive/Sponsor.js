@@ -11,7 +11,8 @@ import sponsorBg from '../../static/sponsor-bg.png'
 import { mobile } from '../../utils/style/media'
 
 const Sponsor = () => (
-  <Container>
+  <Container id="s-ponsor">
+    {/* "#sponser" gets removed / blocked by ad blockers */}
     <Wrapper>
       <SponsorWrapper>
         <SectionTitle color="dark">Sponsor.</SectionTitle>
@@ -20,7 +21,9 @@ const Sponsor = () => (
           Engineering, and Talent Acquisition Leaders in the industry. Contact
           our sponsor team for more information regarding sponsor packages
         </Text>
-        <Button color="blue">Contact us</Button>
+        <Button color="blue" href="mailto:ek@honeypot.io">
+          Contact us
+        </Button>
       </SponsorWrapper>
     </Wrapper>
   </Container>

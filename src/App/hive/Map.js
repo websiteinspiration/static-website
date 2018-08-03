@@ -27,6 +27,6 @@ const StyledIframe = styled.iframe`
   display: block;
   margin: 0;
   border: none;
-  width: 100vw;
+  width: 100%;
   height: 290px;
 `

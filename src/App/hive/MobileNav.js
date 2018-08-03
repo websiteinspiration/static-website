@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // Local
 import MenuBars from '../../vectors/MenuBars'
@@ -22,7 +23,8 @@ class MobileNav extends Component {
         <NavItem href="#speakers">Speakers</NavItem>
         <NavItem href="#locations">Locations</NavItem>
         <NavItem href="#topics">Topics</NavItem>
-        <NavItem href="#sponsor">Sponsor</NavItem>
+        {/* #sponser gets removed / blocked by ad blockers */}
+        <NavItem href="#s-ponsor">Sponsor</NavItem>
       </MobilePopup>
     </Wrapper>
   )
@@ -84,7 +86,7 @@ const MobilePopup = styled.div`
     `};
 `
 
-const NavItem = styled.a`
+const NavItem = styled(AnchorLink)`
   text-decoration: none;
   color: #fff;
   display: block;

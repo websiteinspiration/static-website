@@ -1,6 +1,9 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
+// Utils
+import { mobile } from '../../utils/style/media'
+
 const Topic = ({ maxWidth = 500, title, children, top = 30, ...props }) => (
   <Container maxWidth={maxWidth} top={top} {...props}>
     <Title>{title}</Title>
@@ -23,6 +26,14 @@ const Container = styled.div`
       : css`
           align-self: center;
         `};
+
+  ${mobile(css`
+    margin-top: 42px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  `)};
 `
 
 const Title = styled.h2`

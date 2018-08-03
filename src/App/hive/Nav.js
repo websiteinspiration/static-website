@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // Local
 import HiveLogo from '../../vectors/HiveLogo'
@@ -28,12 +29,12 @@ export default Nav
 const NormalNav = () => (
   <NormalNavWrapper>
     <NavItems>
-      <NavItem href="#">Speakers</NavItem>
-      <NavItem href="#">Topics</NavItem>
-      <NavItem href="#">Location</NavItem>
-      <NavItem href="#">Sponsor</NavItem>
+      <NavItem href="#speakers">Speakers</NavItem>
+      <NavItem href="#topics">Topics</NavItem>
+      <NavItem href="#location">Location</NavItem>
+      <NavItem href="#s-ponsor">Sponsor</NavItem>
     </NavItems>
-    <GetTicketButton href="#">Tickets</GetTicketButton>
+    <GetTicketButton href="#tickets">Tickets</GetTicketButton>
   </NormalNavWrapper>
 )
 
@@ -77,7 +78,7 @@ const NavItems = styled.div`
   justify-content: flex-end;
 `
 
-const NavItem = styled.a`
+const NavItem = styled(AnchorLink)`
   margin-right: 35px;
   text-decoration: none;
   color: #fff;
@@ -89,7 +90,7 @@ const NavItem = styled.a`
   text-shadow: 0 0 8px rgba(7, 39, 167, 0.24);
 `
 
-const GetTicketButton = styled.a`
+const GetTicketButton = styled(AnchorLink)`
   width: 86px;
   height: 30px;
   line-height: 30px;
@@ -99,6 +100,7 @@ const GetTicketButton = styled.a`
 
   text-align: center;
   text-decoration: none;
+  font-weight: bold;
 
   transition: background 150ms ease-in-out;
 

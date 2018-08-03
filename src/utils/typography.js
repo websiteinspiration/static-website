@@ -18,10 +18,12 @@ const typography = new Typography({
     'Helvetica',
     'serif',
   ],
-  googleFonts: {
-    name: 'Montserrat',
-    styles: ['700'],
-  },
+  googleFonts: [
+    {
+      name: 'Montserrat',
+      styles: ['700'],
+    },
+  ],
 })
 
 export default typography

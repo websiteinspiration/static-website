@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 // Local
 import { Container, Wrapper } from './Containers'
@@ -9,9 +9,12 @@ import MapPin from '../../vectors/MapPin'
 // Photos
 import locationBg from '../../static/images/venue.jpg'
 
+// Utils
+import { mobile } from '../../utils/style/media'
+
 const Location = () => (
-  <StyledContainer>
-    <Wrapper min="336">
+  <StyledContainer id="location">
+    <Wrapper>
       <SectionTitle>Location.</SectionTitle>
       <Text>
         Join us at Festsaal Kreuzberg, one of Berlin’s coolest venues. Located
@@ -42,6 +45,12 @@ const StyledContainer = styled(Container)`
   box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.4);
   z-index: 100;
   position: relative;
+
+  padding-bottom: 22px;
+
+  ${mobile(css`
+    padding-bottom: 40px;
+  `)};
 `
 
 const Text = styled.p`

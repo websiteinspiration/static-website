@@ -1,10 +1,15 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+// Utils
+import { mobile } from '../../../utils/style/media'
 
 const Button = styled.a`
-  display: block;
-  width: 131px;
   height: 36px;
-  line-height: 36px;
+  line-height: 1.3;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   margin-top: 26px;
 
   background: ${p =>
@@ -15,10 +20,9 @@ const Button = styled.a`
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.1);
   border-radius: 100px;
 
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  white-space: nowrap;
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 900;
   text-decoration: none;
   text-align: center;
   letter-spacing: 0.43px;
@@ -30,6 +34,13 @@ const Button = styled.a`
         ? '#0A55A1'
         : p.color === 'yellow' ? `#EAB808` : p.color};
   }
+
+  padding: 0 26px;
+
+  ${mobile(css`
+    height: 44px;
+    padding: ${p => (p.normalPadding ? `0 32px` : `0 55px`)};
+  `)};
 `
 
 export default Button

@@ -10,50 +10,81 @@ import TicketButton from './Buttons/TicketButton'
 import plan1 from '../../static/plan1.svg'
 import plan2 from '../../static/plan2.svg'
 import plan3 from '../../static/plan3.svg'
+import { mobile } from '../../utils/style/media'
 
 const Tickets = () => (
-  <Container>
-    <LargeWrapper min="473">
+  <Container id="tickets" style={{ paddingBottom: 80 }}>
+    <LargeWrapper>
       <SectionTitle color="dark">Tickets.</SectionTitle>
-      <TicketsWrapper>
-        <Ticket plan={1}>
-          <Price>€359</Price>
-          <Name>Early Bird</Name>
-          <Desc>First come, First Served</Desc>
-          <Line />
-          <ButtonWrapper>
-            <TicketButton />
-          </ButtonWrapper>
-        </Ticket>
-        <Ticket plan={2}>
-          <Price>€459</Price>
-          <Name>Regular</Name>
-          <Desc>The normal price for conference tickets.</Desc>
-          <Line />
-          <ButtonWrapper>
-            <TicketButton />
-          </ButtonWrapper>
-        </Ticket>
-        <Ticket plan={3}>
-          <Price>€559</Price>
-          <Name>Late Bird</Name>
-          <Desc>Last chance to grab your tickets.</Desc>
-          <Line white />
-          <ButtonWrapper>
-            <TicketButton />
-          </ButtonWrapper>
-        </Ticket>
-      </TicketsWrapper>
     </LargeWrapper>
+
+    <ScrollHider>
+      <ScrollWrapper>
+        <TicketsWrapper>
+          <Ticket plan={1}>
+            <Price>€359</Price>
+            <Name>Early Bird</Name>
+            <Desc>First come, First Served</Desc>
+            <Line />
+            <ButtonWrapper>
+              <TicketButton />
+            </ButtonWrapper>
+          </Ticket>
+          <Ticket plan={2}>
+            <Price>€459</Price>
+            <Name>Regular</Name>
+            <Desc>The normal price for conference tickets.</Desc>
+            <Line />
+            <ButtonWrapper>
+              <TicketButton />
+            </ButtonWrapper>
+          </Ticket>
+          <Ticket plan={3}>
+            <Price>€559</Price>
+            <Name>Late Bird</Name>
+            <Desc>Last chance to grab your tickets.</Desc>
+            <Line white />
+            <ButtonWrapper>
+              <TicketButton />
+            </ButtonWrapper>
+          </Ticket>
+        </TicketsWrapper>
+      </ScrollWrapper>
+    </ScrollHider>
   </Container>
 )
 
 export default Tickets
 
+const ScrollHider = styled.div`
+  ${mobile(css`
+    overflow-y: hidden;
+  `)};
+`
+
+const ScrollWrapper = styled.div`
+  margin-bottom: -16px;
+
+  ::-webkit-scrollbar {
+    opacity: 0;
+  }
+
+  ${mobile(css`
+    overflow-y: hidden;
+    overflow-x: scroll;
+  `)};
+`
+
 const TicketsWrapper = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
+
+  ${mobile(css`
+    justify-content: flex-start;
+    margin-left: 55px;
+    margin-right: 55px;
+  `)};
 `
 
 const Line = styled.div`
@@ -140,4 +171,8 @@ const ButtonWrapper = styled.div`
   margin-left: -85px;
   width: 170px;
   height: 2px;
+
+  ${mobile(css`
+    top: 163px;
+  `)};
 `
