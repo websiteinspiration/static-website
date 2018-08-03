@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Local
-import { Container, Wrapper } from './Containers'
+import { Container, LargeWrapper } from './Containers'
+import SectionTitle from './SectionTitle'
 import TicketButton from './Buttons/TicketButton'
 import Topic from './Topic'
 
@@ -11,8 +12,8 @@ import topicsBg from '../../static/images/topics-bg.png'
 
 const Topics = () => (
   <StyledContainer>
-    <Wrapper min="1100">
-      <Title>Topics.</Title>
+    <LargeWrapper>
+      <SectionTitle>Topics.</SectionTitle>
       <TopicList>
         <Topic title="Recruit the Best People" maxWidth={470}>
           Listen to CTOs, Engineering Leaders and HR Leaders who have built
@@ -33,6 +34,7 @@ const Topics = () => (
           onboarding and training to feedback, promotion and employee
           experience.
         </Topic>
+
         <Topic
           title={
             <div>
@@ -41,10 +43,12 @@ const Topics = () => (
           }
           alignSelf="flex-start"
           maxWidth={440}
+          top={-10}
         >
           How should HR and Tech work together to build the<br /> most effective
           processes to recruit and retain top<br /> engineering teams?
         </Topic>
+
         <Topic
           title={
             <div>
@@ -52,6 +56,7 @@ const Topics = () => (
             </div>
           }
           maxWidth={470}
+          top={15}
         >
           Learn how to build an organization which rewards technical<br />
           contributors and those interested in management.
@@ -60,7 +65,7 @@ const Topics = () => (
       <ButtonWrapper>
         <TicketButton />
       </ButtonWrapper>
-    </Wrapper>
+    </LargeWrapper>
   </StyledContainer>
 )
 
@@ -73,20 +78,8 @@ const StyledContainer = styled(Container)`
   /* background-position: right top; */
 `
 
-const Title = styled.h1`
-  margin-top: 46px;
-  font-family: ${p => p.theme.systemFont};
-  font-size: 38px;
-  color: #fff;
-  font-weight: 400;
-  letter-spacing: 1.58px;
-  text-align: center;
-  line-height: 65px;
-`
-
 const TopicList = styled.div`
   margin-top: 30px;
-  width: 860px;
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -96,4 +89,5 @@ const ButtonWrapper = styled.div`
   margin-top: 45px;
   display: flex;
   justify-content: center;
+  margin-bottom: 38px;
 `

@@ -1,40 +1,75 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 // Local
 import HiveLogo from '../../vectors/HiveLogo'
+import { LargeWrapper } from './Containers'
+import MobileNav from './MobileNav'
+
+// Utils
+import { mobile } from '../../utils/style/media'
 
 const Nav = () => (
-  <div>
-    <NavWrapper>
-      <Logo>
-        <HiveLogo />
-      </Logo>
-      <NavItems>
-        <NavItem href="#">Speakers</NavItem>
-        <NavItem href="#">Topics</NavItem>
-        <NavItem href="#">Location</NavItem>
-        <NavItem href="#">Sponsor</NavItem>
-      </NavItems>
-      <GetTicketBotton href="#">Tickets</GetTicketBotton>
-    </NavWrapper>
-  </div>
+  <NavWrapper>
+    <LargeWrapper style={{ overflow: 'visible' }}>
+      <InnerWrapper>
+        <Logo>
+          <HiveLogo />
+        </Logo>
+        <NormalNav />
+        <MobileNav />
+      </InnerWrapper>
+    </LargeWrapper>
+  </NavWrapper>
 )
 
 export default Nav
 
-// Styles
+const NormalNav = () => (
+  <NormalNavWrapper>
+    <NavItems>
+      <NavItem href="#">Speakers</NavItem>
+      <NavItem href="#">Topics</NavItem>
+      <NavItem href="#">Location</NavItem>
+      <NavItem href="#">Sponsor</NavItem>
+    </NavItems>
+    <GetTicketButton href="#">Tickets</GetTicketButton>
+  </NormalNavWrapper>
+)
 
-const NavWrapper = styled.nav`
+// Styles
+const NavWrapper = styled.div`
+  padding-top: 38px;
+
+  ${mobile(css`
+    padding-top: 22px;
+  `)};
+`
+
+const InnerWrapper = styled.nav`
   width: 100%;
-  height: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 38px;
 `
 
-const Logo = styled.div``
+const Logo = styled.div`
+  ${mobile(css`
+    .nav-logo-text {
+      display: none;
+    }
+  `)};
+`
+
+const NormalNavWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  ${mobile(css`
+    display: none;
+  `)};
+`
 
 const NavItems = styled.div`
   flex-grow: 1;
@@ -46,7 +81,7 @@ const NavItem = styled.a`
   margin-right: 35px;
   text-decoration: none;
   color: #fff;
-  /* Speakers: */
+
   font-family: Courier;
   font-size: 12px;
   color: #ffffff;
@@ -54,7 +89,7 @@ const NavItem = styled.a`
   text-shadow: 0 0 8px rgba(7, 39, 167, 0.24);
 `
 
-const GetTicketBotton = styled.a`
+const GetTicketButton = styled.a`
   width: 86px;
   height: 30px;
   line-height: 30px;
@@ -64,4 +99,10 @@ const GetTicketBotton = styled.a`
 
   text-align: center;
   text-decoration: none;
+
+  transition: background 150ms ease-in-out;
+
+  &:hover {
+    background: #eab808;
+  }
 `

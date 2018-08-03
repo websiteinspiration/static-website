@@ -1,9 +1,9 @@
 import React from 'react'
 
-const HiveLogo = props => (
+const HiveLogo = ({ ...props }) => (
   <svg
-    width={87}
-    height={37}
+    width={90}
+    height={30}
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
   >
@@ -51,13 +51,14 @@ const HiveLogo = props => (
         />
       </g>
       <text
-        fontFamily=".SFNSDisplay, .SF NS Display"
+        fontFamily="Proxima Nova"
         fontSize={22.275}
         letterSpacing={0.811}
         fill="#FFF"
         transform="translate(4 2)"
+        className="nav-logo-text"
       >
-        <tspan x={38} y={26}>
+        <tspan x={39} y={24}>
           Hive
         </tspan>
       </text>

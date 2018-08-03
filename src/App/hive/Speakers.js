@@ -4,6 +4,7 @@ import styled from 'styled-components'
 // Local
 import { Container, Wrapper } from './Containers'
 import TicketButton from './Buttons/TicketButton'
+import SectionTitle from './SectionTitle'
 
 // Speakers photos
 import avatar1 from '../../static/images/jeri-doris.jpg'
@@ -13,7 +14,7 @@ import avatar3 from '../../static/images/mark-levy.jpg'
 const Speakers = () => (
   <Container>
     <Wrapper min="618">
-      <Title>Speakers.</Title>
+      <SectionTitle color="dark">Speakers.</SectionTitle>
       <SpeakersContainer>
         <SpeakersItem>
           <Avatar>
@@ -51,22 +52,13 @@ const Speakers = () => (
 export default Speakers
 
 // Styles
-const Title = styled.h1`
-  margin-top: 46px;
-  font-family: ${p => p.theme.systemFont};
-  font-size: 38px;
-  color: #000000;
-  font-weight: 400;
-  letter-spacing: 1.58px;
-  text-align: center;
-  line-height: 65px;
-`
 const SpeakersContainer = styled.div`
   margin-top: 30px;
   max-width: 590px;
   display: flex;
   justify-content: space-between;
 `
+
 const SpeakersItem = styled.div`
   width: 140px;
   margin-right: 86px;
@@ -75,6 +67,7 @@ const SpeakersItem = styled.div`
     margin-right: 0;
   }
 `
+
 const Avatar = styled.div`
   width: 140px;
   height: 140px;
@@ -88,6 +81,7 @@ const Avatar = styled.div`
     height: 100%;
   }
 `
+
 const Name = styled.div`
   margin-top: 22px;
   opacity: 0.87;
@@ -98,6 +92,7 @@ const Name = styled.div`
   text-align: center;
   line-height: 26px;
 `
+
 const Info = styled.div`
   margin-top: 12px;
   font-family: ${p => p.theme.systemFont};
