@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+// import Slick from 'react-slick'
 
 // Local
 import { Container, LargeWrapper } from './Containers'
@@ -83,7 +84,8 @@ const TicketsWrapper = styled.div`
   ${mobile(css`
     justify-content: flex-start;
     margin-left: 55px;
-    margin-right: 55px;
+    padding-right: 55px;
+    margin-bottom: 10px;
   `)};
 `
 

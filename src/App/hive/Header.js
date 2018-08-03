@@ -60,7 +60,8 @@ const Main = styled.header`
 
 const PreTitle = styled.h2`
   opacity: 0.87;
-  font-family: Courier, monospace;
+  font-family: Montserrat;
+  font-weight: bold;
   font-size: 14px;
   color: #ffffff;
   letter-spacing: 0.47px;
@@ -69,8 +70,6 @@ const PreTitle = styled.h2`
 
   ${mobile(css`
     font-size: 20px;
-    font-family: Montserrat;
-    font-weight: bold;
     line-height: 1.4;
     max-width: 200px;
     margin-left: auto;

@@ -5,7 +5,13 @@ import Link from 'gatsby-link'
 // Local
 import I18n from '../../shared/I18n'
 import Container from '../../shared/Container'
-import { Instagram, Twitter, Facebook, LinkedIn, Github } from './vectors'
+import {
+  Instagram,
+  Twitter,
+  Facebook,
+  LinkedIn,
+  Github,
+} from '../../vectors/social'
 
 // Images
 import logo from '../../static/honeypot-white-logo.svg'

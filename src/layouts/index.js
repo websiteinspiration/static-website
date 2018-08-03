@@ -33,6 +33,17 @@ const MainLayout = ({ children }) => (
               <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
               <link rel="shortcut icon" href={favicon} />
+              <link
+                rel="stylesheet"
+                type="text/css"
+                charSet="UTF-8"
+                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+              />
+              <link
+                rel="stylesheet"
+                type="text/css"
+                href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+              />
 
               {/* TypeKit */}
               <script src="https://use.typekit.net/fkv8pfd.js" />

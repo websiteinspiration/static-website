@@ -83,7 +83,7 @@ const NavItem = styled(AnchorLink)`
   text-decoration: none;
   color: #fff;
 
-  font-family: Courier;
+  font-weight: bold;
   font-size: 12px;
   color: #ffffff;
   letter-spacing: 0.4px;

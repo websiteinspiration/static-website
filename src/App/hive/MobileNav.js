@@ -94,7 +94,6 @@ const NavItem = styled(AnchorLink)`
   padding: 12px 0;
   margin-bottom: 3px;
 
-  font-family: Courier, monospace;
   font-size: 15px;
   color: #ffffff;
   letter-spacing: 0.4px;
