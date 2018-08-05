@@ -8,6 +8,7 @@ import MapPin from '../../vectors/MapPin'
 
 // Photos
 import locationBg from '../../static/images/venue.jpg'
+import Paragraph from './Paragraph'
 
 // Utils
 import { mobile } from '../../utils/style/media'
@@ -16,12 +17,14 @@ const Location = () => (
   <StyledContainer id="location">
     <Wrapper>
       <SectionTitle>Location.</SectionTitle>
-      <Text>
-        Join us at Festsaal Kreuzberg, one of Berlin’s coolest venues. Located
-        close to the<br /> Spree in the heart of the city, Festsaal is the
-        perfect location for intimate talks,<br /> interactive workshops and
-        networking. The conference runs from 9am to 6pm.
-      </Text>
+      <Center>
+        <Paragraph TextAlign="center">
+          Join us at Festsaal Kreuzberg, one of Berlin’s coolest venues. Located
+          close to the Spree in the heart of the city, Festsaal is the perfect
+          location for intimate talks, interactive workshops and networking. The
+          conference runs from 9am to 6pm.
+        </Paragraph>
+      </Center>
       <Center>
         <LocationDetails>
           <MapPin />
@@ -65,6 +68,7 @@ const Center = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  text-align: center;
 `
 
 const LocationDetails = styled.div`
