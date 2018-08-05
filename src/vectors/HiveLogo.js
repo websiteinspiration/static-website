@@ -57,6 +57,7 @@ const HiveLogo = ({ ...props }) => (
         fill="#FFF"
         transform="translate(4 2)"
         className="nav-logo-text"
+        fontWeight="bold"
       >
         <tspan x={39} y={24}>
           Hive
