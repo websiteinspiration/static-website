@@ -7,6 +7,7 @@ import Nav from './Nav'
 import TicketButton from './Buttons/TicketButton'
 import photoBg1 from '../../static/images/hive-logo.png'
 import photoBg2 from '../../static/images/honeypot-logo.png'
+import MapPin from '../../vectors/MapPin'
 
 // Utils
 import { mobile } from '../../utils/style/media'
@@ -21,6 +22,9 @@ const Header = () => (
         <SubTitle>
           Learn how to build Engineering Organizations from the world’s top
           Talent Acquisition, HR and Engineering Leaders.
+        </SubTitle>
+        <SubTitle light>
+          <MapPin /> Festsaal Kreuzberg, Berlin, October 18th, 2018
         </SubTitle>
         <TicketButton />
       </Main>
@@ -67,6 +71,12 @@ const PreTitle = styled.h2`
   letter-spacing: 0.47px;
   text-shadow: 0 0 8px #1779dd;
   margin-bottom: 26px;
+
+  ${p =>
+    p.light &&
+    css`
+      font-weight: lighter;
+    `};
 
   ${mobile(css`
     font-size: 20px;
