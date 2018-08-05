@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components'
 import { Wrapper, LargeWrapper } from './Containers'
 import SectionTitle from './SectionTitle'
 import { mobile } from '../../utils/style/media'
+import Paragraph from './Paragraph'
 
 import bear from '../../static/images/honeypot-logo.png'
 
@@ -13,14 +14,14 @@ const About = () => (
     <Container id="about">
       <Wrapper>
         <StyledSectionTitle color="dark">About.</StyledSectionTitle>
-        <Text>
+        <Paragraph textColor="black" maxWidth="100%">
           Honeypot is Europe’s leading tech job platform, on a mission to build
           great engineering teams. On Honeypot, software developers state their
           job preferences upfront and companies apply directly to them. We
           believe everybody should choose a job they love: whether that’s based
           on a cutting-edge tech stack, an inspiring team or just good
           old-fashioned salary.
-        </Text>
+        </Paragraph>
       </Wrapper>
     </Container>
   </StyledLargeWrapper>
