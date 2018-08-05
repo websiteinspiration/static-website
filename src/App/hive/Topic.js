@@ -1,13 +1,16 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
+// Local
+import Paragraph from './Paragraph'
+
 // Utils
 import { mobile } from '../../utils/style/media'
 
 const Topic = ({ maxWidth = 500, title, children, top = 30, ...props }) => (
   <Container maxWidth={maxWidth} top={top} {...props}>
     <Title>{title}</Title>
-    <Desc>{children}</Desc>
+    <Paragraph>{children}</Paragraph>
   </Container>
 )
 
