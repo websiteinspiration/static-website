@@ -24,7 +24,7 @@ class MobileNav extends Component {
         onClick={() => this.setState(({ open }) => ({ open: !open }))}
       >
         <NavItem href="#speakers">Speakers</NavItem>
-        <NavItem href="#locations">Locations</NavItem>
+        <NavItem href="#location">Locations</NavItem>
         <NavItem href="#topics">Topics</NavItem>
         {/* #sponser gets removed / blocked by ad blockers */}
         <NavItem href="#s-ponsor">Sponsor</NavItem>
