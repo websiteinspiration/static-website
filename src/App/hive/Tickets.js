@@ -43,7 +43,7 @@ const Ticket = ({ plan, price = 0, name, desc, whiteLine }) => (
     <Desc>{desc}</Desc>
     <Line white={whiteLine} />
     <ButtonWrapper>
-      <TicketButton />
+      <TicketButton fontSize={15.5} />
     </ButtonWrapper>
   </TicketWrapper>
 )
@@ -51,6 +51,7 @@ const Ticket = ({ plan, price = 0, name, desc, whiteLine }) => (
 const Carousel = () => {
   return (
     <AliceCarousel
+      responsive={{ 0: { items: 1 }, 515: { items: 2 } }}
       mouseDragEnabled={true}
       buttonsDisabled={true}
       infinite={false}
@@ -126,11 +127,16 @@ const Line = styled.div`
   height: 2px;
   opacity: 0.1;
   border-bottom: 1px solid ${p => (p.white ? '#fff' : '#0656a9')};
+
+  ${mobile(css`
+    top: 205px;
+  `)};
 `
 
 const TicketWrapper = styled.div`
   width: 235px;
   height: 250px;
+
   padding: 48px 10px 10px 10px;
   position: relative;
   flex-shrink: 0;
@@ -165,6 +171,12 @@ const TicketWrapper = styled.div`
         opacity: 1;
       }
     `};
+
+  ${mobile(css`
+    width: 258px;
+    height: 277px;
+    background-size: cover;
+  `)};
 `
 
 const Price = styled.div`
@@ -173,25 +185,39 @@ const Price = styled.div`
   letter-spacing: 1.25px;
   text-align: center;
   font-weight: bold;
+
+  ${mobile(css`
+    font-size: 36px;
+  `)};
 `
 
 const Name = styled.h2`
   margin-top: 15px;
+  margin-bottom: 0;
   opacity: 0.4;
   font-size: 25px;
   color: #0d62b8;
   letter-spacing: 1.04px;
   text-align: center;
   font-weight: bold;
+
+  ${mobile(css`
+    font-size: 30px;
+  `)};
 `
 
 const Desc = styled.span`
-  margin-top: 10px;
+  margin: 15px 15px 0 15px;
+  display: block;
   opacity: 0.47;
   font-size: 14px;
   color: #0d62b8;
   letter-spacing: 0.58px;
   text-align: center;
+
+  ${mobile(css`
+    font-size: 16.8px;
+  `)};
 `
 
 const ButtonWrapper = styled.div`
@@ -205,6 +231,6 @@ const ButtonWrapper = styled.div`
   height: 2px;
 
   ${mobile(css`
-    top: 163px;
+    top: 185px;
   `)};
 `
