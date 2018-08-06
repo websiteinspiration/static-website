@@ -86,6 +86,7 @@ const SpeakersItem = styled.div`
   }
 
   ${mobile(css`
+    width: 170px;
     margin-right: 0;
     margin-bottom: 20px;
 
@@ -107,6 +108,11 @@ const Avatar = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  ${mobile(css`
+    width: 170px;
+    height: 170px;
+  `)};
 `
 
 const Name = styled.div`
@@ -118,10 +124,14 @@ const Name = styled.div`
   letter-spacing: 0.5px;
   text-align: center;
   line-height: 26px;
+
+  ${mobile(css`
+    margin-top: 14px;
+  `)};
 `
 
 const Info = styled.div`
-  margin-top: 12px;
+  margin-top: 8px;
   font-family: ${p => p.theme.systemFont};
   font-size: 14px;
   color: #000000;
