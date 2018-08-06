@@ -24,8 +24,9 @@ const Header = () => (
           Talent Acquisition, HR and Engineering Leaders.
         </SubTitle>
         <SubTitle light>
-          <MapPin /> Festsaal Kreuzberg, Berlin, October 18th, 2018
+          <MapPin /> &nbsp; Festsaal Kreuzberg, Berlin, October 18th, 2018
         </SubTitle>
+        <Space size="20" />
         <TicketButton />
       </Main>
     </Wrapper>
@@ -41,7 +42,7 @@ const HeaderContainer = styled(Container)`
   min-height: 542px;
   padding-bottom: 40px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27);
-  background: url(${photoBg1}) no-repeat right 100px, var(--mascot-bg),
+  background: var(--mascot-bg), url(${photoBg1}) no-repeat right 120px,
     linear-gradient(36deg, #6fb6fe 0%, #2d91f7 100%);
 
   ${mobile(css`
@@ -111,4 +112,8 @@ const SubTitle = styled.div`
     margin-top: 38px;
     padding: 0 25px;
   `)};
+`
+
+const Space = styled.div`
+  height: ${p => p.size}px;
 `
