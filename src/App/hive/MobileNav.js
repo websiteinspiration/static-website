@@ -19,7 +19,10 @@ class MobileNav extends Component {
       >
         <MenuBars />
       </MobileTrigger>
-      <MobilePopup open={this.state.open}>
+      <MobilePopup
+        open={this.state.open}
+        onClick={() => this.setState(({ open }) => ({ open: !open }))}
+      >
         <NavItem href="#speakers">Speakers</NavItem>
         <NavItem href="#locations">Locations</NavItem>
         <NavItem href="#topics">Topics</NavItem>
@@ -39,7 +42,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  position: relative;
+  /* position: relative; */
 
   ${notMobile(css`
     display: none;
@@ -54,24 +57,27 @@ const MobileTrigger = styled.button`
   display: block;
   margin: 0;
   padding: 5px 0;
+  z-index: 999;
 `
 
 const MobilePopup = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
-  min-width: 200px;
+  width: auto;
   z-index: 100;
-  padding: 8px 0;
+  padding: 48px 0;
 
   position: absolute;
-  top: 30px;
+  top: 0;
   right: 0;
+  left: 0;
+  bottom: 0;
 
   user-select: none;
   background: #357;
-  border-radius: 8px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   opacity: 0;
   transform: scale(0.8);
@@ -91,10 +97,10 @@ const NavItem = styled(AnchorLink)`
   color: #fff;
   display: block;
   text-align: center;
-  padding: 12px 0;
+  padding: 30px 0;
   margin-bottom: 3px;
 
-  font-size: 15px;
+  font-size: 30px;
   color: #ffffff;
   letter-spacing: 0.4px;
   text-shadow: 0 0 8px rgba(7, 39, 167, 0.24);
