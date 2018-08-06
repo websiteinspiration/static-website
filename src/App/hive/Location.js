@@ -14,7 +14,7 @@ import Paragraph from './Paragraph'
 import { mobile } from '../../utils/style/media'
 
 const Location = () => (
-  <StyledContainer id="location">
+  <StyledContainer id="locations">
     <Wrapper>
       <SectionTitle>Location.</SectionTitle>
       <Center>
