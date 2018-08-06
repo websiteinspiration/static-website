@@ -21,6 +21,10 @@ export default Map
 const StyledContainer = styled(Container)`
   position: relative;
   background: rgba(0, 0, 0, 0.15);
+
+  .place-card {
+    display: none;
+  }
 `
 
 const StyledIframe = styled.iframe`
