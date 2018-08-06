@@ -16,9 +16,10 @@ const Topics = () => (
       <SectionTitle>Topics.</SectionTitle>
       <TopicList>
         <Topic title="Recruit the Best People" maxWidth={470}>
-          Listen to CTOs, Engineering Leaders and HR Leaders who have built
-          products and scaled teams through booms and busts. From onboarding and
-          training to feedback, promotion and employee experience.
+          Through keynote speeches, lightning talks and interactive workshops,
+          learn how to go from your first tech hire to making hundreds of hires
+          a year. Topics include talent analytics, candidate experience and
+          employer branding.
         </Topic>
         <Topic
           title={
