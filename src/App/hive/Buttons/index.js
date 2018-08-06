@@ -6,6 +6,7 @@ import { mobile } from '../../../utils/style/media'
 const Button = styled.a`
   height: 36px;
   line-height: 1.3;
+  padding-top: 1px;
   display: inline-flex;
   align-items: center;
   text-align: center;
@@ -21,7 +22,7 @@ const Button = styled.a`
   border-radius: 100px;
 
   white-space: nowrap;
-  font-size: 13px;
+  font-size: ${p => p.fontSize || 13}px;
   font-weight: 900;
   text-decoration: none;
   text-align: center;
@@ -38,7 +39,9 @@ const Button = styled.a`
   padding: 0 26px;
 
   ${mobile(css`
-    height: 44px;
+    padding: 0 ${p => p.sidePadding || 55}px;
+
+    height: 45px;
     padding: ${p => (p.normalPadding ? `0 32px` : `0 55px`)};
   `)};
 `
