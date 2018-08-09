@@ -10,7 +10,7 @@ const TicketButton = ({
   ...props
 }) => (
   <Button
-    href="https://hiveconference2018.eventbrite.ie"
+    href="https://hiveconference2018.eventbrite.ie/#tickets"
     color={color}
     normalPadding
     fontSize={fontSize}

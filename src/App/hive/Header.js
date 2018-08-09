@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // Local
 import { Container, Wrapper } from './Containers'
@@ -23,8 +24,10 @@ const Header = () => (
           Learn how to build Engineering Organizations from the world’s top
           Talent Acquisition, HR and Engineering Leaders.
         </SubTitle>
-        <SubTitle light>
-          <MapPin /> &nbsp; Festsaal Kreuzberg, Berlin, October 18th, 2018
+        <SubTitle>
+          <AnchorLink href="#map">
+            <MapPin /> &nbsp; Festsaal Kreuzberg, Berlin, October 18th, 2018
+          </AnchorLink>
         </SubTitle>
         <Space size="20" />
         <TicketButton />
@@ -102,11 +105,16 @@ const Title = styled.h1`
 const SubTitle = styled.div`
   margin-top: 26px;
   font-size: 16px;
-  color: #ffffff;
   letter-spacing: 0.53px;
   line-height: 27px;
   max-width: 540px;
   margin-top: 25px;
+  color: white;
+
+  > a {
+    color: white;
+    text-decoration: none;
+  }
 
   ${mobile(css`
     margin-top: 38px;

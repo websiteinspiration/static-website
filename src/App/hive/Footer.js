@@ -26,7 +26,7 @@ const Header = () => (
         <Co>© 2018 Honeypot GmbH</Co>
 
         <Social>
-          <SocialLink href="https://www.linkedin.com/company/honeypot">
+          <SocialLink href="https://www.linkedin.com/company/honeypot/">
             <LinkedIn />
           </SocialLink>
           <SocialLink href="https://twitter.com/honeypotio">
@@ -35,7 +35,7 @@ const Header = () => (
           <SocialLink href="https://facebook.com/honeypotio">
             <Facebook />
           </SocialLink>
-          <SocialLink href="https://instagram.com/honeypotio">
+          <SocialLink href="https://www.instagram.com/honeypot.io/">
             <Instagram />
           </SocialLink>
           <SocialLink href="https://youtube.com/hive">

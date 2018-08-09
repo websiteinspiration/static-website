@@ -30,7 +30,7 @@ export default class CookieBanner extends React.PureComponent {
   render() {
     return this.state.dismissed ? null : (
       <Wrapper>
-        By using this website you agree to our <a href="/privacy">policy</a> on
+        By using this website you agree to our <a href="/pages/privacy">policy</a> on
         cookies.
         <CloseBtn onClick={this.dismissed}>
           <CloseIcon />
