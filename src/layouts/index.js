@@ -53,10 +53,9 @@ const MainLayout = ({ children }) => (
                 }}
               />
             </Helmet>
+            <CookieBanner />
 
             {children()}
-
-            <CookieBanner />
           </div>
         </I18nextProvider>
       )}

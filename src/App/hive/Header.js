@@ -21,8 +21,9 @@ const Header = () => (
         <PreTitle>Hive Conference by Honeypot</PreTitle>
         <Title>Hire. Scale. Develop.</Title>
         <SubTitle>
-          Learn how to build Engineering Organizations from the world’s top
-          Talent Acquisition, HR and Engineering Leaders.
+          A one-day conference for HR Leaders, Technical Hiring Managers, CTOs
+          and VPs of Engineering focused on all aspects of building and scaling
+          great engineering teams.
         </SubTitle>
         <SubTitle>
           <AnchorLink href="#map">

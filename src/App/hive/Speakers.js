@@ -35,7 +35,7 @@ const Speakers = () => (
             <Name>Kevin Goldsmith</Name>
             <Info>
               VPE @ AstrumU (Former CTO @ Avvo, Former VPE @ Spotify, DoE @
-              Adobe
+              Adobe)
             </Info>
           </SpeakersItem>
           <SpeakersItem>
@@ -43,7 +43,7 @@ const Speakers = () => (
               <img src={avatar3} />
             </Avatar>
             <Name>Mark Levy</Name>
-            <Info>Former AirBnb Employee Experience Pioneer.</Info>
+            <Info>Former Airbnb Employee Experience Pioneer.</Info>
           </SpeakersItem>
         </SpeakersContainer>
         <Text>… and many more to be announced.</Text>

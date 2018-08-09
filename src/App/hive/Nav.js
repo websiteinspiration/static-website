@@ -3,20 +3,35 @@ import styled, { css } from 'styled-components'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 // Local
-import HiveLogo from '../../vectors/HiveLogo'
+// import HiveLogo from '../../vectors/HiveLogo'
 import { LargeWrapper } from './Containers'
 import MobileNav from './MobileNav'
+import hiveLogoWhite from '../../static/logos/hive-logo-white.png'
+import HoneypotLogoWhite from '../../static/logos/Honeypot-Logo-white.png'
 
 // Utils
 import { mobile } from '../../utils/style/media'
 
-const Nav = () => (
+const Nav = props => (
   <NavWrapper>
     <LargeWrapper style={{ overflow: 'visible' }}>
       <InnerWrapper>
-        <Logo>
-          <HiveLogo />
-        </Logo>
+        {props.logo == 'honeypot' ? (
+          <Logo
+            alt="Hive Conference by Honeypot"
+            title="Hive Conference by Honeypot"
+            src={HoneypotLogoWhite}
+            height="30"
+          />
+        ) : (
+          <Logo
+            alt="Hive Conference by Honeypot"
+            title="Hive Conference by Honeypot"
+            src={hiveLogoWhite}
+            height="30"
+          />
+        )}
+
         <NormalNav />
         <MobileNav />
       </InnerWrapper>
@@ -54,7 +69,7 @@ const InnerWrapper = styled.nav`
   align-items: center;
 `
 
-const Logo = styled.div`
+const Logo = styled.img`
   ${mobile(css`
     .nav-logo-text {
       display: none;

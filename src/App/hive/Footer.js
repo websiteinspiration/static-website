@@ -19,7 +19,7 @@ import { mobile } from '../../utils/style/media'
 const Header = () => (
   <FooterContainer>
     <NavWrapper>
-      <Nav />
+      <Nav logo="honeypot" />
     </NavWrapper>
     <LargeWrapper>
       <FooterStack>
@@ -38,7 +38,7 @@ const Header = () => (
           <SocialLink href="https://www.instagram.com/honeypot.io/">
             <Instagram />
           </SocialLink>
-          <SocialLink href="https://youtube.com/hive">
+          <SocialLink href="https://www.youtube.com/channel/UCsUalyRg43M8D60mtHe6YcA">
             <YouTube />
           </SocialLink>
         </Social>
