@@ -24,15 +24,16 @@ export default () => {
         <Helmet>
           <title>{pageTitle}</title>
           <meta name="description" content={description} />
-          <meta property="og:image:url" content={hiveLogo} />
           <meta property="og:type" content="article" />
           <meta property="og:title" content={pageTitle} />
           <meta
             property="og:url"
-            content="https://www.honeypot.io/hive-conference-2018"
+            content="https://hive.honeypot.io/hive-conference-2018/"
           />
           <meta property="og:description" content={description} />
-          <meta property="og:image:url" content={hiveLogo} />
+          <meta property="og:image" content='https://image.ibb.co/dhM6Xp/social_hive_828x315_2x.png' />
+          <meta property="og:image:url" content='https://image.ibb.co/dhM6Xp/social_hive_828x315_2x.png' />
+          <meta property="og:image:alt" content="Hive by Honeypot Conference 2018" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={pageTitle} />
           <meta name="twitter:site" content="@honeypotio" />
