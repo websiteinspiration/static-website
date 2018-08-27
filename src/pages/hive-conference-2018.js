@@ -11,7 +11,6 @@ import Tickets from '../App/hive/Tickets'
 import Sponsor from '../App/hive/Sponsor'
 import About from '../App/hive/About'
 import Footer from '../App/hive/Footer'
-import hiveLogo from '../static/logos/hive-logo-only.png'
 
 const gtmCode = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PJX579');`
 export default () => {
@@ -38,7 +37,7 @@ export default () => {
           <meta name="twitter:title" content={pageTitle} />
           <meta name="twitter:site" content="@honeypotio" />
           <meta name="twitter:description" content={description} />
-          <meta name="twitter:image" content={hiveLogo} />
+          <meta name="twitter:image" content='https://image.ibb.co/dhM6Xp/social_hive_828x315_2x.png' />
         </Helmet>
 
         <Header />
