@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 
 import Header from '../App/hive/Header'
 import Speakers from '../App/hive/Speakers'
+import Schedule from '../App/hive/Schedule'
 import Topics from '../App/hive/Topics'
 import Location from '../App/hive/Location'
 import Map from '../App/hive/Map'
@@ -43,6 +44,7 @@ export default () => {
         <Header />
         <Speakers />
         <Topics />
+        <Schedule />
         <Location />
         <Map />
         <Tickets />
