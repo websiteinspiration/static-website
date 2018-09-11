@@ -92,7 +92,7 @@ const TopicIcon = kind => {
     flex: 0 0 30px;
   `;
 
-  return <Img src={ TopicKind[kind].icon } />;
+  return <Img src={ TopicKind[kind].icon } title={ kind } />;
 };
 
 const Schedule = () => (
@@ -240,7 +240,7 @@ const Schedule = () => (
             <TopicCell>
               <RowWrapper kind={ "break" }>
                 { TopicIcon("break") }
-                Cofee Break
+                Coffee Break
               </RowWrapper>
             </TopicCell>
           </TableRow>
