@@ -28,7 +28,7 @@ const TopicKind = {
     colorIcon: breakColorIcon
   },
   keynote: {
-    color: '54, 142, 215',
+    color: '24, 116, 204',
     icon: keynoteIcon,
     colorIcon: keynoteColorIcon
   },
@@ -38,12 +38,12 @@ const TopicKind = {
     colorIcon: casestudyColorIcon
   },
   panel: {
-    color: '246, 199, 36',
+    color: '213, 170, 19',
     icon: panelIcon,
     colorIcon: panelColorIcon
   },
   workshop: {
-    color: '202, 150, 250',
+    color: '169, 85, 245',
     icon: workshopIcon,
     colorIcon: workshopColorIcon
   }
@@ -78,18 +78,16 @@ const TableBody = styled.div`
 const TableRow = styled.div`
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  flex-grow: 1;
+  align-items: stretch;
 `;
 
 const TimeCell = styled.div`
-  flex: 0 0 130px;
+  flex: 0 0 60px;
   padding: 2px 5px;
 `;
 
 const TopicCell = styled.div`
   flex: 1 1 auto;
-  padding: 2px 5px;
 `;
 
 const RowWrapper = styled.div`
@@ -99,6 +97,7 @@ const RowWrapper = styled.div`
   border-radius: 3px;
   color: #ffffff;
   font-weight: 500;
+  margin: 2px 2px;
 
   ${
     props => (props.kind === 'break') && css`
@@ -109,12 +108,19 @@ const RowWrapper = styled.div`
   ${props => props.kind && css`
     background-image: linear-gradient(rgba(${TopicKind[props.kind].color},0.7), rgba(${TopicKind[props.kind].color},1));
   `}
+
+  ${props => props.kind === 'workshop' && css`
+    height: 100%;
+  ` }
+
 `;
 
 const TopicIcon = (kind, key = false) => {
   const Img = styled.img`
     margin-bottom: 0;
     padding-right: 20px;
+    flex: 0 0 30px;
+    max-height: 30px;
 
     ${key && css`
       padding-right: 5px;
@@ -252,37 +258,38 @@ const Schedule = () => (
             </TopicCell>
           </TableRow>
           <TableRow>
-            <TimeCell>
-              14.00 - 16.30
-            </TimeCell>
-            <TopicCell>
-              <RowWrapper kind={ "workshop" }>
-                { TopicIcon("workshop") }
-                Mark Levy, Employee Experience Pioneer (formerly at AirBnB)
-              </RowWrapper>
-            </TopicCell>
-          </TableRow>
-          <TableRow>
-            <TimeCell>
-              14.00 - 14.15
-            </TimeCell>
-            <TopicCell>
-              <RowWrapper kind={ "casestudy" }>
-                { TopicIcon("casestudy") }
-                Amir Friedman, VP Engineering, kloeckner.i
-              </RowWrapper>
-            </TopicCell>
-          </TableRow>
-          <TableRow>
-            <TimeCell>
-              15.05
-            </TimeCell>
-            <TopicCell>
-              <RowWrapper kind={ "casestudy" }>
-                { TopicIcon("casestudy") }
-                Aleksandra Gavrilovska, Engineering Manager, SoundCloud, Director at Women Who Code Berlin
-              </RowWrapper>
-            </TopicCell>
+            <div style={{width: "50%"}}>
+              <TableRow>
+                <TimeCell>
+                  14.00
+                </TimeCell>
+                <TopicCell>
+                  <RowWrapper kind={ "casestudy" }>
+                    { TopicIcon("casestudy") }
+                    Amir Friedman, VP Engineering, kloeckner.i
+                  </RowWrapper>
+                </TopicCell>
+              </TableRow>
+              <TableRow>
+                <TimeCell>
+                  15.05
+                </TimeCell>
+                <TopicCell>
+                  <RowWrapper kind={ "casestudy" }>
+                    { TopicIcon("casestudy") }
+                    Aleksandra Gavrilovska, Engineering Manager, SoundCloud, Director at Women Who Code Berlin
+                  </RowWrapper>
+                </TopicCell>
+              </TableRow>
+            </div>
+            <div style={{width: "50%", paddingBottom: '4px'}}>
+              <TopicCell style={{height: '100%'}}>
+                <RowWrapper kind={ "workshop" }>
+                  { TopicIcon("workshop") }
+                  Mark Levy, Employee Experience Pioneer (formerly at AirBnB)
+                </RowWrapper>
+              </TopicCell>
+            </div>
           </TableRow>
           <TableRow>
             <TimeCell>
