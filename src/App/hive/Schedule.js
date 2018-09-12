@@ -37,7 +37,8 @@ const TableBody = styled.div`
 const TableRow = styled.div`
   display: flex;
   justify-content: flex-start;
-  align-items: stretch; `
+  align-items: stretch;
+`;
 
 const TimeCell = styled.div`
   flex: 0 0 60px;
@@ -76,7 +77,7 @@ const RowWrapper = styled.div`
   justify-content: flex-start;
   padding: 10px;
   border-radius: 3px;
-  margin: 2px 5px;
+  margin: 2px 2px;
 
   ${props => props.kind && css`
     background-color: ${ TopicKind[props.kind].color };
@@ -93,18 +94,11 @@ const TopicIcon = kind => {
     margin-bottom: 0;
     padding-right: 20px;
     flex: 0 0 30px;
+    max-height: 30px;
   `;
 
   return <Img src={ TopicKind[kind].icon } />;
 };
-
-const TimeWrapper = styled.div`
-  display: flex;
-	flex-direction: column;
-  align-items: stretch;
-  justify-content: space-around;
-  flex: 0 0 30px;
-`;
 
 const Schedule = () => (
   <SectionWrapper id="schedule">
@@ -211,20 +205,6 @@ const Schedule = () => (
               </RowWrapper>
             </TopicCell>
           </TableRow>
-	  {/*
-          <TableRow>
-            <TimeCell>
-              14.00 - 16.30
-            </TimeCell>
-            <TopicCell>
-              <RowWrapper kind={ "workshop" }>
-                { TopicIcon("workshop") }
-                Mark Levy, Employee Experience Pioneer (formerly at AirBnB)
-              </RowWrapper>
-            </TopicCell>
-          </TableRow>
-		*/
-	  }
           <TableRow>
             <div style={{width: "50%"}}>
               <TableRow>
@@ -250,8 +230,8 @@ const Schedule = () => (
                 </TopicCell>
               </TableRow>
             </div>
-            <div style={{width: "50%", height: '100%' }}>
-              <TopicCell>
+            <div style={{width: "50%", paddingBottom: '4px'}}>
+              <TopicCell style={{height: '100%'}}>
                 <RowWrapper kind={ "workshop" }>
                   { TopicIcon("workshop") }
                   Mark Levy, Employee Experience Pioneer (formerly at AirBnB)
