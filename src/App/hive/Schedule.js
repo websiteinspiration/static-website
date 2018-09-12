@@ -309,7 +309,9 @@ const Schedule = () => (
             <TopicCell>
               <RowWrapper kind={ "casestudy" }>
                 { TopicIcon("casestudy") }
-                Antonio Arias Lopez, Talent Acquisition Lead, Jose Arteaga, Tech Talent Acquisition Specialist, Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
+                Antonio Arias Lopez, Talent Acquisition Lead,<br />
+                Jose Arteaga, Tech Talent Acquisition Specialist,<br />
+                Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
               </RowWrapper>
             </TopicCell>
           </TableRow>
