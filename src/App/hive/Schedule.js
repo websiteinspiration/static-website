@@ -11,10 +11,43 @@ import keynoteIcon from '../../static/icons/keynote-white.svg';
 import casestudyIcon from '../../static/icons/casestudy-white.svg';
 import panelIcon from '../../static/icons/line-person-icon.svg';
 import workshopIcon from '../../static/icons/workshop-white.svg';
+import breakColorIcon from '../../static/icons/coffee-black.svg';
+import keynoteColorIcon from '../../static/icons/keynote-blue.svg';
+import casestudyColorIcon from '../../static/icons/casestudy-teal.svg';
+import panelColorIcon from '../../static/icons/line-person-icon.svg';
+import workshopColorIcon from '../../static/icons/workshop-purple.svg';
 
 const SectionWrapper = styled.div`
   padding-bottom: 50px;
 `;
+
+const TopicKind = {
+  break: {
+    color: '#f7f6f6',
+    icon: breakIcon,
+    colorIcon: breakColorIcon
+  },
+  keynote: {
+    color: '#368ed7',
+    icon: keynoteIcon,
+    colorIcon: keynoteColorIcon
+  },
+  casestudy: {
+    color: '#4bd4d2',
+    icon: casestudyIcon,
+    colorIcon: casestudyColorIcon
+  },
+  panel: {
+    color: '#f6c724',
+    icon: panelIcon,
+    colorIcon: panelColorIcon
+  },
+  workshop: {
+    color: '#ca96fa',
+    icon: workshopIcon,
+    colorIcon: workshopColorIcon
+  }
+};
 
 const TableHeader = styled.div`
   margin: 20px;
@@ -24,10 +57,18 @@ const TableHeader = styled.div`
 
 const HeaderIcon = styled.div`
   padding: 5px 20px;
+  height: 30px;
+  line-height: 20px;
+  font-weight: 600;
 
   ${mobile(css`
     padding: 5px 7px;
   `)}
+
+  ${ props => props.kind && css`
+    color: ${ TopicKind[props.kind].color };
+    color: ${ props.kind === 'break' && '#000000' };
+  `}
 `;
 
 const TableBody = styled.div`
@@ -51,29 +92,6 @@ const TopicCell = styled.div`
   padding: 2px 5px;
 `;
 
-const TopicKind = {
-  break: {
-    color: '#f7f6f6',
-    icon: breakIcon
-  },
-  keynote: {
-    color: '#6aabe0',
-    icon: keynoteIcon
-  },
-  casestudy: {
-    color: '#4bd4d2',
-    icon: casestudyIcon
-  },
-  panel: {
-    color: '#f6c724',
-    icon: panelIcon
-  },
-  workshop: {
-    color: '#ca96fa',
-    icon: workshopIcon
-  }
-};
-
 const RowWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -85,12 +103,22 @@ const RowWrapper = styled.div`
   `}
 `;
 
-const TopicIcon = kind => {
+const TopicIcon = (kind, key = false) => {
   const Img = styled.img`
     margin-bottom: 0;
     padding-right: 20px;
-    flex: 0 0 30px;
+
+    ${key && css`
+      padding-right: 5px;
+      height: 16px;
+      float: left;
+      margin-top: 2px;
+    `}
   `;
+
+  if (key) {
+    return <Img src={ TopicKind[kind].colorIcon } title={ kind } />;
+  }
 
   return <Img src={ TopicKind[kind].icon } title={ kind } />;
 };
@@ -103,11 +131,26 @@ const Schedule = () => (
       </LargeWrapper>
       <LargeWrapper>
         <TableHeader>
-          <HeaderIcon>Breaks</HeaderIcon>
-          <HeaderIcon>Keynotes</HeaderIcon>
-          <HeaderIcon>Case Studies</HeaderIcon>
-          <HeaderIcon>Panel</HeaderIcon>
-          <HeaderIcon>Workshop</HeaderIcon>
+          <HeaderIcon kind="break">
+            { TopicIcon("break", true) }
+            Breaks
+          </HeaderIcon>
+          <HeaderIcon kind="keynote">
+            { TopicIcon("keynote", true) }
+            Keynotes
+          </HeaderIcon>
+          <HeaderIcon kind="casestudy">
+            { TopicIcon("casestudy", true) }
+            Case Studies
+          </HeaderIcon>
+          <HeaderIcon kind="panel">
+            { TopicIcon("panel", true) }
+            Panel
+          </HeaderIcon>
+          <HeaderIcon kind="workshop">
+            { TopicIcon("workshop", true) }
+            Workshop
+          </HeaderIcon>
         </TableHeader>
         <TableBody>
           <TableRow>
