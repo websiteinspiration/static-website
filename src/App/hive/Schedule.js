@@ -23,27 +23,27 @@ const SectionWrapper = styled.div`
 
 const TopicKind = {
   break: {
-    color: '#f7f6f6',
+    color: '247, 246, 246',
     icon: breakIcon,
     colorIcon: breakColorIcon
   },
   keynote: {
-    color: '#368ed7',
+    color: '54, 142, 215',
     icon: keynoteIcon,
     colorIcon: keynoteColorIcon
   },
   casestudy: {
-    color: '#4bd4d2',
+    color: '4, 190, 187',
     icon: casestudyIcon,
     colorIcon: casestudyColorIcon
   },
   panel: {
-    color: '#f6c724',
+    color: '246, 199, 36',
     icon: panelIcon,
     colorIcon: panelColorIcon
   },
   workshop: {
-    color: '#ca96fa',
+    color: '202, 150, 250',
     icon: workshopIcon,
     colorIcon: workshopColorIcon
   }
@@ -66,7 +66,7 @@ const HeaderIcon = styled.div`
   `)}
 
   ${ props => props.kind && css`
-    color: ${ TopicKind[props.kind].color };
+    color: rgb(${ TopicKind[props.kind].color });
     color: ${ props.kind === 'break' && '#000000' };
   `}
 `;
@@ -97,9 +97,17 @@ const RowWrapper = styled.div`
   justify-content: flex-start;
   padding: 10px;
   border-radius: 3px;
+  color: #ffffff;
+  font-weight: 500;
+
+  ${
+    props => (props.kind === 'break') && css`
+      color: #3c3c3c;
+    `
+  }
 
   ${props => props.kind && css`
-    background-color: ${ TopicKind[props.kind].color }
+    background-image: linear-gradient(rgba(${TopicKind[props.kind].color},0.7), rgba(${TopicKind[props.kind].color},1));
   `}
 `;
 
