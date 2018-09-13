@@ -491,7 +491,7 @@ const Schedule = () => (
                       Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
                     </Summary>
                     <Description>
-                      <b>Case Study: From Agency to Automation: How We Cut Tech
+                      <b>From Agency to Automation: How We Cut Tech
                       Time to Hire and Cost per Hire in Half in One Year.</b>
                       <br />
                       Antonio Arias Lopez is leading Talent Acquisition at
@@ -558,6 +558,7 @@ const Schedule = () => (
                   Kevin Goldsmith, VP of Engineering, AstrumU
                 </Summary>
                 <Description>
+                  <b>Using Agile Techniques to Build a More Inclusive Team</b>
                   Building psychological safety in your teams is critical if you
                   want them to perform at their best. The challenge is how to
                   develop and encourage the trust and collaboration and to make
