@@ -18,6 +18,20 @@ import panelColorIcon from '../../static/icons/line-person-icon.svg';
 import workshopColorIcon from '../../static/icons/workshop-purple.svg';
 import arrowWhiteIcon from '../../static/icons/arrow-white.svg';
 
+// avatars
+import AleksandraGavril from '../../static/avatars/AleksandraGavril.png'
+import AmirFriedman from '../../static/avatars/AmirFriedman.png'
+import AntonioLopez from '../../static/avatars/AntonioLopez.png'
+import DanielKrauss from '../../static/avatars/DanielKrauss.png'
+import JeriDoris from '../../static/avatars/JeriDoris.png'
+import JoseArtega from '../../static/avatars/JoseArtega.png'
+import KevinGoldsmith from '../../static/avatars/KevinGoldsmith.png'
+import MargeauxPelen from '../../static/avatars/MargeauxPelen.png'
+import MarkLevy from '../../static/avatars/MarkLevy.png'
+import MartinaNiemann from '../../static/avatars/MartinaNiemann.png'
+import NicoBrautigam from '../../static/avatars/NicoBrautigam.png'
+import SergejZimpel from '../../static/avatars/SergejZimpel.png'
+
 const SectionWrapper = styled.div`
   padding-bottom: 50px;
 `;
@@ -91,20 +105,6 @@ const TopicCell = styled.div`
   flex: 1 1 auto;
 `;
 
-const ArrowCell = () => {
-  const Img = styled.img`
-    margin-bottom: 0;
-    flex: 0 1 15px;
-  `;
-  return <Img onClick={ () => console.log('cliked') } src={ arrowWhiteIcon } />
-}
-
-const Text = styled.p`
-  flex: 1 1 auto;
-  margin: 0;
-  #float: left;
-`
-
 const RowWrapper = styled.div`
   #display: flex;
   #justify-content: space-between;
@@ -115,14 +115,13 @@ const RowWrapper = styled.div`
   font-weight: 500;
   margin: 2px 2px;
 
-  ${
-    props => (props.kind === 'break') && css`
+  ${props => (props.kind === 'break') && css`
       color: #3c3c3c;
-    `
-  }
+  `}
 
   ${props => props.kind && css`
-    background-image: linear-gradient(rgba(${TopicKind[props.kind].color},0.7), rgba(${TopicKind[props.kind].color},1));
+    background-image: linear-gradient(rgba(${TopicKind[props.kind].color},0.7),
+      rgba(${TopicKind[props.kind].color},1));
   `}
 
   ${props => props.kind === 'workshop' && css`
@@ -170,7 +169,20 @@ class Topic extends React.Component {
     const Img = styled.img`
       margin-bottom: 0;
       flex: 0 1 15px;
+      ${props => !props.hide && css`
+        transform: rotate(180deg);
+      ` }
     `;
+
+    const ImgAvatar = styled.img`
+      margin-bottom: 0;
+      max-width: 25px;
+    `
+
+    const Text = styled.span`
+      flex: 1 1 auto;
+      #float: left;
+    `
     
     const Summary = styled.div`
       display: flex;
@@ -182,6 +194,10 @@ class Topic extends React.Component {
       ${props => props.hide && css`
         display: none;
       `}
+    `;
+    const Avatar = styled.div`
+      flex: 0 0 auto;
+      margin-right: 20px;
     `;
     const multiple = Array.isArray(this.props.children);
     let Sum, Detail;
@@ -196,11 +212,17 @@ class Topic extends React.Component {
     return <RowWrapper kind={ this.props.kind }>
       <Summary>
         { TopicIcon(this.props.kind) }
+        {this.props.avatars &&
+          <Avatar>
+            {this.props.avatars.map((i, k) => <ImgAvatar src={ i } key={k} />)}
+          </Avatar>
+        }
         <Text>
           { Sum }
         </Text>
         {multiple &&
           <Img
+            hide={ this.state.hide }
             onClick={ () => this.handleClick() }
             src={ arrowWhiteIcon } />
         }
@@ -212,9 +234,13 @@ class Topic extends React.Component {
   }
 }
 
-const Summary = styled.p``;
+const Summary = styled.p`
+  margin: 0;
+`;
 const Description = styled.p`
+  margin-top: 20px;
   margin-left: 40px;
+  margin-right: 20px;
   # For firefox
   # margin-left: 30px;
 `;
@@ -267,11 +293,12 @@ const Schedule = () => (
               9.30
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "keynote" }>
+              <Topic kind={ "keynote" } avatars={ [MarkLevy] }>
                 <Summary>Mark Levy, Employee Experience Pioneer (formerly at
                   AirBnB)
                 </Summary>
                 <Description>
+                  <b>From HR to Employee Experience</b><br />
                   Mark was the pioneer at Airbnb for more than four years of
                   shifting the function, the mindset and ways of working to
                   treating the employee like the business treats their customer.
@@ -287,11 +314,12 @@ const Schedule = () => (
               10.00
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "keynote" }>
+              <Topic kind={ "keynote" } avatars={ [DanielKrauss] }>
                 <Summary>
                   Daniel Krauss, CIO and Co-Founder, FlixMobility
                 </Summary>
                 <Description>
+                  <b>From HR to Employee Experience</b><br />
                   Daniel Krauss is one of the three founders of FlixMobility and
                   the current CIO where he is responsible for all technological
                   aspects of FlixBus including Business Intelligence, Online
@@ -310,7 +338,7 @@ const Schedule = () => (
               10.30
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "casestudy" }>
+              <Topic kind={ "casestudy" } avatars={ [SergejZimpel] }>
                 <Summary>
                   Sergej Zimpel, Senior Recruiter, ProSiebenSat.1 Media SE
                 </Summary>
@@ -337,7 +365,7 @@ const Schedule = () => (
               11.30
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "keynote" }>
+              <Topic kind={ "keynote" } avatars={ [JeriDoris] }>
                 <Summary>
                   Jeri Doris, Chief People Officer, Delivery Hero
                 </Summary>
@@ -352,13 +380,15 @@ const Schedule = () => (
               12.00
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "panel" }>
+              <Topic kind={ "panel" } avatars={ [MargeauxPelen] }>
                 <Summary>
                   Margaux Pelen, Founder at The Learning Studio<br />
                   Teddy Dimitrova, Tech Talent Manager at Bloomon<br />
-                  Jan Wirth, IT Recruiter at MYTOYS Group
+                  Jan Werth, IT Recruiter at MYTOYS Group
                 </Summary>
                 <Description>
+                  <b>Screening Developers: Setting up a Frictionless Screening
+                    Process for Tech Candidates </b><br />
                   Having a well defined screening process is essential to hiring
                   the right tech talent and limiting organizational overhead.
                   Our panelists will discuss developer's educational background,
@@ -388,11 +418,13 @@ const Schedule = () => (
                   14.00
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "casestudy" }>
+                  <Topic kind={ "casestudy" } avatars={ [AmirFriedman] }>
                     <Summary>
                       Amir Friedman, VP Engineering, kloeckner.i
                     </Summary>
                     <Description>
+                      <b>How we Recruit and Retain Developers at Kloeckner.i</b>
+                      <br />
                       Amir is VP of Engineering at kloeckner.i, where he leads
                       30 developers. He is passionate about building high
                       performing teams. In this talk, Amir will talk about how
@@ -412,12 +444,14 @@ const Schedule = () => (
                   15.05
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "casestudy" }>
+                  <Topic kind={ "casestudy" } avatars={ [AleksandraGavril] }>
                     <Summary>
                       Aleksandra Gavrilovska, Engineering Manager, SoundCloud,
                       Director at Women Who Code Berlin
                     </Summary>
                     <Description>
+                      <b>Using Retrospectives to Build Teams at SoundCloud</b>
+                      <br />
                       Functional teams are based on trust, communication and
                       empathy. Those can grow and improve as the time goes or
                       they can be catalysed by using different tools, for
@@ -432,22 +466,67 @@ const Schedule = () => (
                   </Topic>
                 </TopicCell>
               </TableRow>
+              <TableRow>
+                <TimeCell>
+                  15.30
+                </TimeCell>
+                <TopicCell>
+                  <Topic kind={ "break" }>
+                    <Summary>
+                      Coffee Break
+                    </Summary>
+                  </Topic>
+                </TopicCell>
+              </TableRow>
+              <TableRow>
+                <TimeCell>
+                  16.00
+                </TimeCell>
+                <TopicCell>
+                  <Topic kind={ "casestudy" } avatars={ [AntonioLopez,
+                    JoseArtega, NicoBrautigam] }>
+                    <Summary>
+                      Antonio Arias Lopez, Talent Acquisition Lead,<br />
+                      Jose Arteaga, Tech Talent Acquisition Specialist,<br />
+                      Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
+                    </Summary>
+                    <Description>
+                      <b>Case Study: From Agency to Automation: How We Cut Tech
+                      Time to Hire and Cost per Hire in Half in One Year.</b>
+                      <br />
+                      Antonio Arias Lopez is leading Talent Acquisition at
+                      Tipico, the market leader in sports betting in Germany.
+                      Antonio set up the Group Talent Acquisition function and
+                      leads a team of 11 recruiters, spread across 4 locations
+                      Since joining, Antonio and his team have reduced time to
+                      hire by 51%, reduced agency spend by 82%, and increased
+                      inbound tech applications by five times. Learn how Tipico
+                      implemented state of the art HR Tech, like automated
+                      referencing, asynchronous interviewing, best-in-class tech
+                      assessments to transform recruitment and build a
+                      digitally-powered system.
+                    </Description>
+                  </Topic>
+                </TopicCell>
+              </TableRow>
             </div>
             <div style={{width: "50%", paddingBottom: '4px'}}>
               <TopicCell style={{height: '100%'}}>
-                <Topic kind={ "workshop" }>
+                <Topic kind={ "workshop" } avatars={ [MarkLevy] }>
                   <Summary>
                      Mark Levy, Employee Experience Pioneer (formerly at
                      Airbnb)
                   </Summary>
                   <Description>
-                     In this workshop, participants will analyze their own
-                     organization, how they work with their employees and start
-                     to consider what it will take to create more two way
-                     dialog, to co-create with their employees, and to help the
-                     entire company shift towards a new way of working where you
-                     set your employees up for success by helping them
-                     understand the business needs and treat them the way you
+                    <b>A Deeper Dive into what it takes to Shift from HR to
+                    Employee Experience</b><br />
+                    In this workshop, participants will analyze their own
+                    organization, how they work with their employees and start
+                    to consider what it will take to create more two way
+                    dialog, to co-create with their employees, and to help the
+                    entire company shift towards a new way of working where you
+                    set your employees up for success by helping them
+                    understand the business needs and treat them the way you
                      want the employees to treat your customer
                   </Description>
                 </Topic>
@@ -456,48 +535,10 @@ const Schedule = () => (
           </TableRow>
           <TableRow>
             <TimeCell>
-              15.30
-            </TimeCell>
-            <TopicCell>
-              <Topic kind={ "break" }>
-                <Summary>
-                  Coffee Break
-                </Summary>
-              </Topic>
-            </TopicCell>
-          </TableRow>
-          <TableRow>
-            <TimeCell>
-              16.00
-            </TimeCell>
-            <TopicCell>
-              <Topic kind={ "casestudy" }>
-                <Summary>
-                  Antonio Arias Lopez, Talent Acquisition Lead,<br />
-                  Jose Arteaga, Tech Talent Acquisition Specialist,<br />
-                  Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
-                </Summary>
-                <Description>
-                  Antonio Arias Lopez is leading Talent Acquisition at Tipico,
-                  the market leader in sports betting in Germany. Antonio set up
-                  the Group Talent Acquisition function and leads a team of 11
-                  recruiters, spread across 4 locations. Since joining, Antonio
-                  and his team have reduced time to hire by 51%, reduced agency
-                  spend by 82%, and increased inbound tech applications by five
-                  times. Learn how Tipico implemented state of the art HR Tech,
-                  like automated referencing, asynchronous interviewing,
-                  best-in-class tech assessments to transform recruitment and
-                  build a digitally-powered system.
-                </Description>
-              </Topic>
-            </TopicCell>
-          </TableRow>
-          <TableRow>
-            <TimeCell>
               16.30
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "keynote" }>
+              <Topic kind={ "keynote" } avatars={ [MartinaNiemann] }>
                 <Summary>
                   Martina Niemann, Vice President HR Management, Lufthansa
                 </Summary>
@@ -512,7 +553,7 @@ const Schedule = () => (
               17.00
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "keynote" }>
+              <Topic kind={ "keynote" } avatars={ [KevinGoldsmith] }>
                 <Summary>
                   Kevin Goldsmith, VP of Engineering, AstrumU
                 </Summary>
