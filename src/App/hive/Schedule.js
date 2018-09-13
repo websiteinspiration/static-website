@@ -319,7 +319,7 @@ const Schedule = () => (
                   Daniel Krauss, CIO and Co-Founder, FlixMobility
                 </Summary>
                 <Description>
-                  <b>From HR to Employee Experience</b><br />
+                  <b>To be announced</b><br />
                   Daniel Krauss is one of the three founders of FlixMobility and
                   the current CIO where he is responsible for all technological
                   aspects of FlixBus including Business Intelligence, Online

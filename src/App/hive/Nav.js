@@ -46,6 +46,7 @@ const NormalNav = () => (
     <NavItems>
       <NavItem href="#speakers">Speakers</NavItem>
       <NavItem href="#topics">Topics</NavItem>
+      <NavItem href="#schedule">Schedule</NavItem>
       <NavItem href="#location">Location</NavItem>
       <NavItem href="#s-ponsor">Sponsor</NavItem>
     </NavItems>
