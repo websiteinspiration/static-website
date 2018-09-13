@@ -16,6 +16,7 @@ import keynoteColorIcon from '../../static/icons/keynote-blue.svg';
 import casestudyColorIcon from '../../static/icons/casestudy-teal.svg';
 import panelColorIcon from '../../static/icons/line-person-icon.svg';
 import workshopColorIcon from '../../static/icons/workshop-purple.svg';
+import arrowWhiteIcon from '../../static/icons/arrow-white.svg';
 
 const SectionWrapper = styled.div`
   padding-bottom: 50px;
@@ -90,9 +91,24 @@ const TopicCell = styled.div`
   flex: 1 1 auto;
 `;
 
+const ArrowCell = () => {
+  const Img = styled.img`
+    margin-bottom: 0;
+    flex: 0 1 15px;
+  `;
+  return <Img onClick={ () => console.log('cliked') } src={ arrowWhiteIcon } />
+}
+
+const Text = styled.p`
+  flex: 1 1 auto;
+  margin: 0;
+  #float: left;
+`
+
 const RowWrapper = styled.div`
-  display: flex;
-  justify-content: flex-start;
+  #display: flex;
+  #justify-content: space-between;
+  box-sizing: border-box;
   padding: 10px;
   border-radius: 3px;
   color: #ffffff;
@@ -137,6 +153,73 @@ const TopicIcon = (kind, key = false) => {
   return <Img src={ TopicKind[kind].icon } title={ kind } />;
 };
 
+
+class Topic extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hide: true
+    };
+  }
+
+  handleClick() {
+    const {hide} = this.state;
+    this.setState({ hide: !hide });
+  }
+  render() {
+    const Img = styled.img`
+      margin-bottom: 0;
+      flex: 0 1 15px;
+    `;
+    
+    const Summary = styled.div`
+      display: flex;
+      justify-content: space-between;
+    `
+
+    const Description = styled.div`
+      display: block;
+      ${props => props.hide && css`
+        display: none;
+      `}
+    `;
+    const multiple = Array.isArray(this.props.children);
+    let Sum, Detail;
+    // If Summary and Description are given, split them
+    if(multiple) {
+      Sum = this.props.children[0];
+      Detail = this.props.children[1];
+    } else {
+      // Otherwise assume, that it is only the summary
+      Sum = this.props.children;
+    }
+    return <RowWrapper kind={ this.props.kind }>
+      <Summary>
+        { TopicIcon(this.props.kind) }
+        <Text>
+          { Sum }
+        </Text>
+        {multiple &&
+          <Img
+            onClick={ () => this.handleClick() }
+            src={ arrowWhiteIcon } />
+        }
+      </Summary>
+      <Description hide={ this.state.hide }>
+        { Detail }
+      </Description>
+    </RowWrapper>
+  }
+}
+
+const Summary = styled.p``;
+const Description = styled.p`
+  margin-left: 40px;
+  # For firefox
+  # margin-left: 30px;
+`;
+
+
 const Schedule = () => (
   <SectionWrapper id="schedule">
     <Container>
@@ -172,10 +255,11 @@ const Schedule = () => (
               8.30
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "break" }>
-                { TopicIcon("break") }
-                Registration and Breakfast
-              </RowWrapper>
+              <Topic kind={ "break" }>
+                <Summary>
+                  Registration and Breakfast
+                </Summary>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -183,10 +267,19 @@ const Schedule = () => (
               9.30
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "keynote" }>
-                { TopicIcon("keynote") }
-                Mark Levy, Employee Experience Pioneer (formerly at AirBnB)
-              </RowWrapper>
+              <Topic kind={ "keynote" }>
+                <Summary>Mark Levy, Employee Experience Pioneer (formerly at
+                  AirBnB)
+                </Summary>
+                <Description>
+                  Mark was the pioneer at Airbnb for more than four years of
+                  shifting the function, the mindset and ways of working to
+                  treating the employee like the business treats their customer.
+                  Mark will share how the shift started, what it is through
+                  stories about the way Airbnb created belonging through the
+                  employee experience.
+                </Description>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -194,10 +287,22 @@ const Schedule = () => (
               10.00
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "keynote" }>
-                { TopicIcon("keynote") }
-                Daniel Krauss, CIO and Co-Founder, FlixMobility
-              </RowWrapper>
+              <Topic kind={ "keynote" }>
+                <Summary>
+                  Daniel Krauss, CIO and Co-Founder, FlixMobility
+                </Summary>
+                <Description>
+                  Daniel Krauss is one of the three founders of FlixMobility and
+                  the current CIO where he is responsible for all technological
+                  aspects of FlixBus including Business Intelligence, Online
+                  Product, Infrastructure and Software Engineering. Prior to
+                  launching FlixBus, Daniel worked as technical manager for
+                  Microsoft, Siemens and Marquardt. Daniel studied business
+                  information systems at universities in Germany and China. He
+                  was born in 1983 in Neheim-Hüsten, Germany, and currently
+                  resides in Munich.
+                </Description>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -205,10 +310,14 @@ const Schedule = () => (
               10.30
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "casestudy" }>
-                { TopicIcon("casestudy") }
-                Sergej Zimpel, Senior Recruiter, ProSiebenSat.1 Media SE
-              </RowWrapper>
+              <Topic kind={ "casestudy" }>
+                <Summary>
+                  Sergej Zimpel, Senior Recruiter, ProSiebenSat.1 Media SE
+                </Summary>
+                <Description>
+                  To be announced
+                </Description>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -216,10 +325,11 @@ const Schedule = () => (
               11.00
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "break" }>
-                { TopicIcon("break") }
-                Coffee Break
-              </RowWrapper>
+              <Topic kind={ "break" }>
+                <Summary>
+                  Coffee Break
+                </Summary>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -227,10 +337,14 @@ const Schedule = () => (
               11.30
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "keynote" }>
-                { TopicIcon("keynote") }
-                Jeri Doris, Chief People Officer, Delivery Hero
-              </RowWrapper>
+              <Topic kind={ "keynote" }>
+                <Summary>
+                  Jeri Doris, Chief People Officer, Delivery Hero
+                </Summary>
+                <Description>
+                  To be announced
+                </Description>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -238,12 +352,21 @@ const Schedule = () => (
               12.00
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "panel" }>
-                { TopicIcon("panel") }
-                Margaux Pelen, Founder at The Learning Studio<br />
-                Teddy Dimitrova, Tech Talent Manager at Bloomon<br />
-                Jan Wirth, IT Recruiter at MYTOYS Group
-              </RowWrapper>
+              <Topic kind={ "panel" }>
+                <Summary>
+                  Margaux Pelen, Founder at The Learning Studio<br />
+                  Teddy Dimitrova, Tech Talent Manager at Bloomon<br />
+                  Jan Wirth, IT Recruiter at MYTOYS Group
+                </Summary>
+                <Description>
+                  Having a well defined screening process is essential to hiring
+                  the right tech talent and limiting organizational overhead.
+                  Our panelists will discuss developer's educational background,
+                  how to understand their interests from an application, how to
+                  automate screening and how to choose which technical screening
+                  is most suited to the position you are hiring for. 
+                </Description>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -251,10 +374,11 @@ const Schedule = () => (
               12.30
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "break" }>
-                { TopicIcon("break") }
-                Lunch
-              </RowWrapper>
+              <Topic kind={ "break" }>
+                <Summary>
+                  Lunch
+                </Summary>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -264,10 +388,23 @@ const Schedule = () => (
                   14.00
                 </TimeCell>
                 <TopicCell>
-                  <RowWrapper kind={ "casestudy" }>
-                    { TopicIcon("casestudy") }
-                    Amir Friedman, VP Engineering, kloeckner.i
-                  </RowWrapper>
+                  <Topic kind={ "casestudy" }>
+                    <Summary>
+                      Amir Friedman, VP Engineering, kloeckner.i
+                    </Summary>
+                    <Description>
+                      Amir is VP of Engineering at kloeckner.i, where he leads
+                      30 developers. He is passionate about building high
+                      performing teams. In this talk, Amir will talk about how
+                      he recruits the right people for the right teams, how
+                      kloeckner.i are building their developer brand and most
+                      importantly how they have kept turnover on their
+                      engineering team at close to zero. kloeckner.i is the
+                      digital arm of Klöckner & Co, Germany's largest steel and
+                      metal distributor. The company has over 8,000 employees
+                      and €6.3 billion revenue in 2017.
+                    </Description>
+                  </Topic>
                 </TopicCell>
               </TableRow>
               <TableRow>
@@ -275,19 +412,45 @@ const Schedule = () => (
                   15.05
                 </TimeCell>
                 <TopicCell>
-                  <RowWrapper kind={ "casestudy" }>
-                    { TopicIcon("casestudy") }
-                    Aleksandra Gavrilovska, Engineering Manager, SoundCloud, Director at Women Who Code Berlin
-                  </RowWrapper>
+                  <Topic kind={ "casestudy" }>
+                    <Summary>
+                      Aleksandra Gavrilovska, Engineering Manager, SoundCloud,
+                      Director at Women Who Code Berlin
+                    </Summary>
+                    <Description>
+                      Functional teams are based on trust, communication and
+                      empathy. Those can grow and improve as the time goes or
+                      they can be catalysed by using different tools, for
+                      example a retrospective activity. In this case study
+                      Aleksandra will show various retrospectives and the impact
+                      they had on her team at SoundCloud. Aleksandra Gavrilovska
+                      is an Engineering Manager at SoundCloud and Director at
+                      Women Who Code Berlin. She has been working in software
+                      development for 10 years and has a Master and Bachelor in
+                      Computer Science. 
+                    </Description>
+                  </Topic>
                 </TopicCell>
               </TableRow>
             </div>
             <div style={{width: "50%", paddingBottom: '4px'}}>
               <TopicCell style={{height: '100%'}}>
-                <RowWrapper kind={ "workshop" }>
-                  { TopicIcon("workshop") }
-                  Mark Levy, Employee Experience Pioneer (formerly at AirBnB)
-                </RowWrapper>
+                <Topic kind={ "workshop" }>
+                  <Summary>
+                     Mark Levy, Employee Experience Pioneer (formerly at
+                     Airbnb)
+                  </Summary>
+                  <Description>
+                     In this workshop, participants will analyze their own
+                     organization, how they work with their employees and start
+                     to consider what it will take to create more two way
+                     dialog, to co-create with their employees, and to help the
+                     entire company shift towards a new way of working where you
+                     set your employees up for success by helping them
+                     understand the business needs and treat them the way you
+                     want the employees to treat your customer
+                  </Description>
+                </Topic>
               </TopicCell>
             </div>
           </TableRow>
@@ -296,10 +459,11 @@ const Schedule = () => (
               15.30
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "break" }>
-                { TopicIcon("break") }
-                Coffee Break
-              </RowWrapper>
+              <Topic kind={ "break" }>
+                <Summary>
+                  Coffee Break
+                </Summary>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -307,10 +471,25 @@ const Schedule = () => (
               16.00
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "casestudy" }>
-                { TopicIcon("casestudy") }
-                Antonio Arias Lopez, Talent Acquisition Lead, Jose Arteaga, Tech Talent Acquisition Specialist, Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
-              </RowWrapper>
+              <Topic kind={ "casestudy" }>
+                <Summary>
+                  Antonio Arias Lopez, Talent Acquisition Lead,<br />
+                  Jose Arteaga, Tech Talent Acquisition Specialist,<br />
+                  Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
+                </Summary>
+                <Description>
+                  Antonio Arias Lopez is leading Talent Acquisition at Tipico,
+                  the market leader in sports betting in Germany. Antonio set up
+                  the Group Talent Acquisition function and leads a team of 11
+                  recruiters, spread across 4 locations. Since joining, Antonio
+                  and his team have reduced time to hire by 51%, reduced agency
+                  spend by 82%, and increased inbound tech applications by five
+                  times. Learn how Tipico implemented state of the art HR Tech,
+                  like automated referencing, asynchronous interviewing,
+                  best-in-class tech assessments to transform recruitment and
+                  build a digitally-powered system.
+                </Description>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -318,10 +497,14 @@ const Schedule = () => (
               16.30
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "keynote" }>
-                { TopicIcon("keynote") }
-                Martina Niemann, Vice President HR Management, Lufthansa
-              </RowWrapper>
+              <Topic kind={ "keynote" }>
+                <Summary>
+                  Martina Niemann, Vice President HR Management, Lufthansa
+                </Summary>
+                <Description>
+                  To be announced
+                </Description>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -329,10 +512,25 @@ const Schedule = () => (
               17.00
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "keynote" }>
-                { TopicIcon("keynote") }
-                Kevin Goldsmith, VP of Engineering, AstrumU
-              </RowWrapper>
+              <Topic kind={ "keynote" }>
+                <Summary>
+                  Kevin Goldsmith, VP of Engineering, AstrumU
+                </Summary>
+                <Description>
+                  Building psychological safety in your teams is critical if you
+                  want them to perform at their best. The challenge is how to
+                  develop and encourage the trust and collaboration and to make
+                  sure that all voices are heard. The agile community has
+                  developed facilitation exercises and tools that make
+                  conversations more democratic and inclusive. I have used some
+                  of these techniques with my teams for years and have found
+                  them incredibly valuable. I will teach you some of the agile
+                  methods that I use for large and small team meetings,
+                  brainstorms, and one-on-ones that encourage all team members
+                  to participate. These tools also help make sure that all
+                  voices are respected and valued.
+                </Description>
+              </Topic>
             </TopicCell>
           </TableRow>
           <TableRow>
@@ -340,10 +538,11 @@ const Schedule = () => (
               17.45
             </TimeCell>
             <TopicCell>
-              <RowWrapper kind={ "break" }>
-                { TopicIcon("break") }
-                Closing
-              </RowWrapper>
+              <Topic kind={ "break" }>
+                <Summary>
+                  Closing
+                </Summary>
+              </Topic>
             </TopicCell>
           </TableRow>
         </TableBody>
