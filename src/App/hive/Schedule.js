@@ -316,11 +316,11 @@ const Schedule = () => (
             <TopicCell>
               <Topic kind={ "keynote" } avatars={ [DanielKrauss] }>
                 <Summary>
-                  Daniel Krauss, CIO and Co-Founder, FlixMobility
+                  Daniel Krauss, CIO and Co-Founder, FlixBus
                 </Summary>
                 <Description>
                   <b>To be announced</b><br />
-                  Daniel Krauss is one of the three founders of FlixMobility and
+                  Daniel Krauss is one of the three founders of FlixBus and
                   the current CIO where he is responsible for all technological
                   aspects of FlixBus including Business Intelligence, Online
                   Product, Infrastructure and Software Engineering. Prior to
