@@ -64,7 +64,7 @@ const Speakers = () => (
               <img src={avatar4} />
             </Avatar>
             <Name>Daniel Krauss</Name>
-            <Info>CIO and Co-Foundre @ FlixBus.</Info>
+            <Info>CIO and Co-Founder @ FlixBus.</Info>
           </SpeakersItem>
           <SpeakersItem>
             <Avatar>
