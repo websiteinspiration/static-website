@@ -156,8 +156,9 @@ const TopicIcon = (kind, key = false) => {
 class Topic extends React.Component {
   constructor(props) {
     super(props);
+    const hide = props.hide === undefined ? true : props.hide;
     this.state = {
-      hide: true
+      hide
     };
   }
 
@@ -512,7 +513,7 @@ const Schedule = () => (
             </div>
             <div style={{width: "50%", paddingBottom: '4px'}}>
               <TopicCell style={{height: '100%'}}>
-                <Topic kind={ "workshop" } avatars={ [MarkLevy] }>
+                <Topic kind={ "workshop" } avatars={ [MarkLevy] } hide={ false }>
                   <Summary>
                      Mark Levy, Employee Experience Pioneer (formerly at
                      Airbnb)
