@@ -156,8 +156,9 @@ const TopicIcon = (kind, key = false) => {
 class Topic extends React.Component {
   constructor(props) {
     super(props);
+    const hide = props.hide === undefined ? true : props.hide;
     this.state = {
-      hide: true
+      hide
     };
   }
 
@@ -316,11 +317,11 @@ const Schedule = () => (
             <TopicCell>
               <Topic kind={ "keynote" } avatars={ [DanielKrauss] }>
                 <Summary>
-                  Daniel Krauss, CIO and Co-Founder, FlixMobility
+                  Daniel Krauss, CIO and Co-Founder, FlixBus
                 </Summary>
                 <Description>
-                  <b>From HR to Employee Experience</b><br />
-                  Daniel Krauss is one of the three founders of FlixMobility and
+                  <b>To be announced</b><br />
+                  Daniel Krauss is one of the three founders of FlixBus and
                   the current CIO where he is responsible for all technological
                   aspects of FlixBus including Business Intelligence, Online
                   Product, Infrastructure and Software Engineering. Prior to
@@ -491,7 +492,7 @@ const Schedule = () => (
                       Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
                     </Summary>
                     <Description>
-                      <b>Case Study: From Agency to Automation: How We Cut Tech
+                      <b>From Agency to Automation: How We Cut Tech
                       Time to Hire and Cost per Hire in Half in One Year.</b>
                       <br />
                       Antonio Arias Lopez is leading Talent Acquisition at
@@ -512,7 +513,7 @@ const Schedule = () => (
             </div>
             <div style={{width: "50%", paddingBottom: '4px'}}>
               <TopicCell style={{height: '100%'}}>
-                <Topic kind={ "workshop" } avatars={ [MarkLevy] }>
+                <Topic kind={ "workshop" } avatars={ [MarkLevy] } hide={ false }>
                   <Summary>
                      Mark Levy, Employee Experience Pioneer (formerly at
                      Airbnb)
@@ -558,6 +559,7 @@ const Schedule = () => (
                   Kevin Goldsmith, VP of Engineering, AstrumU
                 </Summary>
                 <Description>
+                  <b>Using Agile Techniques to Build a More Inclusive Team</b>
                   Building psychological safety in your teams is critical if you
                   want them to perform at their best. The challenge is how to
                   develop and encourage the trust and collaboration and to make
