@@ -21,6 +21,9 @@ import avatar11 from '../../static/images/teddy-dimitrova.jpg'
 import avatar12 from '../../static/images/amir-friedman.jpg'
 import avatar13 from '../../static/images/antonio-arias.png'
 import avatar14 from '../../static/images/aleksandra-gavrilovska.png'
+import avatar15 from '../../static/images/eyal-matzkel.jpg'
+import avatar16 from '../../static/images/magdalena-masluk.jpg'
+import avatar17 from '../../static/images/katharina-waeschenbach.jpg'
 
 // Utils
 import { mobile } from '../../utils/style/media'
@@ -146,6 +149,39 @@ const Speakers = () => (
               <Name>Aleksandra Gavrilovska</Name>
               <Info>Engineering Manager @ SoundCloud, Director at Women Who Code
                 Berlin</Info>
+            </SpeakersItem>
+            <SpeakersItem>
+              <Avatar>
+                <img src={avatar15} />
+              </Avatar>
+              <Name>Eyal Matzkel</Name>
+              <Info>Senior Engineering Manager @ GoEuro</Info>
+            </SpeakersItem>
+          </Center>
+        </SpeakersContainer>
+
+        <SpeakersContainer>
+          <Center>
+            <SpeakersItem>
+              <Avatar>
+                <img src={avatar16} />
+              </Avatar>
+              <Name>Dr. Magdalena Masluk-Meller</Name>
+              <Info>Talent Sourcing Lead @ Zalando SE</Info>
+            </SpeakersItem>
+            <SpeakersItem>
+              <Avatar>
+                <img src={avatar17} />
+              </Avatar>
+              <Name>Katharina Wäschenbach</Name>
+              <Info>Head of People & Culture @ HeyCar</Info>
+            </SpeakersItem>
+            <SpeakersItem>
+              <Avatar>
+                <img src={avatar15} />
+              </Avatar>
+              <Name>Antonio Arias Lopez</Name>
+              <Info>Talent Acquisition Lead @ Tipico</Info>
             </SpeakersItem>
           </Center>
         </SpeakersContainer>
