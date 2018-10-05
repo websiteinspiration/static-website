@@ -657,6 +657,7 @@ const Schedule = () => (
                   Martina Niemann, Vice President HR Management, Lufthansa
                 </Summary>
                 <Description>
+                  <b>HR Transformation at Lufthansa</b><br />
                   To be announced
                 </Description>
               </Topic>
