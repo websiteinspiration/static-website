@@ -15,15 +15,20 @@ import avatar5 from '../../static/images/margaux-pelen.png'
 import avatar6 from '../../static/images/sergej-zimpel.png'
 import avatar7 from '../../static/images/martina-niemann.jpg'
 import avatar8 from '../../static/images/nico-brautigam.png'
-import avatar9 from '../../static/images/jan-werth.jpg'
+import avatar9 from '../../static/images/Jan.png'
 import avatar10 from '../../static/images/jose-arteaga.png'
-import avatar11 from '../../static/images/teddy-dimitrova.jpg'
+import avatar11 from '../../static/images/Teddy.png'
 import avatar12 from '../../static/images/amir-friedman.jpg'
 import avatar13 from '../../static/images/antonio-arias.png'
 import avatar14 from '../../static/images/aleksandra-gavrilovska.png'
-import avatar15 from '../../static/images/eyal-matzkel.jpg'
-import avatar16 from '../../static/images/magdalena-masluk.jpg'
+import avatar15 from '../../static/images/Eyal.png'
+import avatar16 from '../../static/images/Magdalena.png'
 import avatar17 from '../../static/images/katharina-waeschenbach.jpg'
+import avatar18 from '../../static/OddurMagnusson.png';
+import avatar19 from '../../static/images/ErikaEnberg.png';
+import avatar20 from '../../static/images/Dasa.png';
+import avatar21 from '../../static/images/Emma.png';
+import avatar22 from '../../static/images/Kaya.png';
 
 // Utils
 import { mobile } from '../../utils/style/media'
@@ -171,17 +176,55 @@ const Speakers = () => (
             </SpeakersItem>
             <SpeakersItem>
               <Avatar>
+                <img src={avatar18} />
+              </Avatar>
+              <Name>Oddur Snær Magnússon</Name>
+              <Info>CTO @ Klang Games</Info>
+            </SpeakersItem>
+            <SpeakersItem>
+              <Avatar>
                 <img src={avatar17} />
               </Avatar>
               <Name>Katharina Wäschenbach</Name>
               <Info>Head of People & Culture @ HeyCar</Info>
             </SpeakersItem>
+          </Center>
+        </SpeakersContainer>
+
+        <SpeakersContainer>
+          <Center>
             <SpeakersItem>
               <Avatar>
-                <img src={avatar15} />
+                <img src={avatar22} />
               </Avatar>
-              <Name>Antonio Arias Lopez</Name>
-              <Info>Talent Acquisition Lead @ Tipico</Info>
+              <Name>Kaya Taner</Name>
+              <Info>Co-Founder @ Honeypot</Info>
+            </SpeakersItem>
+            <SpeakersItem>
+              <Avatar>
+                <img src={avatar19} />
+              </Avatar>
+              <Name>Erika Enberg</Name>
+              <Info>Director of People and Culture @ Blacklane</Info>
+            </SpeakersItem>
+            <SpeakersItem>
+              <Avatar>
+                <img src={avatar20} />
+              </Avatar>
+              <Name>Daša Rupar</Name>
+              <Info>Senior Manager, HR Analytics @ AUTO1</Info>
+            </SpeakersItem>
+          </Center>
+        </SpeakersContainer>
+
+        <SpeakersContainer>
+          <Center>
+            <SpeakersItem>
+              <Avatar>
+                <img src={avatar21} />
+              </Avatar>
+              <Name>Emma Tracey</Name>
+              <Info>Co-Founder @ Honeypot</Info>
             </SpeakersItem>
           </Center>
         </SpeakersContainer>

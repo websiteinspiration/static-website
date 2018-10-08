@@ -17,6 +17,7 @@ import casestudyColorIcon from '../../static/icons/casestudy-teal.svg';
 import panelColorIcon from '../../static/icons/line-person-icon.svg';
 import workshopColorIcon from '../../static/icons/workshop-purple.svg';
 import arrowWhiteIcon from '../../static/icons/arrow-white.svg';
+import drinksIcon from '../../static/icons/Drinks-Icon.svg';
 
 // avatars
 import AleksandraGavril from '../../static/avatars/AleksandraGavril.png'
@@ -31,6 +32,18 @@ import MarkLevy from '../../static/avatars/MarkLevy.png'
 import MartinaNiemann from '../../static/avatars/MartinaNiemann.png'
 import NicoBrautigam from '../../static/avatars/NicoBrautigam.png'
 import SergejZimpel from '../../static/avatars/SergejZimpel.png'
+import OddurMagnusson from '../../static/OddurMagnusson.png'
+import ErikaEnberg from '../../static/images/ErikaEnberg.png'
+import Dasa from '../../static/images/Dasa.png'
+import Emma from '../../static/images/Emma.png'
+import Kaya from '../../static/images/Kaya.png'
+import Eyal from '../../static/images/Eyal.png'
+import Teddy from '../../static/images/Teddy.png'
+import Jan from '../../static/images/Jan.png'
+import Magdalena from '../../static/images/Magdalena.png'
+import Katie from '../../static/images/Katie.png'
+import Debbie from '../../static/images/Debbie.png'
+import Kuba from '../../static/images/Kuba.png'
 
 const SectionWrapper = styled.div`
   padding-bottom: 50px;
@@ -44,6 +57,11 @@ const TopicKind = {
   },
   keynote: {
     color: '24, 116, 204',
+    icon: keynoteIcon,
+    colorIcon: keynoteColorIcon
+  },
+  welcome: {
+    color: '204, 229, 255',
     icon: keynoteIcon,
     colorIcon: keynoteColorIcon
   },
@@ -61,6 +79,11 @@ const TopicKind = {
     color: '169, 85, 245',
     icon: workshopIcon,
     colorIcon: workshopColorIcon
+  },
+  drinks: {
+    color: '247, 246, 246',
+    icon: drinksIcon,
+    colorIcon: drinksIcon
   }
 };
 
@@ -115,7 +138,8 @@ const RowWrapper = styled.div`
   font-weight: 500;
   margin: 2px 2px;
 
-  ${props => (props.kind === 'break') && css`
+  ${props => (props.kind === 'break' || props.kind === 'drinks'
+    || props.kind === 'welcome') && css`
       color: #3c3c3c;
   `}
 
@@ -149,7 +173,12 @@ const TopicIcon = (kind, key = false) => {
     return <Img src={ TopicKind[kind].colorIcon } title={ kind } />;
   }
 
-  return <Img src={ TopicKind[kind].icon } title={ kind } />;
+  if(TopicKind[kind].icon) {
+    return <Img src={ TopicKind[kind].icon } title={ kind } />;
+  }
+
+  return null;
+
 };
 
 
@@ -294,7 +323,7 @@ const Schedule = () => (
               9.15
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "keynote" }>
+              <Topic kind={ "welcome" }>
                 <Summary>
                   Welcome Talk
                 </Summary>
@@ -386,7 +415,8 @@ const Schedule = () => (
               11.30
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "panel" } avatars={ [MargeauxPelen] }>
+              <Topic kind={ "panel" } avatars={ [MargeauxPelen, Teddy, Jan,
+                Magdalena, Kuba, Debbie] }>
                 <Summary>
                   Margaux Pelen, Founder, The Learning Studio<br />
                   Teddy Dimitrova, Tech Talent Manager, Bloomon<br />
@@ -452,7 +482,8 @@ const Schedule = () => (
                   14.00
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "panel" } avatars={ [AmirFriedman] }>
+                  <Topic kind={ "panel" } avatars={ [
+                    AmirFriedman, OddurMagnusson, ErikaEnberg, Eyal, Katie] }>
                     <Summary>
                       Amir Friedman, VP Engineering, kloeckner.i<br />
                       Oddur Snær Magnússon, CTO, Klang Games<br />
@@ -484,7 +515,7 @@ const Schedule = () => (
                   14.30
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "casestudy" } avatars={ [AmirFriedman] }>
+                  <Topic kind={ "casestudy" } avatars={ [] }>
                     <Summary>
                       Katharina Wäschenbach, Head of People & Culture, HeyCar
                     </Summary>
@@ -517,7 +548,7 @@ const Schedule = () => (
                   14.45
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "casestudy" } avatars={ [AmirFriedman] }>
+                  <Topic kind={ "casestudy" } avatars={ [Dasa] }>
                     <Summary>
                       Daša Rupar, Senior Manager, HR Analytics, AUTO1
                     </Summary>
@@ -566,7 +597,7 @@ const Schedule = () => (
                   15.15
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "casestudy" } avatars={ [AleksandraGavril] }>
+                  <Topic kind={ "casestudy" } avatars={ [Kaya, Emma] }>
                     <Summary>
                       Kaya Taner and Emma Tracey, Co-Founders, Honeypot
                     </Summary>
@@ -707,7 +738,7 @@ const Schedule = () => (
               18.00
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "break" }>
+              <Topic kind={ "drinks" }>
                 <Summary>
                   Drinks
                 </Summary>
