@@ -17,6 +17,7 @@ import casestudyColorIcon from '../../static/icons/casestudy-teal.svg';
 import panelColorIcon from '../../static/icons/line-person-icon.svg';
 import workshopColorIcon from '../../static/icons/workshop-purple.svg';
 import arrowWhiteIcon from '../../static/icons/arrow-white.svg';
+import drinksIcon from '../../static/icons/Drinks-Icon.svg';
 
 // avatars
 import AleksandraGavril from '../../static/avatars/AleksandraGavril.png'
@@ -31,6 +32,19 @@ import MarkLevy from '../../static/avatars/MarkLevy.png'
 import MartinaNiemann from '../../static/avatars/MartinaNiemann.png'
 import NicoBrautigam from '../../static/avatars/NicoBrautigam.png'
 import SergejZimpel from '../../static/avatars/SergejZimpel.png'
+import OddurMagnusson from '../../static/OddurMagnusson.png'
+import ErikaEnberg from '../../static/images/ErikaEnberg.png'
+import Dasa from '../../static/images/Dasa.png'
+import Emma from '../../static/images/Emma.png'
+import Kaya from '../../static/images/Kaya.png'
+import Eyal from '../../static/images/Eyal.png'
+import Teddy from '../../static/images/Teddy.png'
+import Jan from '../../static/images/Jan.png'
+import Magdalena from '../../static/images/Magdalena.png'
+import Katie from '../../static/images/Katie.png'
+import Debbie from '../../static/images/Debbie.png'
+import Kuba from '../../static/images/Kuba.png'
+import Katharina from '../../static/images/katharina-waeschenbach.jpg'
 
 const SectionWrapper = styled.div`
   padding-bottom: 50px;
@@ -44,6 +58,11 @@ const TopicKind = {
   },
   keynote: {
     color: '24, 116, 204',
+    icon: keynoteIcon,
+    colorIcon: keynoteColorIcon
+  },
+  welcome: {
+    color: '204, 229, 255',
     icon: keynoteIcon,
     colorIcon: keynoteColorIcon
   },
@@ -61,6 +80,11 @@ const TopicKind = {
     color: '169, 85, 245',
     icon: workshopIcon,
     colorIcon: workshopColorIcon
+  },
+  drinks: {
+    color: '247, 246, 246',
+    icon: drinksIcon,
+    colorIcon: drinksIcon
   }
 };
 
@@ -115,7 +139,8 @@ const RowWrapper = styled.div`
   font-weight: 500;
   margin: 2px 2px;
 
-  ${props => (props.kind === 'break') && css`
+  ${props => (props.kind === 'break' || props.kind === 'drinks'
+    || props.kind === 'welcome') && css`
       color: #3c3c3c;
   `}
 
@@ -149,7 +174,12 @@ const TopicIcon = (kind, key = false) => {
     return <Img src={ TopicKind[kind].colorIcon } title={ kind } />;
   }
 
-  return <Img src={ TopicKind[kind].icon } title={ kind } />;
+  if(TopicKind[kind].icon) {
+    return <Img src={ TopicKind[kind].icon } title={ kind } />;
+  }
+
+  return null;
+
 };
 
 
@@ -178,6 +208,7 @@ class Topic extends React.Component {
     const ImgAvatar = styled.img`
       margin-bottom: 0;
       max-width: 25px;
+      border-radius: 50%;
     `
 
     const Text = styled.span`
@@ -291,12 +322,27 @@ const Schedule = () => (
           </TableRow>
           <TableRow>
             <TimeCell>
-              9.30
+              9.15
+            </TimeCell>
+            <TopicCell>
+              <Topic kind={ "welcome" }>
+                <Summary>
+                  Welcome Talk
+                </Summary>
+                <Description>
+                  Emma Tracey, Co-Founder, Honeypot
+                </Description>
+              </Topic>
+            </TopicCell>
+          </TableRow>
+          <TableRow>
+            <TimeCell>
+              9.20
             </TimeCell>
             <TopicCell>
               <Topic kind={ "keynote" } avatars={ [MarkLevy] }>
                 <Summary>Mark Levy, Employee Experience Pioneer (formerly at
-                  AirBnB)
+                  Airbnb)
                 </Summary>
                 <Description>
                   <b>From HR to Employee Experience</b><br />
@@ -320,7 +366,8 @@ const Schedule = () => (
                   Daniel Krauss, CIO and Co-Founder, FlixBus
                 </Summary>
                 <Description>
-                  <b>To be announced</b><br />
+                  <b>How to Drive Rapid Growth in Tech through Smart Leadership
+                  </b><br />
                   Daniel Krauss is one of the three founders of FlixBus and
                   the current CIO where he is responsible for all technological
                   aspects of FlixBus including Business Intelligence, Online
@@ -344,7 +391,11 @@ const Schedule = () => (
                   Sergej Zimpel, Senior Recruiter, ProSiebenSat.1 Media SE
                 </Summary>
                 <Description>
-                  To be announced
+                  <b>How to Build a Employer Brand to attract Tech Talent</b>
+                  <br />
+                  Sergej will talk about how ProSiebenSat1 adapted its approach
+                  to become more attractive to tech talent. He will focus in
+                  particular on changes implemented at SevenOne Media in Berlin.
                 </Description>
               </Topic>
             </TopicCell>
@@ -366,26 +417,16 @@ const Schedule = () => (
               11.30
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "keynote" } avatars={ [JeriDoris] }>
+              <Topic kind={ "panel" } avatars={ [MargeauxPelen, Teddy, Jan,
+                Magdalena, Kuba, Debbie] }>
                 <Summary>
-                  Jeri Doris, Chief People Officer, Delivery Hero
-                </Summary>
-                <Description>
-                  To be announced
-                </Description>
-              </Topic>
-            </TopicCell>
-          </TableRow>
-          <TableRow>
-            <TimeCell>
-              12.00
-            </TimeCell>
-            <TopicCell>
-              <Topic kind={ "panel" } avatars={ [MargeauxPelen] }>
-                <Summary>
-                  Margaux Pelen, Founder at The Learning Studio<br />
-                  Teddy Dimitrova, Tech Talent Manager at Bloomon<br />
-                  Jan Werth, IT Recruiter at MYTOYS Group
+                  Margaux Pelen, Founder, The Learning Studio<br />
+                  Teddy Dimitrova, Tech Talent Manager, Bloomon<br />
+                  Jan Werth, Senior IT Recruiter, MYTOYS Group<br />
+                  Dr. Magdalena Masluk-Meller, Talent Sourcing Lead, Zalando SE
+                  <br />
+                  Kuba Kucharski, Developer Evangelist, Codility<br />
+                  Moderator: Debora Lasoen, Head of Talent Management, Honeypot
                 </Summary>
                 <Description>
                   <b>Screening Developers: Setting up a Frictionless Screening
@@ -396,6 +437,30 @@ const Schedule = () => (
                   how to understand their interests from an application, how to
                   automate screening and how to choose which technical screening
                   is most suited to the position you are hiring for. 
+                </Description>
+              </Topic>
+            </TopicCell>
+          </TableRow>
+          <TableRow>
+            <TimeCell>
+              12.00
+            </TimeCell>
+            <TopicCell>
+              <Topic kind={ "keynote" } avatars={ [JeriDoris] }>
+                <Summary>
+                  Jeri Doris, Chief People Officer, Delivery Hero
+                </Summary>
+                <Description>
+                  <b>Improving the Candidate Experience, One Hire at a Time</b>
+                  <br />
+                  Drawing on her experience from the Bay Area and the recent
+                  hyper growth at Delivery Hero, Jeri will explore Candidate
+                  Experience in tech recruiting. Zoning in on learnings from
+                  Delivery Hero's core people strategy, Jeri will answer three
+                  key questions: How does Delivery Hero guarantee an amazing
+                  candidate experience?; how does the company hire as many
+                  engineers as possible?; and finally, how do Jeri and her team
+                  ensure their process is not impacted by hyper growth?
                 </Description>
               </Topic>
             </TopicCell>
@@ -419,30 +484,92 @@ const Schedule = () => (
                   14.00
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "casestudy" } avatars={ [AmirFriedman] }>
+                  <Topic kind={ "panel" } avatars={ [
+                    AmirFriedman, OddurMagnusson, ErikaEnberg, Eyal, Katie] }>
                     <Summary>
-                      Amir Friedman, VP Engineering, kloeckner.i
+                      Amir Friedman, VP Engineering, kloeckner.i<br />
+                      Oddur Snær Magnússon, CTO, Klang Games<br />
+                      Erika Enberg, Director, People and Culture,
+                      Blacklane<br /> 
+                      Eyal Matzkel, Senior Engineering Manager, GoEuro<br />
+                      Moderator: Katharina Kretschmer, Customer Success Manager,
+                      Honeypot
                     </Summary>
                     <Description>
-                      <b>How we Recruit and Retain Developers at Kloeckner.i</b>
+                      <b>When Engineers become Managers: How, Who and When</b>
                       <br />
-                      Amir is VP of Engineering at kloeckner.i, where he leads
-                      30 developers. He is passionate about building high
-                      performing teams. In this talk, Amir will talk about how
-                      he recruits the right people for the right teams, how
-                      kloeckner.i are building their developer brand and most
-                      importantly how they have kept turnover on their
-                      engineering team at close to zero. kloeckner.i is the
-                      digital arm of Klöckner & Co, Germany's largest steel and
-                      metal distributor. The company has over 8,000 employees
-                      and €6.3 billion revenue in 2017.
+                      Managing requires a different skill set from technical
+                      work, yet many companies promote their best technical
+                      workers to management positions. So what skills and traits
+                      make a great engineering leader? And how do you build an
+                      organization that reward skilled technical talent that
+                      don't want to manage people? Our panelists will discuss
+                      leadership development; cultivating a culture that rewards
+                      leadership and technical skills equally and how HR and
+                      technical leaders can work together to build the
+                      organization of the future.
                     </Description>
                   </Topic>
                 </TopicCell>
               </TableRow>
               <TableRow>
                 <TimeCell>
-                  15.05
+                  14.30
+                </TimeCell>
+                <TopicCell>
+                  <Topic kind={ "casestudy" } avatars={ [Katharina] }>
+                    <Summary>
+                      Katharina Wäschenbach, Head of People & Culture, HeyCar
+                    </Summary>
+                    <Description>
+                      <b>Re-designing the Engineering Team While Still on Hyper
+                      (business) growth</b>
+                      <br />
+                      Within six months, BCG Digital Ventures developed, built
+                      and launched heycar, an online used car platform in
+                      partnership with Volkswagen Financial Services in Germany.
+                      A year later the organization is still growing fast while
+                      facing challenges along the way that remain while moving
+                      fast with the business, but also after more than 60
+                      people joined the company and foster a culture to
+                      constantly innovate. One of this main challenges reflects
+                      the organizational design, which we have recently changed
+                      in the engineering team. Here we explicitly changed into
+                      working in squads. Changes like this doesn’t come as
+                      surprise, it needs to be communicated and implemented
+                      while business can’t stop either. We have recognized paint
+                      points as well as positive learnings, while implementing
+                      the squad logic and which we want to share with a broader
+                      audience.
+                    </Description>
+                  </Topic>
+                </TopicCell>
+              </TableRow>
+              <TableRow>
+                <TimeCell>
+                  14.45
+                </TimeCell>
+                <TopicCell>
+                  <Topic kind={ "casestudy" } avatars={ [Dasa] }>
+                    <Summary>
+                      Daša Rupar, Senior Manager, HR Analytics, AUTO1
+                    </Summary>
+                    <Description>
+                      <b>How We Build Data-driven Culture in HR at AUTO1</b>
+                      <br />
+                      By moving from reactive to proactive business partner,
+                      encouraging data-driven culture in HR is essential. Data
+                      and analytics allows HR at Auto1 to work on projects that
+                      add value to the business. Daša Rupar will present how
+                      Auto1 made important steps towards greater efficiency of
+                      the recruitment process through the use of analytics. 
+                    </Description>
+                  </Topic>
+                </TopicCell>
+              </TableRow>
+              <TableRow>
+                <TimeCell>
+                  15.00
                 </TimeCell>
                 <TopicCell>
                   <Topic kind={ "casestudy" } avatars={ [AleksandraGavril] }>
@@ -469,6 +596,24 @@ const Schedule = () => (
               </TableRow>
               <TableRow>
                 <TimeCell>
+                  15.15
+                </TimeCell>
+                <TopicCell>
+                  <Topic kind={ "casestudy" } avatars={ [Kaya, Emma] }>
+                    <Summary>
+                      Kaya Taner and Emma Tracey, Co-Founders, Honeypot
+                    </Summary>
+                    <Description>
+                      <b>Data Driven Recruitment </b>
+                      <br />
+                      Benchmark your hiring process with data directly from
+                      Honeypot.
+                    </Description>
+                  </Topic>
+                </TopicCell>
+              </TableRow>
+              <TableRow>
+                <TimeCell>
                   15.30
                 </TimeCell>
                 <TopicCell>
@@ -487,8 +632,9 @@ const Schedule = () => (
                   <Topic kind={ "casestudy" } avatars={ [AntonioLopez,
                     JoseArtega, NicoBrautigam] }>
                     <Summary>
-                      Antonio Arias Lopez, Talent Acquisition Lead,<br />
-                      Jose Arteaga, Tech Talent Acquisition Specialist,<br />
+                      Antonio Arias Lopez, Talent Acquisition Lead, Tipico<br />
+                      Jose Arteaga, Tech Talent Acquisition Specialist, Tipico
+                      <br />
                       Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
                     </Summary>
                     <Description>
@@ -544,6 +690,7 @@ const Schedule = () => (
                   Martina Niemann, Vice President HR Management, Lufthansa
                 </Summary>
                 <Description>
+                  <b>HR Transformation at Lufthansa</b><br />
                   To be announced
                 </Description>
               </Topic>
@@ -581,9 +728,21 @@ const Schedule = () => (
               17.45
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "break" }>
+              <Topic kind={ "welcome" }>
                 <Summary>
                   Closing
+                </Summary>
+              </Topic>
+            </TopicCell>
+          </TableRow>
+          <TableRow>
+            <TimeCell>
+              18.00
+            </TimeCell>
+            <TopicCell>
+              <Topic kind={ "drinks" }>
+                <Summary>
+                  Drinks
                 </Summary>
               </Topic>
             </TopicCell>
