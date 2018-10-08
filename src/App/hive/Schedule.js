@@ -44,6 +44,7 @@ import Magdalena from '../../static/images/Magdalena.png'
 import Katie from '../../static/images/Katie.png'
 import Debbie from '../../static/images/Debbie.png'
 import Kuba from '../../static/images/Kuba.png'
+import Katharina from '../../static/images/katharina-waeschenbach.jpg'
 
 const SectionWrapper = styled.div`
   padding-bottom: 50px;
@@ -207,6 +208,7 @@ class Topic extends React.Component {
     const ImgAvatar = styled.img`
       margin-bottom: 0;
       max-width: 25px;
+      border-radius: 50%;
     `
 
     const Text = styled.span`
@@ -515,7 +517,7 @@ const Schedule = () => (
                   14.30
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "casestudy" } avatars={ [] }>
+                  <Topic kind={ "casestudy" } avatars={ [Katharina] }>
                     <Summary>
                       Katharina Wäschenbach, Head of People & Culture, HeyCar
                     </Summary>
@@ -726,7 +728,7 @@ const Schedule = () => (
               17.45
             </TimeCell>
             <TopicCell>
-              <Topic kind={ "keynote" }>
+              <Topic kind={ "welcome" }>
                 <Summary>
                   Closing
                 </Summary>
