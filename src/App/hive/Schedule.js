@@ -643,17 +643,16 @@ const Schedule = () => (
                       <b>From Agency to Automation: How We Cut Tech
                       Time to Hire and Cost per Hire in Half in One Year.</b>
                       <br />
-                      Antonio Arias Lopez is leading Talent Acquisition at
-                      Tipico, the market leader in sports betting in Germany.
-                      Antonio set up the Group Talent Acquisition function and
-                      leads a team of 11 recruiters, spread across 4 locations
-                      Since joining, Antonio and his team have reduced time to
-                      hire by 51%, reduced agency spend by 82%, and increased
-                      inbound tech applications by five times. Learn how Tipico
-                      implemented state of the art HR Tech, like automated
-                      referencing, asynchronous interviewing, best-in-class tech
-                      assessments to transform recruitment and build a
-                      digitally-powered system.
+                      Tipico is the market leader in sports betting in Germany.
+                      The Talent Acquisition team is made up of 11 recruiters,
+                      spread across 4 locations. Since inception earlier this
+                      year, the team have reduced time to hire by 51%, reduced
+                      agency spend by 82%, and increased inbound tech
+                      applications by five times. Learn how Tipico implemented
+                      state of the art HR Tech, like automated referencing,
+                      asynchronous interviewing, best-in-class tech assessments
+                      to transform recruitment and build a digitally-powered
+                      system.
                     </Description>
                   </Topic>
                 </TopicCell>
