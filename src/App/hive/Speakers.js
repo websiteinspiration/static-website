@@ -29,6 +29,7 @@ import avatar19 from '../../static/images/ErikaEnberg.png';
 import avatar20 from '../../static/images/Dasa.png';
 import avatar21 from '../../static/images/Emma.png';
 import avatar22 from '../../static/images/Kaya.png';
+import avatar23 from '../../static/images/Alexander.jpg';
 
 // Utils
 import { mobile } from '../../utils/style/media'
@@ -142,10 +143,10 @@ const Speakers = () => (
           <Center>
             <SpeakersItem>
               <Avatar>
-                <img src={avatar13} />
+                <img src={avatar23} />
               </Avatar>
-              <Name>Antonio Arias Lopez</Name>
-              <Info>Talent Acquisition Lead @ Tipico</Info>
+              <Name>Alexander Witteveen</Name>
+              <Info>VP Engineering @ Elsevier</Info>
             </SpeakersItem>
             <SpeakersItem>
               <Avatar>

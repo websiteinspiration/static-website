@@ -45,6 +45,7 @@ import Katie from '../../static/images/Katie.png'
 import Debbie from '../../static/images/Debbie.png'
 import Kuba from '../../static/images/Kuba.png'
 import Katharina from '../../static/images/katharina-waeschenbach.jpg'
+import Alexander from '../../static/images/Alexander.jpg';
 
 const SectionWrapper = styled.div`
   padding-bottom: 50px;
@@ -485,13 +486,15 @@ const Schedule = () => (
                 </TimeCell>
                 <TopicCell>
                   <Topic kind={ "panel" } avatars={ [
-                    AmirFriedman, OddurMagnusson, ErikaEnberg, Eyal, Katie] }>
+                    AmirFriedman, OddurMagnusson, ErikaEnberg, Eyal, Alexander,
+                    Katie] }>
                     <Summary>
                       Amir Friedman, VP Engineering, kloeckner.i<br />
                       Oddur Snær Magnússon, CTO, Klang Games<br />
                       Erika Enberg, Director, People and Culture,
                       Blacklane<br /> 
                       Eyal Matzkel, Senior Engineering Manager, GoEuro<br />
+                      Alexander Witteveen, VP Engineering, Elsevier<br />
                       Moderator: Katharina Kretschmer, Customer Success Manager,
                       Honeypot
                     </Summary>
@@ -629,10 +632,9 @@ const Schedule = () => (
                   16.00
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "casestudy" } avatars={ [AntonioLopez,
-                    JoseArtega, NicoBrautigam] }>
+                  <Topic kind={ "casestudy" } avatars={ [ JoseArtega,
+                    NicoBrautigam] }>
                     <Summary>
-                      Antonio Arias Lopez, Talent Acquisition Lead, Tipico<br />
                       Jose Arteaga, Tech Talent Acquisition Specialist, Tipico
                       <br />
                       Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
@@ -707,6 +709,7 @@ const Schedule = () => (
                 </Summary>
                 <Description>
                   <b>Using Agile Techniques to Build a More Inclusive Team</b>
+                  <br/>
                   Building psychological safety in your teams is critical if you
                   want them to perform at their best. The challenge is how to
                   develop and encourage the trust and collaboration and to make
