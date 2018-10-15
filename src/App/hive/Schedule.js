@@ -45,6 +45,7 @@ import Katie from '../../static/images/Katie.png'
 import Debbie from '../../static/images/Debbie.png'
 import Kuba from '../../static/images/Kuba.png'
 import Katharina from '../../static/images/katharina-waeschenbach.jpg'
+import Alexander from '../../static/images/Alexander.jpg';
 
 const SectionWrapper = styled.div`
   padding-bottom: 50px;
@@ -485,13 +486,15 @@ const Schedule = () => (
                 </TimeCell>
                 <TopicCell>
                   <Topic kind={ "panel" } avatars={ [
-                    AmirFriedman, OddurMagnusson, ErikaEnberg, Eyal, Katie] }>
+                    AmirFriedman, OddurMagnusson, ErikaEnberg, Eyal, Alexander,
+                    Katie] }>
                     <Summary>
                       Amir Friedman, VP Engineering, kloeckner.i<br />
                       Oddur Snær Magnússon, CTO, Klang Games<br />
                       Erika Enberg, Director, People and Culture,
                       Blacklane<br /> 
                       Eyal Matzkel, Senior Engineering Manager, GoEuro<br />
+                      Alexander Witteveen, VP Engineering, Elsevier<br />
                       Moderator: Katharina Kretschmer, Customer Success Manager,
                       Honeypot
                     </Summary>
@@ -629,10 +632,9 @@ const Schedule = () => (
                   16.00
                 </TimeCell>
                 <TopicCell>
-                  <Topic kind={ "casestudy" } avatars={ [AntonioLopez,
-                    JoseArtega, NicoBrautigam] }>
+                  <Topic kind={ "casestudy" } avatars={ [ JoseArtega,
+                    NicoBrautigam] }>
                     <Summary>
-                      Antonio Arias Lopez, Talent Acquisition Lead, Tipico<br />
                       Jose Arteaga, Tech Talent Acquisition Specialist, Tipico
                       <br />
                       Nico Bräutigam, Tech Talent Acquisition Specialist, Tipico
@@ -641,17 +643,16 @@ const Schedule = () => (
                       <b>From Agency to Automation: How We Cut Tech
                       Time to Hire and Cost per Hire in Half in One Year.</b>
                       <br />
-                      Antonio Arias Lopez is leading Talent Acquisition at
-                      Tipico, the market leader in sports betting in Germany.
-                      Antonio set up the Group Talent Acquisition function and
-                      leads a team of 11 recruiters, spread across 4 locations
-                      Since joining, Antonio and his team have reduced time to
-                      hire by 51%, reduced agency spend by 82%, and increased
-                      inbound tech applications by five times. Learn how Tipico
-                      implemented state of the art HR Tech, like automated
-                      referencing, asynchronous interviewing, best-in-class tech
-                      assessments to transform recruitment and build a
-                      digitally-powered system.
+                      Tipico is the market leader in sports betting in Germany.
+                      The Talent Acquisition team is made up of 11 recruiters,
+                      spread across 4 locations. Since inception earlier this
+                      year, the team have reduced time to hire by 51%, reduced
+                      agency spend by 82%, and increased inbound tech
+                      applications by five times. Learn how Tipico implemented
+                      state of the art HR Tech, like automated referencing,
+                      asynchronous interviewing, best-in-class tech assessments
+                      to transform recruitment and build a digitally-powered
+                      system.
                     </Description>
                   </Topic>
                 </TopicCell>
@@ -707,6 +708,7 @@ const Schedule = () => (
                 </Summary>
                 <Description>
                   <b>Using Agile Techniques to Build a More Inclusive Team</b>
+                  <br/>
                   Building psychological safety in your teams is critical if you
                   want them to perform at their best. The challenge is how to
                   develop and encourage the trust and collaboration and to make
