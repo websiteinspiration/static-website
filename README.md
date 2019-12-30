@@ -1,3 +1,5 @@
+# THIS IS A DEPRECATED PROJECT. IT WAS USED FOR [HIVE-CONF 2018](https://hive.honeypot.io/hive-conference-2018/) WITH A LONG TERM PLAN TO USE FOR A [NEW STATIC WEBSITE](https://honeypot.netlify.com/en/). IN THE END WE USED THE [WEBSITE PROJECT](https://github.com/honeypotio/website/) FOR THE SITE BUT HIVE-2018 STILL LIVES HERE
+
 # static-website
 By Gatsby 
 
